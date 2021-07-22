@@ -14,10 +14,10 @@
 
 #### **INTEGRANTES** ####
 
-  - **Gabriel Sotelo**: 24 años, de Isidro Casanova,estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** jugar videojuegos y ver anime, [facebook](https://www.facebook.com/gabriel.sotelo.10)
+  - **Gabriel Sotelo**: 24 años, de Isidro Casanova, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** jugar videojuegos y ver anime, [facebook](https://www.facebook.com/gabriel.sotelo.10)
 
   - **Neyen Pena**: 23 años, de Lanús, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** videojuegos, deportes y tecnologia. [github](https://github.com/NEYENPENA)
 
-  - **Marcos Ezquivel**:
+- **Marcos Esquivel**: 24 años, de San Francisco Solano, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** videojuegos, tecnologia. *estudios* ensamblado y reparacion de pc, reparacion de dispositivos moviles.
 
   - **Maximo Rodriguez**:
