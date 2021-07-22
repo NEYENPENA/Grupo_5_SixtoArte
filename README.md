@@ -1,4 +1,4 @@
-##**SIXTOARTE**##
+## **SIXTOARTE** ##
 
 - nuestro ecommerce sera de **venta de arte en mosaico**.
 - apuntamos al publico en general.
@@ -11,7 +11,7 @@
         - [Por las funcionalidades implementadas 2](https://www.garbarino.com/) en dispositivos móviles como muetran los  detalles del producto, nos gusto lo **simple** que es, dandote la informacion justa y necesaria para conocer el producto.
 
 
-####**INTEGRANTES**####
+#### **INTEGRANTES** ####
 
   - **Gabriel Sotelo**:24 años, de Isidro Casanova, **pasatiempo** jugar videojuegos y ver anime, [facebook](https://www.facebook.com/gabriel.sotelo.10)
 
