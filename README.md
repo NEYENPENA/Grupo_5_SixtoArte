@@ -1,6 +1,6 @@
 ## **SIXTOARTE** ##
 
-- Nuestro ecommerce sera de **venta de arte en mosaico**.
+- Nuestro ecommerce sera de **venta de arte en mosaicos. Diseños exclusivos y composiciones a pedido**.
 
 - Apuntamos al publico en general.
 
@@ -16,7 +16,7 @@
 
   - **Gabriel Sotelo**: 24 años, de Isidro Casanova, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** jugar videojuegos y ver anime, [github](https://github.com/GabrieSotelo97)
 
-  - **Neyen Pena**: 23 años, de Lanús, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** videojuegos, deportes y tecnologia. [github](https://github.com/NEYENPENA)
+  - **Neyen Pena**: 23 años, de Lanús, estudiante de la Tecnicatura superior en Higiene y Seguridad en el trabajo en Instituto Tecnologico Beltran y Desarrollo web full stack en Digital house y Fundacion formar. **pasatiempo** Deportes, tecnologia y videojuegos. [github](https://github.com/NEYENPENA)
 
 - **Marcos Esquivel**: 24 años, de San Francisco Solano, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** videojuegos, tecnologia. *estudios* ensamblado y reparacion de pc, reparacion de dispositivos moviles. [github](https://github.com/MarcosEsquivel)
 
