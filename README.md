@@ -1,5 +1,7 @@
 ## **SIXTOARTE** ##
 
+<!-- ![](ruta) -->
+
 - Nuestro ecommerce sera de **venta de arte en mosaico**.
 
 - Apuntamos al publico en general.
@@ -18,6 +20,6 @@
 
   - **Neyen Pena**: 23 años, de Lanús, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** videojuegos, deportes y tecnologia. [github](https://github.com/NEYENPENA)
 
-- **Marcos Esquivel**: 24 años, de San Francisco Solano, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** videojuegos, tecnologia. *estudios* ensamblado y reparacion de pc, reparacion de dispositivos moviles. [github](https://github.com/MarcosEsquivel)
+  - **Marcos Esquivel**: 24 años, de San Francisco Solano, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** videojuegos, tecnologia. *estudios* ensamblado y reparacion de pc, reparacion de dispositivos moviles. [github](https://github.com/MarcosEsquivel)
 
   - **Maximo Rodriguez**:
