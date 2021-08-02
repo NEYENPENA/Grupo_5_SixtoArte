@@ -1,6 +1,6 @@
 ## **SIXTOARTE** ##
 
-![](/img/logo/logoprincipal.jpg)
+<img src="/img/logo/logoprincipal.jpg" width="150">
 
 - Nuestro ecommerce sera de **venta de arte en mosaicos. Diseños exclusivos y composiciones a pedido**.
 
