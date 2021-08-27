@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
 const port = 3030;
-const path = require('path')
-const user = require('./routes/user')
-const main = require('./routes/main')
+const path = require('path');
+const user = require('./routes/user');
+const main = require('./routes/main');
 
 app.use(express.static('public'));
 
-app.use('/', user)
+app.use('/', user);
 
-app.use('/', main)
+app.use('/', main);
 
-app.listen(console.log('Server corriendo en http://localhost: ' + port + 'home'));
+app.listen(port, ()=> console.log('Server corriendo en http://localhost:' + port + '/home'));
