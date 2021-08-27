@@ -1,0 +1,172 @@
+header{
+    background-color: var(--azul);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 72px;
+}
+header .logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header .logo a img{
+    width: 55px;
+    border-radius: 50%;
+}
+header .nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+nav{
+    display: none;
+}
+header form {
+    position: relative;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header form input{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+}
+
+header form i{
+     position: absolute;
+     right: 8%;
+     top: 27px;
+}
+header .icons{
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+header .icons a i{
+    font-size: 30px;
+    color: var(--grafito);
+    filter:brightness(150%);
+    
+}
+
+ @media(min-width:426px){
+
+    header .logo a img{
+        width: 70px;
+        height: 50px;
+        border-radius: 20%;
+    }
+    header form{
+        width: 50%;
+        
+    }
+    header form input{
+        width: 90%;
+        height: 35px;
+        
+    }
+
+
+}
+@media(min-width:769px){
+    header{
+        height: 120px;
+    }
+    header .logo{
+        width: 20%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        max-width: 140px;
+    }
+    header .logo a {
+        width: 100%;
+    }
+    header .logo a img{
+        width: 80%;
+        height: 80px;
+    }
+    header .nav{
+        width: 80%;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    header .nav nav{
+        display: flex;
+        width: 100%;
+        height: 15%;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 7px;
+        margin-top: 5px;
+        margin-right: 2px;
+        margin-bottom: 30px;
+    }
+    nav ul.redes{
+        display: flex;
+        width: 20%;
+        justify-content: space-evenly;
+
+    }
+    nav ul.redes a{
+        width: 100%;
+        height: 100%;
+    }
+    nav ul.redes a img{
+        height: 90%;
+        padding-top: 2px;
+        
+    }
+    
+    nav ul.user{
+        display: flex;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul.user li{
+        font-size: 13px;
+    }
+    nav ul.user li a.login{
+        border-right: 1px solid black;
+        padding-right: 10px;
+        font-weight: 900;
+        
+    }
+    nav ul.user li a.regi{
+        font-weight: 900;
+        margin-left: 10px;
+    }
+    header form {
+        width: 65%;
+        
+    }
+    header form input{
+        width: 100%;
+        font-size: 25px;
+    }
+    header form i{
+        font-size: 25px;
+        top: 10%;
+        right: 2%;
+    }
+    header .icons{
+        position: relative;
+        right: 0;
+        max-width: 300px;
+    }
+
+
+} 

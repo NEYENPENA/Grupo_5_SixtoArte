@@ -1,0 +1,144 @@
+.home {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.home .carrousel{
+    border: 2px solid var(--grafito);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.home .carrousel img{
+    width: 80%;
+}
+.home .carrousel .flechal i{
+    font-size: 40px;
+    color: gray;
+    width: 15%;
+    top: 50%;
+    left: 0%;
+}
+.home .carrousel .flechar i{
+    font-size: 40px;
+    color: gray;
+    width: 15%;
+    right: 0%;
+    top: 45%;
+}
+.home section{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.home section article{
+    width: 100%;
+    border: 4px solid var(--azul);
+    margin-top: 50px;
+    border-radius: 5%;
+    padding-bottom: 10px;
+    text-align: center;
+    box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
+}
+.home section article div {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
+.home section article div p.descripcion{
+    text-align: center;
+    width: 100%;
+    padding:0 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    border-top: 2px solid var(--azul);
+}
+.home section article div p.precio{
+    width: 45%;
+    display: flex;
+    font-weight: 900;
+    justify-content: center;
+    background-color: var(--azul);
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.home section article div .icons2{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.home section article div .icons2 i{
+    font-size: 25px;
+}
+.home section article div .icons2 i.fa-heart{
+    color: palevioletred;
+}
+.home section article div .icons2 i.fa-shopping-cart{
+    color: var(--grafito);
+}
+
+@media(min-width:426px){
+    .home{
+        padding-top: 5px;
+    }
+    .home section{
+        width: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .home section article{
+        width: 80%;
+        width: 45%;
+        margin-top: 50px;
+        border-radius: 5%;
+        padding-bottom: 10px;
+        text-align: center;
+        
+    }
+    .home section article div p.descripcion{
+        padding: 0px 15px;
+    }
+    .home section article div p.precio{
+        margin-left: 5px;
+    }
+}
+
+@media(min-width:769px){
+    .home section article{
+        width: 30%;
+    }
+
+    .home section article div p.precio{
+        order:-5;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        font-size: 25px;
+    }
+    .home section article div .icons2{
+        width: 100%;
+        
+    }
+    .home section article div .icons2 i.fa-shopping-cart{
+        background-color: var(--azul);
+        border-radius: 30px;
+        width: 45%;
+        padding-top: 2px;
+        
+        
+    }
+    .home section article div .icons2 i.fa-heart{
+        order:2;
+        width: 50%;
+        
+        
+    }
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+Tokumin:wght@400;500;700;800&display=swap');
+
+:root{
+    --letra:'Kaisei Tokumin', serif;
+    --azul:#4592AF;
+    --azulOscuro:#0c779e;
+    --grafito:#1c1c1c;
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    font-family: var(--letra);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+}
+
+

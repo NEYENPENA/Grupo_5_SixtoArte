@@ -1,6 +1,7 @@
 const express = require('express');
-const router = express.Router();
 const path = require('path');
+const router = express.Router();
+
 
 router.get('/home', (req,res) => res.sendFile(path.join(__dirname, '..', 'views', 'home.html')));
 router.get('/productDetail', (req,res) => res.sendFile(path.join(__dirname, '..', 'views', 'productDetail.html')));
