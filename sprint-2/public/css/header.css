@@ -40,6 +40,7 @@ header form input{
     width: 90%;
     height: 30px;
     border-radius: 10px;
+    border: none;
 }
 
 header form i{
