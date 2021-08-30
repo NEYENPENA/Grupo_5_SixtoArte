@@ -1,0 +1,103 @@
+/* HOME DE CARRITO */
+.carritoDeProducto {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* SECCION QUE CONTIENE LOS PRODUCTOS AGREGADOS A CARRITO */
+.carritoDeProducto section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* IMAGEN DEL PRODUCTO */
+.carritoDeProducto img {
+    width: 25%;
+    border-right: 1px solid var(--azul);
+}
+
+/* CONTIENE IMAGEN, DESCRIPCION, PRECIO, BOTON DE BORRAR DE PRODUCTO */
+.carritoDeProducto section article{
+    border: 4px solid var(--azul);
+    margin: 20px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5%;
+}
+
+/* CONTIENE IMAGEN Y DESCRIPCION DE PRODUCTO */
+.carritoDeProducto section article .article1{
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--azul);
+}
+
+/* CONTIENE FUENTE DE DESCRIPCION DE PRODUCTOS */
+.carritoDeProducto section article .article1 p{
+    width: 75%;
+}
+
+/* CONTIENE BOTON DE BORRAR Y PRECIO DEL PRODUCTO */
+.carritoDeProducto section article .article2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-family: 'Ribeye Marrow','Kaisei Tokumin',serif;
+}
+
+/* CONTIENE BOTON DE BORRAR DE PRODUCTO */
+.carritoDeProducto section article .article2 i{
+    font-size: 25px;
+    border-radius: 10%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    color: var(--grafito);
+    filter: brightness(150%);
+}
+
+/* CONTIENE PRECIO DE PRODUCTO */
+.carritoDeProducto section article .article2 p{
+    width: 50%;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-around;
+    border-left: 2px solid var(--azul);
+}
+
+/* -----------------------------------------------------------------------------------------------*/
+
+@media (min-width: 426px){
+
+/* CONTIENE IMAGEN, DESCRIPCION, PRECIO, BOTON DE BORRAR DE PRODUCTO */
+    .carritoDeProducto section article{
+        border: 4px solid var(--azul);
+        margin: 20px;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
+        border-radius: 5%;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------*/
+
+@media (min-width: 769px){
+
+/* CONTIENE IMAGEN, DESCRIPCION, PRECIO, BOTON DE BORRAR DE PRODUCTO */
+    .carritoDeProducto section article{
+        border: 4px solid var(--azul);
+        margin: 20px;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
+        border-radius: 5%;
+    }
+}
