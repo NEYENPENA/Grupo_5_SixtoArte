@@ -5,9 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d43134a834.js" crossorigin="anonymous"></script>
     <title>productDetail</title>
 </head>
 <body>
+    <header>
+        <div class="logo">
+            <a href=""><img src="../img/logoprincipal.jpg" alt=""></a>
+        </div>
+
+        <div class="nav">
+            <nav>
+                <ul class="redes">
+                    <li><a target="_blank" href=""><img src="../img/LOGOFACEBOOK.png" alt=""></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/sixto.arte/?utm_medium=copy_link"><img src="../img/logoinstagram.png" alt=""></a></li>
+                    <li><a target="_blank" href=""><img src="../img/LOGOWHATSAPP.png" alt=""></a></li>
+                </ul>
+                <ul class="user">
+                    <li><a class="login" href="/login">Login</a></li>
+                    <li><a class="regi" href="/register">Register</a></li>
+                </ul>
+            </nav>
+            
+            
+                <form action="">
+                    <input type="text" placeholder="Buscar">
+                    <i class="fas fa-search"></i>
+                </form>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-adjust"></i></a>
+                    <a href="#"><i class="fas fa-user"></i></a>
+                    <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                </div>                    
+        </div>        
+    </header>
+
+    <main>
+            <section class="principio">        
+                    <div class="producto">
+                        <img src="../img/espejoazul.png" alt="">                        
+                        <div class="fotos">
+                            <span>1/1</span>
+                         </div>                        
+                        <i class="fas fa-search-plus"></i>  
+                    </div>
+                    <div class="descripcion">                        
+                        <h4>Espejo rectangular. Bordes mosaiqueados con azulejos y venecitas 45cm x 24cm</h4>                        
+                        <p>$1000</p>
+                    </div>
+            </section>
+            <section class="comprar">                
+                <form action="">
+                    
+                    <div class="cantidadd">
+                        <label for="cantidad">Cantidad</label>
+                        
+                        <input type="number" id="cantidad" value="1">
+                    </div>
+                    
+                    <div class="agregar">
+                        <i class="fas fa-shopping-cart"></i>
+                        <input type="submit" value="Agregar al carrito">
+                    </div>
+                </form>
+            </section>
+            <section class="favoritos">
+                    <form  action="">                    
+                            <i class="fas fa-heart"></i>
+                            <input type="submit" value="Agregar a favoritos">                                       
+                    </form>
+            </section>
+            <section class="pedidos" >
+                <div >
+                    <h3>Espejos con diseños a pedido. ¡Colores con la gama que elijas!</h3>
+                <div/>
+            </section>
+    </main>
     
+    <footer>
+        <div class="logof">
+            <img src="../img/logoprincipal.jpg" alt="">
+        </div>
+        <h3>contactanos</h3>
+        <div class="redes">
+            <a class="facebook" target="_blank" href=""><img src="../img/LOGOFACEBOOK.png" alt=""></a>
+            <a class="instagram" target="_blank" href="https://www.instagram.com/sixto.arte/?utm_medium=copy_link"><img src="../img/logoinstagram.png" alt=""></a>
+            <a class="whatsapp" target="_blank" href=""><img src="../img/LOGOWHATSAPP.png" alt=""></a>
+        </div>
+
+    </footer>
 </body>
 </html>
