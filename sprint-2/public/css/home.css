@@ -4,18 +4,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: relative;
 }
+
 .home .carrousel{
     border: 2px solid var(--grafito);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+    margin-top: 72px;
+    height: 406px;
+    position: relative;
+    width: 100%;
 }
 .home .carrousel img{
-    width: 80%;
+    width: 50%;
+    height: 90%;
 }
+
+
+
+
+.home .carrousel .c1{
+    position: absolute;
+    animation: pasar1 12s infinite;
+    left: 25%;
+    
+}
+.home .carrousel .c2{
+    position: absolute;
+    animation: pasar2 12s infinite;
+    left: 25%;
+    
+}
+
+.home .carrousel .c3{
+    position: absolute;
+    animation: pasar3 12s infinite;
+    left: 25%;
+    
+}
+
+
+
+
+
+
 .home .carrousel .flechal i{
     font-size: 40px;
     color: gray;
@@ -37,6 +72,9 @@
     flex-direction: column;
 }
 .home section article{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     border: 4px solid var(--azul);
     margin-top: 50px;
@@ -44,6 +82,13 @@
     padding-bottom: 10px;
     text-align: center;
     box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
+}
+.home section article .imagen{
+    height: 67%;
+}
+.home section article .art2{
+    height: 33%;
+    max-height: 60px;
 }
 .home section article div {
     display: flex;
@@ -54,7 +99,7 @@
 .home section article div p.descripcion{
     text-align: center;
     width: 100%;
-    padding:0 20px;
+    padding:0 5px;
     margin-bottom: 10px;
     font-weight: 700;
     border-top: 2px solid var(--azul);
@@ -64,7 +109,7 @@
     display: flex;
     font-weight: 900;
     justify-content: center;
-    background-color: var(--azul);
+    box-shadow: var(--caja);
     border-radius: 10px;
     margin-left: 10px;
 }
@@ -81,6 +126,23 @@
 }
 .home section article div .icons2 i.fa-shopping-cart{
     color: var(--grafito);
+}
+.home section article.tablet{
+    display: none;
+}
+.home section article.laptop{
+    display: none;
+}
+.home .top{
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    
+}
+
+.home .top a i{
+    color: var(--cian);
+    font-size: 28px;
 }
 
 @media(min-width:426px){
@@ -109,11 +171,34 @@
     .home section article div p.precio{
         margin-left: 5px;
     }
+    .home section article.tablet{
+    display: flex;
+    
+    }
 }
 
 @media(min-width:769px){
+    .home .carrousel{
+        margin-top: 120px;
+        
+    }
+    
+
+
+
+
+    
     .home section article{
         width: 30%;
+        max-width: 265px;
+        align-items: center;
+        box-shadow: none;
+    }
+    .home section article .imagen img{
+        max-height: 300px;
+    }
+    .home section article .imagen{
+        width: 60%;
     }
 
     .home section article div p.precio{
@@ -122,13 +207,14 @@
         text-align: center;
         background-color: white;
         font-size: 25px;
+        box-shadow: none;
     }
     .home section article div .icons2{
         width: 100%;
         
     }
     .home section article div .icons2 i.fa-shopping-cart{
-        background-color: var(--azul);
+        box-shadow: var(--caja);
         border-radius: 30px;
         width: 45%;
         padding-top: 2px;
@@ -138,7 +224,31 @@
     .home section article div .icons2 i.fa-heart{
         order:2;
         width: 50%;
-        
+        }
+    .home section article .art2{
+            height: 40%;
+            max-height: 92px;
+    }
+    .home section article.laptop{
+        display: flex;
         
     }
+    .home .top a i{
+            
+            font-size: 40px;
+    }
+/* --------------animaciones----------------------------- */
+
+        .home section article:hover{
+            box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
+            transform: scale(1.1);
+        }
+        .home section article div .icons2 i.fa-heart:hover{
+            animation: latir 1.5s normal linear infinite;
+        }
+        .home .top a i:hover{
+            color:  var(--azul);
+            box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
+            transform: scale(1.1);
+        }
 }
