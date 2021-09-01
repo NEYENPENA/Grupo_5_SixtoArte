@@ -4,19 +4,53 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: relative;
 }
+
 .home .carrousel{
     border: 2px solid var(--grafito);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 0;
+    margin-top: 72px;
+    height: 406px;
+    position: relative;
+    width: 100%;
 }
 .home .carrousel img{
     width: 50%;
     height: 90%;
 }
+
+
+
+
+.home .carrousel .c1{
+    position: absolute;
+    animation: pasar1 12s infinite;
+    left: 25%;
+    
+}
+.home .carrousel .c2{
+    position: absolute;
+    animation: pasar2 12s infinite;
+    left: 25%;
+    
+}
+
+.home .carrousel .c3{
+    position: absolute;
+    animation: pasar3 12s infinite;
+    left: 25%;
+    
+}
+
+
+
+
+
+
 .home .carrousel .flechal i{
     font-size: 40px;
     color: gray;
@@ -99,6 +133,17 @@
 .home section article.laptop{
     display: none;
 }
+.home .top{
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    
+}
+
+.home .top a i{
+    color: var(--cian);
+    font-size: 28px;
+}
 
 @media(min-width:426px){
     .home{
@@ -133,10 +178,21 @@
 }
 
 @media(min-width:769px){
+    .home .carrousel{
+        margin-top: 120px;
+        
+    }
+    
+
+
+
+
+    
     .home section article{
         width: 30%;
-        max-width: 318px;
+        max-width: 265px;
         align-items: center;
+        box-shadow: none;
     }
     .home section article .imagen img{
         max-height: 300px;
@@ -176,5 +232,23 @@
     .home section article.laptop{
         display: flex;
         
+    }
+    .home .top a i{
+            
+            font-size: 40px;
+    }
+/* --------------animaciones----------------------------- */
+
+        .home section article:hover{
+            box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
+            transform: scale(1.1);
+        }
+        .home section article div .icons2 i.fa-heart:hover{
+            animation: latir 1.5s normal linear infinite;
+        }
+        .home .top a i:hover{
+            color:  var(--azul);
+            box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
+            transform: scale(1.1);
         }
 }
