@@ -58,5 +58,8 @@ footer .redes a img{
     footer .redes a img{
         width: 40px;
     }
+    footer .redes a img:hover{
+        animation: giro 2s normal linear infinite;
+    }
     
 }
