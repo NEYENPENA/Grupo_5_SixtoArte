@@ -1,13 +1,68 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Registro</title>
+    <script src="https://kit.fontawesome.com/33e6d7e34b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Register</title>
-</head>
-<body>
+  </head>
+  <body class="body">
+    <header>
+        <div class="logo">
+            <a href="/home"><img src="../img/logoprincipal.jpg" alt=""></a>
+        </div>
+
+        <div class="nav">
+            <nav>
+                <ul class="user">
+                    <li><a class="login" href="/login">Login</a></li>
+                    <li><a class="regi" href="/register">Register</a></li>
+                </ul>
+            </nav>
+            
+            
+            <div class="nav2">
+                <form action="">
+                        <input type="text" placeholder="Buscar">
+                        <i class="fas fa-search"></i>
+                </form>
+                <div class="icons">
+                        <a href="#"><i class="fas fa-adjust"></i></a>
+                        <a href="#"><i class="fas fa-user"></i></a>
+                        <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+                    
+        </div>
+            
+
+    </header>
+
     
-</body>
+    
+    
+    <main class="login-box">
+      
+      <h1>Registro
+      </h1>
+      <form>
+       
+        <label for="username">correo Electronico</label>
+        <input type="text" placeholder="insertar correo">
+        
+        <label for="password">Contraseña</label>
+        <input type="password" placeholder="insertar contraseña">
+        
+        <label for="password">Repetir Contraseña</label>
+        <input type="password" placeholder="Repetir contraseña">
+
+        <input type="submit" value="registracion">
+        <br>
+        <div>
+            <a  class="link"  href="index.html">iniciar Sesion</a>
+        </div>
+        
+      </form>
+    </main>
+  </body>
 </html>
