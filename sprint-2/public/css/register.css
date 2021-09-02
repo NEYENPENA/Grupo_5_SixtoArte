@@ -65,7 +65,7 @@
    border: none;
    outline: none;
    height: 40px;
-   background: #f7adad;
+   background: var(--azul);
    color: rgb(0, 0, 0);
    font-size: 18px;
    border-radius: 20px;
@@ -80,7 +80,7 @@
     border: none;
     outline: none;
     height: 40px;
-    background: #e0a5ac;
+    background: var(--azul);
     color: rgb(0, 0, 0);
     font-size: 18px;
     border-radius: 20px;
