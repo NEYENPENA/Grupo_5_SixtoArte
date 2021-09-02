@@ -96,7 +96,7 @@ header .nav .nav2{
     }
 
     /* ----------------animaciones------------------ */
-    input:focus{
+    header input:focus{
         box-shadow:  rgba(47, 216, 13, 0.589) 0px -12px 30px, rgba(72, 223, 13, 0.596) 0px 12px 13px;
     }
 
