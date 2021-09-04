@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Registro</title>
-    <script src="https://kit.fontawesome.com/33e6d7e34b.js" crossorigin="anonymous"></script>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body class="body">
-    <header>
+    <script src="https://kit.fontawesome.com/d43134a834.js" crossorigin="anonymous"></script>
+    <title>productDetail</title>
+</head>
+<body>
+    <header class="headerr">
         <div class="logo">
-            <a href="/home"><img src="../img/logoprincipal.jpg" alt=""></a>
+            <a href="/"><img src="../img/logoprincipal.jpg" alt=""></a>
         </div>
 
         <div class="nav">
@@ -38,31 +40,37 @@
 
     </header>
 
-    
-    
-    
-    <main class="login-box">
+    <main class="register">
       
-      <h1>Registro
-      </h1>
-      <form>
-       
-        <label for="username">correo Electronico</label>
-        <input type="text" placeholder="insertar correo">
+      <div class="caja">
+        <h1>Registro
+        </h1>
         
-        <label for="password">Contraseña</label>
-        <input type="password" placeholder="insertar contraseña">
-        
-        <label for="password">Repetir Contraseña</label>
-        <input type="password" placeholder="Repetir contraseña">
+        <form action="/" method="GET">
+         
+          <label for="nombre">nombre de usuario</label>
+          <input type="user" name="nombre" placeholder="nombre de usuario" id="nombre" required>
 
-        <input type="submit" value="registracion">
-        <br>
-        <div>
-            <a  class="link"  href="index.html">iniciar Sesion</a>
-        </div>
+          <label for="correo">correo Electronico</label>
+          <input type="email" name="email" placeholder="insertar correo" id="correo" required>
+          
+          <label for="password">Contraseña</label>
+          <input type="password" name="contraseña" placeholder="insertar contraseña" id="password" required>
+          
+          <label for="password2">Repetir Contraseña</label>
+          <input type="password" name="contraseña2" placeholder="Repetir contraseña" id="password2" required>
         
-      </form>
+          <input class="enviar" type="submit" value="registrarse">
+          <br>
+          <p>o</p>
+          <div class="iniciar">
+           
+              <a  href="login">iniciar Sesión</a>
+          </div>
+          
+        </form>
+      </div>
+      
     </main>
-  </body>
+</body>
 </html>
