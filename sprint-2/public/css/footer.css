@@ -4,10 +4,11 @@ footer{
     display: flex;
     flex-wrap: wrap;
     height: 100px;
+    width: 100%;
     align-items: center;
-    /* background-color: var(--azulOscuro); */
     background-image: url(../img/fondoAzul.jpg);
-    
+    position: absolute;
+    bottom: 0;
 }
 footer .logof{
     width: 20%;
