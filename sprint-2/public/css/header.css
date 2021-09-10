@@ -29,6 +29,7 @@ header .nav{
     width: 80%;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
 }
 nav{
     display: none;
@@ -65,10 +66,33 @@ header .icons a i{
     filter:brightness(150%);
     
 }
+header .nav .nav2 .icons .heart, header .nav .nav2 .icons .user{
+    display: none;
+    position: absolute;
+}
 header .nav .nav2{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+}
+header .nav .menudespleglable{
+position: absolute;
+background-color: #328eafd0;
+right: 0;
+top: 75px;
+width: 40vw;
+border-radius: 10px;
+display: none;
+}
+header .nav .menudespleglable ul li a{
+    color: black;
+    font-size: 26px;
+}
+header .nav .menudespleglable ul li{
+    border-bottom: 2px solid white;
+}
+header .nav .menudespleglable ul li:last-of-type{
+    border-bottom: none
 }
 
  @media(min-width:426px){
@@ -151,13 +175,13 @@ header .nav .nav2{
     nav ul.user li{
         font-size: 13px;
     }
-    nav ul.user li a.login{
+    nav ul.user li a.login1{
         border-right: 1px solid black;
         padding-right: 10px;
         font-weight: 900;
         
     }
-    nav ul.user li a.regi{
+    nav ul.user li a.regi1{
         font-weight: 900;
         margin-left: 10px;
     }
@@ -178,6 +202,14 @@ header .nav .nav2{
         position: relative;
         right: 0;
         max-width: 300px;
+    }
+    header .nav .nav2 .icons .heart, header .nav .nav2 .icons .user{
+        display: block;
+        position: static;
+    }
+    header .nav .nav2 .icons .bars{
+        display: none;
+        position: absolute;
     }
     header .nav{
         
