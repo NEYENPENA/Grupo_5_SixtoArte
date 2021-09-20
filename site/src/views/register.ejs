@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/d43134a834.js" crossorigin="anonymous"></script>
-    <title>LOGIN</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>REGISTER</title>
 </head>
-<body class="login">
+<body>
     <header>
         <div class="logo">
-            <a href="/"><img src="../img/logoprincipal.jpg" alt=""></a>
+            <a href="/"><img src="../images/logoprincipal.jpg" alt=""></a>
         </div>
 
         <div class="nav">
             <nav>
                 <ul class="user">
-                    <li><a class="login1" href="/login">Login</a></li>
-                    <li><a class="regi1" href="/register">Register</a></li>
+                    <li><a class="login1" href="login">Login</a></li>
+                    <li><a class="regi1" href="register">Register</a></li>
                 </ul>
             </nav>
             
@@ -31,7 +31,7 @@
                 <div class="icons">
                         <a href="#"><i class="fas fa-adjust"></i></a>
                         <a class="user" href="#"><i class="fas fa-user"></i></a>
-                        <a href="/productCart"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="productCart"><i class="fas fa-shopping-cart"></i></a>
                         <a class="bars" href="#"><i class="fas fa-bars"></i></a> 
                         <a class="heart" href="/favoritos"><i class="fas fa-heart"></i></a>
                          
@@ -52,24 +52,37 @@
 
     </header>
 
-    <main class="box">
-
-        <div class="boxcontenedor">
-          <h1>Inicio De Sesión</h1>
-			<form>
+    <main class="register">
+      
+      <div class="caja">
+        <h1>Registro
+        </h1>
         
-				<label for="user">Nombre de Usuario</label>
-				<input type="user" placeholder="Usuario@email.com" id="user" required>
-        
-				<label for="password">Contraseña</label>
-				<input type="password" placeholder="Insertar contraseña" id="password" required><br>
-				<input class="inicio" type="submit" value="Ingresar">
-                
-				<a  class="link"  href="/register">¿Desea crear una cuenta?</a>
-			</form>  
+        <form action="/" method="GET">
+         
+          <label for="nombre">Nombre de Usuario</label>
+          <input type="user" name="nombre" placeholder="nombre de usuario" id="nombre" required>
 
-		</div>
-</main> 
-    
+          <label for="correo">Correo Electronico</label>
+          <input type="email" name="email" placeholder="insertar correo" id="correo" required>
+          
+          <label for="password">Contraseña</label>
+          <input type="password" name="contraseña" placeholder="insertar contraseña" id="password" required>
+          
+          <label for="password2">Repetir Contraseña</label>
+          <input type="password" name="contraseña2" placeholder="Repetir contraseña" id="password2" required>
+        
+          <input class="enviar" type="submit" value="registrarse">
+          <br>
+          <p>o</p>
+          <div class="iniciar">
+           
+              <a  href="login">iniciar Sesión</a>
+          </div>
+          
+        </form>
+      </div>
+      
+    </main>
 </body>
 </html>
