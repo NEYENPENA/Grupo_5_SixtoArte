@@ -1,0 +1,86 @@
+.login {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.login .headerlog{
+    position: static;
+}
+.login .box .boxcontenedor{    
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 475px;
+    max-height: 520px;
+}
+.login .box {
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--azulOscuro);
+    margin-top: 120px; 
+    max-width: 475px;   
+}
+.login .box .boxcontenedor h1{
+    font-size: 40px;
+    margin-bottom: 10%;
+    text-align: center;         
+}
+.login .box form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;    
+}
+.login .box form input{
+    border-radius: 6px; 
+    border: none;
+    font-size: 18px;
+    
+}
+.login .box form .inicio{
+    margin-top: 5%;
+    font-size: 18px;
+
+}
+.login .box form label{
+    margin:15px 0;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+
+.login .box .boxcontenedor a{
+    color: black;       
+    margin-top: 10%;
+    margin-bottom: 10%;    
+    font-size: 16px; 
+    box-shadow: var(--caja);
+    border-radius: 7px;
+    padding: 0.5%;
+    background-color: #fff;
+}   
+
+@media(min-width:426px){
+
+
+}
+
+@media(min-width:769px){
+
+    .login .box {
+        width: 75%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--azulOscuro);
+        margin-top: 120px;    
+    }
+}
