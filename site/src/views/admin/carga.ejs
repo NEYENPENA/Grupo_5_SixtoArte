@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+
+<%- include('../partials/head') %> 
+
+<body class="carga">
+   <!--  HEADER -->
+
+   <%- include('../partials/header') %> 
+
+   <main >
+    <h2>CARGA DE PRODUCTO</h2>
+
+    <form class="form" action="/crear" method="POST">
+
+        <label for="nombre">Nombre del Producto</label>
+          <input type="text" name="nombre" placeholder="nombre del producto" id="nombre" required>
+
+          <label for="precio">Precio del Producto</label>
+          <input type="number" name="precio" placeholder="precio del producto" id="precio" required>
+
+          <label for="descripcion">Descripción del Producto</label>
+          <input type="text" name="descripcion" placeholder="descripcion del producto" id="descripcion" required>
+
+          <label for="">suba una imagen</label>
+          <input type="file" name="imagen" accept=".jpg, .png" required>
+
+          <button type="submit" >CARGAR </button>
+          
+    </form>
+    <form class="cancel" action="/admin">
+        <button type="submit">CANCELAR </button></form>
+    
+   </main>
+
+   
+</body>
+</html>

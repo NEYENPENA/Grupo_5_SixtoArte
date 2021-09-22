@@ -1,0 +1,61 @@
+.edit header{
+    position: static;
+}
+
+.edit main{
+    padding-bottom: 150px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.edit main h2{
+    text-align: center;
+    margin: 10px;
+    width: 100%;
+    color: var(--azulOscuro);
+    font-weight: 900;
+}
+.edit main .form{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    background-color: var(--azulOscuro);
+    align-items: center;
+    max-width: 740px;
+}
+.edit main .cancel{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    
+}
+.edit main .cancel button{
+   border-color: var(--azulOscuro);
+    padding: 3px;
+}
+.edit main form button{
+    margin:15px auto;
+    font-size: 18px;
+}
+.edit main form label{
+    color: white;
+    font-weight: 900;
+    margin-top: 20px;
+    width: 95%;
+    max-width: 630px;
+}
+.edit main form input{
+    font-size: 18px;
+    border-radius: 6px;
+    border-color: white;
+    max-width: 630px;
+    width: 95%;
+}
+@media(min-width:426px){
+
+    .edit main form label{
+        font-size: 18px;
+    }
+
+}
