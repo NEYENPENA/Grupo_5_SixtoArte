@@ -45,11 +45,6 @@
     
 }
 
-
-
-
-
-
 .home .carrousel .flechal i{
     font-size: 40px;
     color: gray;
@@ -191,11 +186,6 @@
     .home section{
         margin-bottom: 174px;
     }
-
-
-
-
-    
     .home section article{
         width: 30%;
         max-width: 265px;
@@ -226,8 +216,7 @@
         border-radius: 30px;
         width: 45%;
         padding-top: 2px;
-        
-        
+                
     }
     .home section article div .icons2 i.fa-heart{
         order:2;

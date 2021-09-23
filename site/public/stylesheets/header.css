@@ -124,8 +124,6 @@ header .nav .menudespleglable ul li:last-of-type{
         box-shadow:  rgba(47, 216, 13, 0.589) 0px -12px 30px, rgba(72, 223, 13, 0.596) 0px 12px 13px;
     }
 
-
-
 }
 @media(min-width:769px){
     header{
@@ -152,13 +150,13 @@ header .nav .menudespleglable ul li:last-of-type{
     }
     header .nav nav{
         display: flex;
-        width: 24%;
+        width: 20%; /* otra opcion 35% */
         height: 15%;
         justify-content: center;
         background-color: white;
-        border-radius: 7px;
+        border-radius: 5px;
         margin-top: 5px;
-        margin-right: 2px;
+        margin-right: 1px;
         margin-bottom: 30px;
     }
     header .nav .nav2{
@@ -179,11 +177,12 @@ header .nav .menudespleglable ul li:last-of-type{
         border-right: 1px solid black;
         padding-right: 10px;
         font-weight: 900;
-        
+        color: black;
     }
     nav ul.user li a.regi1{
         font-weight: 900;
         margin-left: 10px;
+        color: black;
     }
     header form {
         width: 65%;

@@ -11,46 +11,24 @@
 
     <main class="carritoDeProducto">
 
-        <section>
-            <article>
-               <div class="article1">
-                    <img src="/images/productos/espejoazul.png" alt="imagen de producto">
-                    <p class="producto"> espejo grande</p>
-               </div>
-                <div class="article2">
-                        <i class="fas fa-trash"></i>
-                        <p class="precio">  $5.500</p>
+        <section>               
+               <article>
+                    <div class="article1">
+                         <img src="/images/productos/<%= producto.imagen %>" alt="imagen de producto">
+                         <p class="producto"> <%= producto.descripcion %> </p>
                     </div>
-            </article>    
-            <article>
-                <div class="article1">
-                     <img src="/images/productos/espejoazul.png" alt="imagen de producto">
-                     <p class="producto"> espejo grande</p>
-                </div>
-                 <div class="article2">
+                    <div class="article2">
                          <i class="fas fa-trash"></i>
-                         <p class="precio">  $5.500</p>
-                     </div>
-             </article>    
-             <article>
-                <div class="article1">
-                     <img src="/images/productos/espejoazul.png" alt="imagen de producto">
-                     <p class="producto"> espejo grande</p>
-                </div>
-                 <div class="article2">
-                         <i class="fas fa-trash"></i>
-                         <p class="precio">  $5.500</p>
-                     </div>
-             </article> 
-
-             <button><p class="resultadofinal">TOTAL A PAGAR: $5.500</p></button>
+                         <p class="precio"> <%= producto.precio%> </p>
+                    </div>
+               </article>                             
+             <button><p class="resultadofinal">TOTAL A PAGAR: <%= producto.precio%></p></button>
         </section>
+</main>
 
-    </main>
+     <!-- FOOTER -->
+      <%- include('./partials/footer') %>
 
- <!-- FOOTER -->
- <%- include('./partials/footer') %>
-
-</body>
+     </body>
 
 </html>
