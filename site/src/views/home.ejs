@@ -26,122 +26,29 @@
             </div>
         </div>
         <section>
-            <article>
-                <div class="imagen">
-                    <img src="../images/productos/espejoazul.png" alt="">
-                </div>
-                <div class="art2">
-                    <p class="descripcion">
-                        espejo azul
-                    </p>
-                    <p class="precio">
-                        $5.500
-                    </p>
-                    <div class="icons2">
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
+
+            <% productos.map(producto => { %>
+                <article>
+                    <div class="imagen">
+                        <img src="../images/productos/<%= producto.imagen %>" alt="">
                     </div>
-                </div>
-
-            </article>
-
-            <article>
-                <div class="imagen">
-                    <img src="../images/productos/portaVelag.png" alt="">
-                </div>
-                <div class="art2">
-                    <p class="descripcion">
-                        soporte de vela
-                    </p>
-                    <p class="precio">
-                        $1.600
-                    </p>
-                    <div class="icons2">
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
+                    <div class="art2">
+                        <p class="descripcion">
+                            <%= producto.Nombre %>
+                        </p>
+                        <p class="precio">
+                            <%= producto.precio %>
+                        </p>
+                        <div class="icons2">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
                     </div>
-                </div>
+    
+                </article>
+        
+                <% }) %> 
 
-            </article>
-
-            <article class="tablet">
-                <div class="imagen">
-                    <img src="../images/productos/lampara.png" alt="">
-                </div>
-                <div class="art2">
-                    <p class="descripcion">
-                        lampara de mesa
-                    </p>
-                    <p class="precio">
-                        $7.800
-                    </p>
-                    <div class="icons2">
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-
-            </article>
-
-            <article class="tablet">
-                <div class="imagen">
-                    <img src="../images/productos/soporte.png" alt="">
-                </div>
-                <div class="art2">
-                    <p class="descripcion">
-                        soporte de metal
-                    </p>
-                    <p class="precio">
-                        $3.400
-                    </p>
-                    <div class="icons2">
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-
-            </article>
-
-            <article class="laptop">
-                <div class="imagen">
-                    <img src="../images/productos/lamparaPie.png" alt="">
-                </div>
-                <div class="art2">
-                    <p class="descripcion">
-                        lampara de pie
-                    </p>
-                    <p class="precio">
-                        $10.200
-                    </p>
-                    <div class="icons2">
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-
-            </article>
-
-            <article class="laptop">
-                <div class="imagen">
-                    <img src="../images/productos/portaVasos.png" alt="">
-                </div>
-                <div class="art2">
-                    <p class="descripcion">
-                        porta vasos
-                    </p>
-                    <p class="precio">
-                        $1000
-                    </p>
-                    <div class="icons2">
-                        <i class="fas fa-heart"></i>
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                </div>
-
-            </article>
-
-            
-            
 
         </section>
 
