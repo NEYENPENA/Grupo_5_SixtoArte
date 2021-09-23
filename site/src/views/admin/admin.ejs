@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+
+<%- include('../partials/head') %> 
+
+<body class="admin">
+   <!--  HEADER -->
+
+   <%- include('../partials/header') %> 
+
+   <main>
+    <h2>ADMIN</h2>
+    <a href="/carga"><h3>agregar nuevo producto</h3></a>
+    
+    <section>
+    <div class="atributos">
+        <div class="id">ID</div>
+        <div class="name">NOMBRE</div>
+        <div class="precio">PRECIO</div>
+        <div class="ver"><i class="far fa-eye"></i></div>
+        <div class="ver2">VER</div>
+        <div class="edit"><i class="far fa-edit"></i></div>
+        <div class="edit2">EDITAR</div>
+        <div class="delet"><i class="far fa-trash-alt"></i></div>
+        <div class="delet2">BORRAR</div>
+    </div>
+    
+    <% productos.map(producto => { %> 
+    <div class="atributos">
+        <div class="id"> <%= producto.id  %> </div>
+        <div class="name"> <%= producto.Nombre  %> </div>
+        <div class="precio"> <%= producto.precio  %> </div>
+        <div class="ver3"><i class="far fa-eye"></i></div>
+        <div class="edit3"><a href=""><i class="far fa-edit"></i></a></div>
+        <div class="delet3"><i class="far fa-trash-alt"></i></div>
+    </div>
+        <% }) %>  
+    
+    </section>
+    <a href="/carga"><h3>agregar nuevo producto</h3></a>
+   </main>
+
+  
+</body>
+</html>
