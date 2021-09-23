@@ -4,41 +4,53 @@
         "Nombre": "espejo azul",
         "imagen": "espejoazul.png",
         "precio": "$5.500",
-        "descripcion": "Espejo rectangular. Bordes mosaiqueados con azulejos y venecitas 45cm x 24cm"
+        "descripcion": "Espejo rectangular. Bordes mosaiqueados con azulejos y venecitas 45cm x 24cm",
+        "categoria": "Espejos",
+        "relacionado": "Espejos con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
         "id": 1,
         "Nombre":"soporte de vela",
         "imagen":"portaVelag.png",
         "precio":"$1.600",
-        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet tellus a iaculis pretium."
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet tellus a iaculis pretium.",
+        "categoria": "Soportes",
+        "relacionado": "Soportes con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
         "id": 2,
         "Nombre":"lampara de mesa",
         "imagen":"lampara.png",
         "precio":"$7.800",
-        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum lorem sit amet vestibulum ultrices."
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum lorem sit amet vestibulum ultrices.",
+        "categoria": "Lamparas",
+        "relacionado": "Lamparas con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
         "id": 3,
         "Nombre":"lampara de pie",
         "imagen":"lamparaPie.png",
         "precio":"$10.200",
-        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "categoria": "Lamparas",
+        "relacionado": "Lamparas con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
         "id": 4,
         "Nombre":"soporte de metal",
         "imagen":"soporte.png",
         "precio":"$3.400",
-        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "categoria": "Soportes",
+        "relacionado": "Soportes con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
         "id": 5,
         "Nombre":"porta vasos",
         "imagen":"portaVasos.png",
         "precio":"$1000",
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue."
+        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
+        "categoria": "otro",
+        "relacionado": "Porta vasos con diseños a pedido. ¡Colores con la gama que elijas!"
     }
 ]
