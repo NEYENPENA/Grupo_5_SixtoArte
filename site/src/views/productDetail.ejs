@@ -6,22 +6,22 @@
 <body>
      <!-- HEADER -->
      <%- include('./partials/header') %>
-
     <main>
         <div class="color"></div>
-            <section class="principio">                          
-                    <article class="producto">
-                        <img src="../images/productos/espejoazul.png" alt="">                        
-                        <div class="fotos">
-                            <span>1/1</span>
-                         </div>                        
-                        <i class="fas fa-search-plus"></i>  
-                        </article>
-                    <article class="cont-right">
-                        <div class="descripcion">                        
-                            <h4>Espejo rectangular. Bordes mosaiqueados con azulejos y venecitas 45cm x 24cm</h4>                        
-                            <p>$ 1.000</p>
-                        </div>
+            <section class="principio">
+                            
+                            <article class="producto">
+                                <img src="/images/productos/<%= producto.imagen %>" alt="">
+                                <div class="fotos">
+                                    <span>1/1</span>
+                                 </div> 
+                                 <i class="fas fa-search-plus"></i>
+                            </article>
+                            <article class="cont-right">
+                                <div class="descripcion">
+                                    <h4> <%= producto.descripcion %> </h4>
+                                    <p> <%= producto.precio  %> </p>
+                                </div>                                                
                         <div class="comprar">                
                             <form action="">
                                 
@@ -29,8 +29,7 @@
                                     <label for="cantidad">Cantidad</label>
                                     
                                     <input type="number" id="cantidad" value="1">
-                                </div>
-                                
+                                </div>                                
                                 <div class="agregar">
                                     <i class="fas fa-shopping-cart"></i>
                                     <input type="submit" value="Agregar al carrito">
@@ -42,20 +41,31 @@
                                         <i class="fas fa-heart"></i>
                                         <input type="submit" value="Agregar a favoritos">                                       
                                 </form>
-                            </div>
-                        
-                    </article>
+                            </div>                    
+                    </article>                    
                     <article class="pedidos">
                         <div >
-                            <h3>Espejos con diseños a pedido. ¡Colores con la gama que elijas!</h3>
-                        <div/>
-                    </article>
-            </section>
-            
-    </main>
-    
- <!-- FOOTER -->
- <%- include('./partials/footer') %>
+                            <% if(producto.categoria === "Espejos") { %>                                 
+                                <h3><%=producto.relacionado %></h3>
 
-</body>
+                                <% }else if(producto.categoria === "Soportes") { %> 
+                                    <h3><%=producto.relacionado %></h3>
+
+                                <% }else if(producto.categoria === "portaVasos") { %>    
+                                    <h3><%=producto.relacionado %></h3>
+
+                                <% }else if(producto.categoria === "Lamparas") { %>
+                                    <h3><%=producto.relacionado %></h3>
+
+                                <% }else { %>                                                                
+                                    <h3>Diseños personalizados para vos, ¡no dudes en consultarnos!</h3>
+                                    <% } %>                                                                                           
+                            </div>
+                    </article>
+                    
+            </section>            
+        </main>    
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+    </body>
 </html>

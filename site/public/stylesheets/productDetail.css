@@ -156,11 +156,13 @@ main .principio .pedidos{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto 124px;
-    /* border-top: 1px solid rgba(67, 67, 67, 0.8); */
+    margin: 0 auto 12px;
     border-top: 2px solid var(--azul);
     border-bottom: 2px solid var(--azul);
     background-color: #fff;
+}
+main .principio .pedidos:last-child{
+    margin: 0 auto 112px;
 }
 main .principio .pedidos div{
     width: 100%;
@@ -216,7 +218,7 @@ footer{
         justify-content: space-around;
         align-items: flex-start; 
         flex-direction: row;
-        margin-bottom: 174px;
+        /* margin-bottom: 174px; */
     }
     main .principio .producto{
         width: 30%;
@@ -254,17 +256,17 @@ footer{
     }
     main .principio .pedidos{
         width: 100%;
-        margin: 0 auto 174px;
+        ;
     }
-
+    main .principio .pedidos:last-child {
+        margin: 0 auto 174px
+    }
 
     /* animaciones */
     main .favoritos form i:hover{    
         animation: latir 1.5s normal linear infinite;
     }
 }
-
-
 
 /* Modificar tamaño
 main .principio .producto:hover{
