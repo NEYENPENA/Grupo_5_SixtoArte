@@ -11,15 +11,13 @@
     background-color:white
   }
   
-  
-  
   main.register .caja{
     display: flex;
     flex-direction: column;
     width: 75%;
     align-items: center;
     background-color: var(--azulOscuro);
-    margin-top:120px ;
+    margin-top:100px ;
     max-width: 475px;
   }
   .register h1{
@@ -84,5 +82,8 @@
     .register form input{
       font-size: 22px;
       margin-bottom: 30px;
+    }
+    main.register .caja{
+     margin-top:150px ;
     }
    }
