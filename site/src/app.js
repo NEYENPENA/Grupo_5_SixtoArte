@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use('/', main);
 app.use('/', product)
-app.use('/', user);
+app.use('/user', user);
 app.use('/', admin)
 
 // catch 404 and forward to error handler
