@@ -79,4 +79,18 @@
         -webkit-transform:scale(0);
         transform: scale(0);
     }
+    
+}
+@keyframes desplegar {
+    0%{
+        transform: translate(100%);
+    
+
+    }
+    100%{
+       transform: translate(0);
+    
+
+    }
+
 }

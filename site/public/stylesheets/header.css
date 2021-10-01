@@ -58,13 +58,13 @@ header .icons{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    position: relative;
 }
-header .icons a i{
+header .icons a i, .fa-bars{
     font-size: 20px;
     color: var(--grafito);
     filter:brightness(150%);
-    
+    font-weight: 900;
 }
 header .nav .nav2 .icons .heart, header .nav .nav2 .icons .user{
     display: none;
@@ -82,7 +82,7 @@ right: 0;
 top: 75px;
 width: 40vw;
 border-radius: 10px;
-display: none;
+visibility: collapse;
 }
 header .nav .menudespleglable ul li a{
     color: black;
@@ -94,6 +94,23 @@ header .nav .menudespleglable ul li{
 header .nav .menudespleglable ul li:last-of-type{
     border-bottom: none
 }
+
+
+header .nav  .check{
+    transform: scale(1.5);
+    z-index: 3;
+    opacity: 0;
+    position: absolute;
+    right: 7%;
+    top: 38%;
+}
+header .nav .check:checked ~ .menudespleglable{
+    visibility:visible;
+    animation: desplegar 1s;
+}
+
+
+
 
  @media(min-width:426px){
 
@@ -110,7 +127,7 @@ header .nav .menudespleglable ul li:last-of-type{
         height: 35px;
         
     }
-    header .icons a i{
+    header .icons a i, header .icons  i{
         font-size: 30px;
         
     }
@@ -118,11 +135,13 @@ header .nav .menudespleglable ul li:last-of-type{
         justify-content: space-around;
         
     }
-
-    /* ----------------animaciones------------------ */
-    header input:focus{
-        box-shadow:  rgba(47, 216, 13, 0.589) 0px -12px 30px, rgba(72, 223, 13, 0.596) 0px 12px 13px;
+    header .nav  .check{
+        transform: scale(2);
+        position: absolute;
+        right: 9%;
     }
+
+    
 
 }
 @media(min-width:769px){
@@ -202,6 +221,7 @@ header .nav .menudespleglable ul li:last-of-type{
         right: 0;
         max-width: 300px;
     }
+    
     header .nav .nav2 .icons .heart, header .nav .nav2 .icons .user{
         display: block;
         position: static;
@@ -214,6 +234,12 @@ header .nav .menudespleglable ul li:last-of-type{
         
         justify-content: flex-end;
     }
+    header .nav  .check, .fa-bars{
+        display: none;
+    }
+    header .nav .menudespleglable{
+        display: none;
+        }
 
 
 /* ----------------animaciones------------------ */
