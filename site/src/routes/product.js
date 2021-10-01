@@ -4,7 +4,8 @@ const router = express.Router();
 const {carrito, detalle} =require('../controllers/productosController')
 
 /* router.get('/productDetail', detalles); */
-router.get('/productCart/:id', carrito);
+
+router.get('/productCart', carrito);
 
 router.get('/detalle/:id', detalle);
 
