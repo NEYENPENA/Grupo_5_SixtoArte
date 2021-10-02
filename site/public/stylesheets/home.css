@@ -92,8 +92,9 @@
     padding: 5px;
 }
 .home section article .art2{
-    height: 33%;
-    max-height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 .home section article div {
     display: flex;
@@ -235,10 +236,7 @@
         order:2;
         width: 50%;
         }
-    .home section article .art2{
-            height: 40%;
-            max-height: 92px;
-    }
+   
     .home section article.laptop{
         display: flex;
         
