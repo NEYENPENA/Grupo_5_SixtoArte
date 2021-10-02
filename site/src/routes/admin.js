@@ -1,11 +1,16 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
-const { admin, carga, edit } = require('../controllers/adminController')
+const { admin, carga, edit, guardar, guardarEdit } = require('../controllers/adminController')
 
-
+//listar
 router.get('/', admin)
+
+//crear
 router.get('/carga', carga)
-router.get('/edit', edit)
+router.post('/', guardar)
+//editar
+router.get('/edit/:id', edit)
+router.put('/', guardarEdit)
 
 module.exports = router
