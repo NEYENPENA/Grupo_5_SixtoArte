@@ -7,12 +7,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = {
     //listar
     admin: (req,res) => {
-        res.render('admin/admin', {productos})
+        res.render('admin/admin', {products})
     },
 
     //crear
     carga: (req,res) => {
-        res.render('admin/carga', {productos})
+        res.render('admin/carga', {products})
     },
     guardar: (req,res) => {
         let max = 0
@@ -61,4 +61,10 @@ module.exports = {
 		}
     },
 
+    //eliminar
+    eliminar: (req,res) => {
+        products = products.filter(product => product.id !== +req.params.id)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
+        res.redirect('/')
+    }
 }
