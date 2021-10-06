@@ -130,6 +130,13 @@
     background-color: white;
 }
 
+.carritoDeProducto section button.pagar {
+    position: static;
+    background: none;
+    border: var(--azulOscuro) 4px solid;
+    padding: 2px;
+}
+
 /* -----------------------------------------------------------------------------------------------*/
 
 /* MEDIDAS DE TABLET */
