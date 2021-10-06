@@ -23,17 +23,19 @@ module.exports = {
 			}
 		});
         
-        let {nombre, precio, descripcion, imagen} = req.body
+        let {nombre, precio, descripcion} = req.body
         const product ={}
         product.id =max +1
-		product.name = nombre
-		product.price = +precio
-		product.description = descripcion
-		product.image = req.file ? req.file.imagen : 'default-image.png'
+		product.Nombre = nombre
+		product.precio = +precio
+		product.descripcion = descripcion
+        product.categoria = 'otro'
+         product.relacionado = 'Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!'
+		product.imagen = req.file ? req.file.filename : 'default-image.png'
 
         products.push(product)
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
-		res.redirect('/products/detail/'+ product.id)
+		res.redirect('/product/detalle/'+ product.id)
 
     },
 
@@ -42,22 +44,23 @@ module.exports = {
         const {id} =req.params
         let productEdit = products.find(e => e.id === +id)
         res.render('admin/edit', {productEdit})
+        
     },
 
     guardarEdit:(req,res) => {
         const productUpdate = products.find(p => p.id === +req.params.id)
-        let {nombre, precio, descripcion, imagen} = req.body
+        let {nombre, precio, descripcion} = req.body
         if(productUpdate){
 			productUpdate.nombre = nombre
 			productUpdate.precio = +precio
 			productUpdate.descripcion = descripcion
-            productUpdate.imagen = imagen
+            productUpdate.imagen = req.file ? req.file.filename : null
 
 			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
-		    res.redirect('/products/detail/'+req.params.id)
+		    res.redirect('/product/detalle/'+req.params.id)
 
 		}else{
-			res.redirect('/products/detail/'+req.params.id)
+			res.redirect('/product/detalle/'+req.params.id)
 		}
     },
 
