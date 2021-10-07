@@ -7,12 +7,12 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = {
     //listar
     admin: (req,res) => {
-        res.render('admin/admin', {productos})
+        res.render('admin/admin', {products})
     },
 
     //crear
     carga: (req,res) => {
-        res.render('admin/carga', {productos})
+        res.render('admin/carga', {products})
     },
     guardar: (req,res) => {
         let max = 0
@@ -59,6 +59,10 @@ module.exports = {
 		}else{
 			res.redirect('/products/detail/'+req.params.id)
 		}
-    },
-
+    },    
+    detalleAdmin: (req,res) => {        
+        const {id} = req.params;
+        const producto = products.find(element => element.id === +id);
+        res.render('admin/detalle', {producto}); 
+    }
 }

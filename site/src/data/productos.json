@@ -10,7 +10,7 @@
     },
     {
         "id": 1,
-        "Nombre":"soporte de vela",
+        "Nombre":"porta vela",
         "imagen":"portaVelag.png",
         "precio":1600,
         "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet tellus a iaculis pretium.",
@@ -46,21 +46,21 @@
     },
     {
         "id": 5,
-        "Nombre":"porta vasos",
+        "Nombre":"posa vasos",
         "imagen":"portaVasos.png",
         "precio":1000,
         "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
-        "relacionado": "Porta vasos con diseños a pedido. ¡Colores con la gama que elijas!"
+        "categoria": "pasa vasos",
+        "relacionado": "Posa vasos con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
         "id": 6,
         "Nombre":"posa pava",
         "imagen":"posapava-hoja.png",
         "precio":400,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
-        "relacionado": "Posa pava con diseños a pedido. ¡Colores con la gama que elijas!"
+        "descripcion":"Posapavas en fibrofácil mosaiqueados!",
+        "categoria": "posa pava",
+        "relacionado": "Posa pavas con el diseño que a vos te guste. ¡Colores con la gama que elijas!"
     },
     {
         "id": 7,
@@ -73,11 +73,11 @@
     },
     {
         "id": 8,
-        "Nombre":"espejo",
+        "Nombre":"espejo marron",
         "imagen":"espejo-marron.png",
         "precio":5500,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
+        "descripcion":"Espejo rectangular. Bordes mosaiqueados con azulejos y venecitas 45cm x 24cm",
+        "categoria": "Espejos",
         "relacionado": "Espejos con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
@@ -85,8 +85,8 @@
         "Nombre":"espejo sol",
         "imagen":"espejo-sol.png",
         "precio":2100,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
+        "descripcion":"Espejo mosaiqueado sobre soporte de yeso",
+        "categoria": "espejo sol",
         "relacionado": "Espejos con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
@@ -100,20 +100,20 @@
     },
     {
         "id": 11,
-        "Nombre":"madre",
+        "Nombre":"pasa pava",
         "imagen":"madre.png",
         "precio":400,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
-        "relacionado": "Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!"
+        "descripcion":"Posa pavas en fibrofácil mosaiqueados! 20 x 20 cm",
+        "categoria": "posa pava",
+        "relacionado": "Posa pavas con el diseño que a vos te guste. ¡Colores con la gama que elijas!"
     },
     {
         "id": 12,
-        "Nombre":"nose",
+        "Nombre":"Wiphalas en red",
         "imagen":"nose.png",
         "precio":1000,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
+        "descripcion":"Wiphalas en red. Listas para cementar ....dale color y sentido a tus paredes!!!",
+        "categoria": "Wiphalas en red",
         "relacionado": "Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
@@ -136,11 +136,11 @@
     },
     {
         "id": 15,
-        "Nombre":"posapava",
+        "Nombre":"posa pava",
         "imagen":"posapava2.png",
         "precio":1000,
         "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
+        "categoria": "posa pava",
         "relacionado": "Posa pavas con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
@@ -163,12 +163,12 @@
     },
     {
         "id": 18,
-        "Nombre":"numero para casas",
+        "Nombre":"numeracion para casas",
         "imagen":"numero-casa.png",
         "precio":300,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
-        "relacionado": "Numeros con diseños a pedido. ¡Colores con la gama que elijas!"
+        "descripcion":"Hogar dulce hogar...numeración para tu casa!",
+        "categoria": "numeracion para casas",
+        "relacionado": "Numeracion para tu casa a pedido. ¡Elejí tu diseño!"
     },
     {
         "id": 19,
@@ -181,20 +181,20 @@
     },
     {
         "id": 20,
-        "Nombre":"numero para casas",
+        "Nombre":"numeracion para casas",
         "imagen":"numero-casa2.png",
         "precio":300,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
-        "relacionado": "Numeros con diseños a pedido. ¡Colores con la gama que elijas!"
+        "descripcion":"Hogar dulce hogar...numeración para tu casa!",
+        "categoria": "numeracion para casas",
+        "relacionado": "Numeracion para tu casa a pedido. ¡Elejí tu diseño!"
     },
     {
         "id": 21,
         "Nombre":"plancha decoracion",
         "imagen":"plancha.png",
         "precio":600,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
+        "descripcion":"Plancha de fierro. Restaurando.... arte sustentable!",
+        "categoria": "plancha decoracion",
         "relacionado": "Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
@@ -244,12 +244,12 @@
     },
     {
         "id": 27,
-        "Nombre":"tambor",
+        "Nombre":"cuñetes de carton",
         "imagen":"tambor.png",
         "precio":1000,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
-        "categoria": "otro",
-        "relacionado": "Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!"
+        "descripcion":"Cuñetes de cartón, con tapa y base de madera, cierre hermético. Mosaiqueados con venecitas y azulejos, forrado en arpillera.",
+        "categoria": "cuñetes de carton",
+        "relacionado": "Úsalo como mesita de apoyo, organizador o simplemente en un rincón. Diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
         "id": 28,
@@ -289,19 +289,28 @@
     },
     {
         "id": 32,
-        "Nombre":"cuadro hoja",
+        "Nombre":"posa pava",
         "imagen":"decoracion-hoja.png",
         "precio":500,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
+        "descripcion":"Posapavas en fibrofácil mosaiqueados!",
+        "categoria": "posa pava",
+        "relacionado": "Posa pavas con el diseño que a vos te guste. ¡Colores con la gama que elijas!"
+    },
+    {
+        "id": 33,
+        "Nombre":"porta rollos",
+        "imagen":"servilletero.png",
+        "precio":800,
+        "descripcion":"Portarollos para pared, en tonos verde esperanza",
         "categoria": "otro",
         "relacionado": "Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!"
     },
     {
-        "id": 33,
-        "Nombre":"servilletero",
-        "imagen":"servilletero.png",
+        "id": 34,
+        "Nombre":"porta vela",
+        "imagen":"Portavela1.jpeg",
         "precio":800,
-        "descripcion":"Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
+        "descripcion":"Porta velas",
         "categoria": "otro",
         "relacionado": "Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!"
     }
