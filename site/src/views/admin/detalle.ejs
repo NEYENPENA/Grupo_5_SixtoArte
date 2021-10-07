@@ -2,7 +2,7 @@
 <html lang="es">
 <!-- HEAD -->
 <%- include('../partials/head') %> 
-<body>
+<body class="detalleAdm">
     <!-- HEADER -->
     <%- include('../partials/header') %> 
     <main>
@@ -21,25 +21,21 @@
                                     <h4> <%= producto.descripcion %> </h4>
                                     <p> <%= producto.precio  %> </p>
                                 </div>                                                
-                        <div class="comprar">                
-                            <form action="">
+                        <div class="comprar">               
                                 
                                 <div class="cantidadd">
                                     <label for="cantidad">Cantidad</label>
                                     
                                     <input type="number" id="cantidad" value="1">
-                                </div>                                
-                                <div class="agregar">
-                                    <i class="fas fa-shopping-cart"></i>
-                                    <input type="submit" value="Agregar al carrito">
                                 </div>
-                            </form>
+
+                                <div class="editar">
+                                    <a href="/admin/edit/<%= producto.id %>">Editar Producto<i class="far fa-edit"></i></a>                                                                         
+                                </div>                                                            
                         </div>
-                        <div class="favoritos">
-                                <form  action="">                    
-                                        <i class="fas fa-heart"></i>
-                                        <input type="submit" value="Agregar a favoritos">                                       
-                                </form>
+                        <div class="trash">                                             
+                                        <i class="far fa-trash-alt"></i>
+                                        <input type="submit" value="Eliminar Producto">                                       
                             </div>                    
                     </article>                    
                     <article class="pedidos">
