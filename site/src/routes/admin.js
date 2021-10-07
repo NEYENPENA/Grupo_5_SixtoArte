@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
+const { admin, carga, edit, guardar, guardarEdit, detalleAdmin } = require('../controllers/adminController')
 const multer = require('multer');
 
 
@@ -13,10 +14,7 @@ const storage = multer.diskStorage({
     }
   })
   
- const upload = multer({ storage: storage })
-
-
-  const { admin, carga, edit, guardar, guardarEdit, eliminar } = require('../controllers/adminController')
+ const upload = multer({ storage: storage })  
 
 //listar
 router.get('/', admin)
@@ -26,6 +24,9 @@ router.get('/carga', carga)
 router.post('/', upload.single('image'), guardar) 
 //editar
 router.get('/edit/:id', edit)
+router.put('/', guardarEdit)
+// detalle
+router.get('/detalle/:id', detalleAdmin)
 router.put('/edit/:id', guardarEdit)
 
 //eliminar

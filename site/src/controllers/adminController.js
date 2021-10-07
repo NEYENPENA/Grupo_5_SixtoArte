@@ -62,6 +62,11 @@ module.exports = {
 		}else{
 			res.redirect('/product/detalle/'+req.params.id)
 		}
+    },    
+    detalleAdmin: (req,res) => {        
+        const {id} = req.params;
+        const producto = products.find(element => element.id === +id);
+        res.render('admin/detalle', {producto}); 
     },
 
     //eliminar
