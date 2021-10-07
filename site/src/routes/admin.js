@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
-const { admin, carga, edit, guardar, guardarEdit, detalleAdmin } = require('../controllers/adminController')
+const { admin, carga, edit, guardar, guardarEdit, detalleAdmin, eliminar } = require('../controllers/adminController')
 const multer = require('multer');
 
 

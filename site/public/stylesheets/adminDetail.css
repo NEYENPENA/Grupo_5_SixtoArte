@@ -1,19 +1,19 @@
-main{
+.detalleAdm main{
     background-color: #ededed;
 }
-main .principio{
+.detalleAdm main .principio{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
     background-color: #fff;
 }
-main .color{
+.detalleAdm main .color{
     background-color: #ededed;
     width: 100%;
     height: 85px;
 }
-main .principio .producto{
+.detalleAdm main .principio .producto{
     display: flex;
     flex-wrap: wrap;
     border: 2px solid var(--azul);
@@ -21,7 +21,7 @@ main .principio .producto{
     border-radius: 1%;
     position: relative;    
 }
-main .principio .producto .fotos{
+.detalleAdm main .principio .producto .fotos{
     background-color: #f5f5f5;
     border-radius: 12px;    
     font-size: 12px;    
@@ -31,14 +31,14 @@ main .principio .producto .fotos{
     top: 2%;
     width: 40px;
 }
-main .principio .producto .fotos span{
+.detalleAdm main .principio .producto .fotos span{
     display: flex;
     justify-content: center;
     padding: 5px 0;
     font-weight: 600;
 }
 
-main .principio .producto i{
+.detalleAdm main .principio .producto i{
     position: absolute;
     left: 88%;
     top: 2%;
@@ -47,12 +47,12 @@ main .principio .producto i{
     border-radius: 35%;
     background-color: #f5f5f5;
 }
-main .principio .cont-right{
+.detalleAdm main .principio .cont-right{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
 }
-main .principio .cont-right .descripcion{
+.detalleAdm main .principio .cont-right .descripcion{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -61,11 +61,11 @@ main .principio .cont-right .descripcion{
     justify-content: center;
     
 }
-main .principio .cont-right .descripcion h4{
+.detalleAdm main .principio .cont-right .descripcion h4{
     text-align: center; 
     color: var(--azul);
 }
-main .principio .cont-right .descripcion p{
+.detalleAdm main .principio .cont-right .descripcion p{
     font-size: 26px;    
     margin-bottom: 5px;
     border-radius: 10px;
@@ -73,21 +73,15 @@ main .principio .cont-right .descripcion p{
     width: 100%;
     text-align: center;
 }
-main .principio .cont-right .comprar {
+.detalleAdm main .principio .cont-right .comprar {
     width: 90%;
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    flex-wrap: wrap;    
+    margin-top: 3%;
     background-color: #fff;
-}
-main .principio .cont-right .comprar form{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    margin: 3% 0;
 }
-main .principio .cont-right .comprar form .cantidadd{
+.detalleAdm main .principio .cont-right .comprar .cantidadd{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -95,50 +89,47 @@ main .principio .cont-right .comprar form .cantidadd{
     margin-bottom: 3%;
     
 }
-main .principio .cont-right .comprar form .cantidadd input{
+.detalleAdm main .principio .cont-right .comprar .cantidadd input{
     width: 12%;
     border: 1px solid rgba(67, 67, 67, 0.8);
     border-radius: 15%;
     text-align: center;
     background-color: #f5f5f5;
 } 
-main .principio .cont-right .comprar form .agregar{
+.detalleAdm main .principio .cont-right .comprar .editar{
     width: 85%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
 } 
-main .principio .cont-right .comprar form .agregar i{
+.detalleAdm main .principio .cont-right .comprar .editar i{
     position: absolute;
     right: 85%; 
     top: 32%;
     
 }
-main .principio .cont-right .comprar form .agregar input{
+.detalleAdm main .principio .cont-right .comprar .editar a{
     width: 100%;
-    padding: 4.7%;
+    padding: 4%;
     background-color: var(--cian);
     font-size: 16px;
     border: none;
     height: 100%;
-} 
-main .principio .cont-right .favoritos {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.detalleAdm main .principio .cont-right .trash {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    background-color: #fff;        
+    margin: 3% auto;
+    background-color: #fff;
+    justify-content: center;    
+    position: relative;        
 }
-main .principio .cont-right .favoritos form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin: 3% 0;
-    position: relative;
-}
-main .principio .cont-right .favoritos input{
+.detalleAdm main .principio .cont-right .trash input{
     width: 85%;
     padding: 4%;
     background-color: var(--cian);
@@ -146,13 +137,12 @@ main .principio .cont-right .favoritos input{
     border: none;
     height: 100%;
 }
-main .principio .cont-right .favoritos form i{
+.detalleAdm main .principio .cont-right .trash i{
     position: absolute;
     right: 80%;
     top: 34%; 
-    color: #db7093
 }
-main .principio .pedidos{
+.detalleAdm main .principio .pedidos{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -161,14 +151,14 @@ main .principio .pedidos{
     border-bottom: 2px solid var(--azul);
     background-color: #fff;
 }
-main .principio .pedidos:last-child{
+.detalleAdm main .principio .pedidos:last-child{
     margin: 0 auto 112px;
 }
-main .principio .pedidos div{
+.detalleAdm main .principio .pedidos div{
     width: 100%;
        
 }
-main .principio .pedidos div h3{
+.detalleAdm main .principio .pedidos div h3{
     text-align: center;
     color: var(--cian);
     margin: 10px 0;
@@ -179,91 +169,86 @@ footer{
     margin-top: 20px;    
     
 }
-@media(min-width:426px){
-    main .principio{
+@media(min-width:426px){   
+    .detalleAdm main .principio{
         width: 80%;
     }
-    main .comprar {
+    .detalleAdm main .comprar {
         width: 80%;
     }
-    main .favoritos {
+    .detalleAdm main .trash {
         width: 80%;
     }
-    main .pedidos {
+    .detalleAdm main .pedidos {
         width: 80%;
     }
-    main .comprar form .agregar i{
+    .detalleAdm main .comprar .editar i{
         right: 90%; 
         top: 32%;
     }
-    main .favoritos form i{
+    .detalleAdm main .trash i{
         right: 84%;
         top: 34%; 
     }
-    main .pedidos div h3{        
+    .detalleAdm main .pedidos div h3{        
         text-shadow: 1px 1px darkcyan;
     }
 }
 
 @media(min-width:769px){
     /* Margen superior */
-    main .color{
+    .detalleAdm main .color{
         background-color: #ededed;
         width: 100%;
         height: 135px;
     }
 
-    main .principio{
+    .detalleAdm main .principio{
         width: 95%;
         justify-content: space-around;
         align-items: flex-start; 
         flex-direction: row;
         /* margin-bottom: 174px; */
     }
-    main .principio .producto{
+    .detalleAdm main .principio .producto{
         width: 30%;
         border: none;
     }
-    main .principio .cont-right{
+    .detalleAdm main .principio .cont-right{
         width: 60%;
         margin: 0;
         flex-direction: row;
         
     }
-    main .principio .cont-right .descripcion{        
+    .detalleAdm main .principio .cont-right .descripcion{        
         margin-top: 5%;
         width: 76.5%;
         padding: 3% 0%;
         
     }
-    main .principio .cont-right .descripcion h4{
+    .detalleAdm main .principio .cont-right .descripcion h4{
         text-align: center; 
         color: rgb(67, 67, 67);
         background-color: var(--cian);
     }
-    main .comprar form .agregar i{
+    .detalleAdm main .comprar .editar i{
         font-size: 22px;
     }
-    main .principio .cont-right .favoritos form i{
+    .detalleAdm main .principio .cont-right .trash i{
         font-size: 22px;
     }
-    main .principio .cont-right .comprar form .cantidadd input{
+    .detalleAdm main .principio .cont-right .comprar .cantidadd input{
         width: 9%;
     }
-    main .comprar{
+    .detalleAdm main .comprar{
         width: 100%;
         margin: 0;
     }
-    main .principio .pedidos{
+    .detalleAdm main .principio .pedidos{
         width: 100%;
         ;
     }
-    main .principio .pedidos:last-child {
+    .detalleAdm main .principio .pedidos:last-child {
         margin: 0 auto 174px
-    }
-
-    /* animaciones */
-    main .favoritos form i:hover{    
-        animation: latir 1.5s normal linear infinite;
     }
 }
