@@ -33,6 +33,5 @@ module.exports = {
 
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 3))
 		res.redirect('/')
-        console.log(req.body)
     }
 }

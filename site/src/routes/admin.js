@@ -30,6 +30,6 @@ router.get('/detalle/:id', detalleAdmin)
 router.put('/edit/:id', guardarEdit)
 
 //eliminar
-router.delete('/delete/:idProduct', eliminar)
+router.delete('/delete/:id', eliminar)
 
 module.exports = router

@@ -314,5 +314,14 @@
       "descripcion": "fanales mosaiqueados en venecitas sobre soporte de vidrio, lo que permite traslucir la luz",
       "categoria": "fanal",
       "relacionado": "Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!"
+   },
+   {
+      "id": 35,
+      "Nombre": "algo",
+      "precio": 45,
+      "descripcion": "asdsad",
+      "categoria": "otro",
+      "relacionado": "Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!",
+      "imagen": "img-1633727403326.jpg"
    }
 ]
