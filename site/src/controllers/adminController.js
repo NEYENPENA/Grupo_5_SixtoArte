@@ -35,7 +35,7 @@ module.exports = {
 
         products.push(product)
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
-		res.redirect('/product/detalle/'+ product.id)
+		res.redirect('/admin/detalle/'+ product.id)
 
     },
 
@@ -71,7 +71,7 @@ module.exports = {
 
     //eliminar
     eliminar: (req,res) => {
-        products = products.filter(product => product.id !== +req.params.id)
+        products = products.filter(p => p.id !== +req.params.id)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
         res.redirect('/')
     }
