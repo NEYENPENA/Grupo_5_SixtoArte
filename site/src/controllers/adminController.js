@@ -63,16 +63,18 @@ module.exports = {
 			res.redirect('/product/detalle/'+req.params.id)
 		}
     },    
-    detalleAdmin: (req,res) => {        
+     detalleAdmin: (req,res) => {        
         const {id} = req.params;
         const producto = products.find(element => element.id === +id);
         res.render('admin/detalle', {producto}); 
-    },
+    }, 
 
     //eliminar
     eliminar: (req,res) => {
-        products = products.filter(p => p.id !== +req.params.id)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
+        products = products.filter(product => product.id !== +req.params.id)
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))                    
         res.redirect('/')
+
+        
     }
 }
