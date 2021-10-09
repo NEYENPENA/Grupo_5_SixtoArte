@@ -33,9 +33,11 @@
                                     <a href="/admin/edit/<%= producto.id %>">Editar Producto<i class="far fa-edit"></i></a>                                                                         
                                 </div>                                                            
                         </div>
-                        <div class="trash">                                             
-                                        <i class="far fa-trash-alt"></i>
-                                        <input type="submit" value="Eliminar Producto">                                       
+                        <div class="trash">     
+                            <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                                <button type="submit" >Eliminar<i class="far fa-trash-alt"></i></button>
+                            </form>                                        
+                                                                              
                             </div>                    
                     </article>                    
                     <article class="pedidos">

@@ -120,23 +120,31 @@
     color: black;
     text-align: center;
 }
-.detalleAdm main .principio .cont-right .trash {
+.detalleAdm main .principio .cont-right .trash {       
     width: 90%;
     display: flex;
     flex-wrap: wrap;
-    margin: 3% auto;
-    background-color: #fff;
-    justify-content: center;    
-    position: relative;        
+    margin: 0 auto;
+    background-color: #fff;    
 }
-.detalleAdm main .principio .cont-right .trash input{
+.detalleAdm main .principio .cont-right .trash form {
+ display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 3% 0;
+    position: relative;
+} 
+.detalleAdm main .principio .cont-right .trash form button{   
     width: 85%;
-    padding: 4%;
+    padding: 3.4%;
     background-color: var(--cian);
     font-size: 16px;
     border: none;
     height: 100%;
+    font-family: var(--letra);
 }
+
 .detalleAdm main .principio .cont-right .trash i{
     position: absolute;
     right: 80%;
