@@ -133,8 +133,10 @@
 .carritoDeProducto section button.pagar {
     position: static;
     background: none;
+    background-color: grey;
     border: var(--azulOscuro) 4px solid;
     padding: 2px;
+    box-shadow: var(--azul) 0px 13px 27px -5px, var(--grafito) 0px 8px 16px -8px;
 }
 
 /* -----------------------------------------------------------------------------------------------*/
