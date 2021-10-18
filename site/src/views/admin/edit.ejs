@@ -15,7 +15,7 @@
     <form class="form" action="/admin/edit/<%= productEdit.id %>?_method=PUT" method="POST">
 
         <label for="nombre">Nombre del Producto</label>
-          <input type="text" name="nombre" value="<%= productEdit.Nombre %>" id="nombre" required>
+          <input type="text" name="nombre" value="<%= productEdit.nombre %>" id="nombre" required>
 
           <label for="precio">Precio del Producto</label>
           <input type="number" name="precio" value="<%= productEdit.precio %>"  id="precio" required>
