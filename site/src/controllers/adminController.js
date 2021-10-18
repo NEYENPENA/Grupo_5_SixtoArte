@@ -7,8 +7,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 module.exports = {
     //listar
     admin: (req,res) => {
-        res.render('admin/admin', {products})
-    },
+        res.render('admin/admin', {products: JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'))})
+    },    
 
     //crear
     carga: (req,res) => {
@@ -26,7 +26,7 @@ module.exports = {
         let {nombre, precio, descripcion} = req.body
         const product ={}
         product.id =max +1
-		product.Nombre = nombre
+		product.nombre = nombre
 		product.precio = +precio
 		product.descripcion = descripcion
         product.categoria = 'otro'
@@ -54,7 +54,7 @@ module.exports = {
 			productUpdate.nombre = nombre
 			productUpdate.precio = +precio
 			productUpdate.descripcion = descripcion
-            productUpdate.imagen = req.file ? req.file.filename : null
+            productUpdate.imagen = req.file ? req.file.filename : 'default icon.jpeg'
 
 			fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
 		    res.redirect('/product/detalle/'+req.params.id)
@@ -70,11 +70,12 @@ module.exports = {
     }, 
 
     //eliminar
-    eliminar: (req,res) => {
-        products = products.filter(product => product.id !== +req.params.id)
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))                    
-        res.redirect('/')
-
-        
-    }
+    eliminar: (req,res) => 
+         {
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let productos = products.filter(product => product.id !== +req.params.id)
+fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, 3))
+res.redirect('/admin')
+}    
+ 
 }
