@@ -7,7 +7,7 @@
    <!-- HEADER -->
    <%- include('./partials/header') %>
   <main class="conteiner">
-   <form action="/" >
+   <form action="/user/register" method="POST" enctype="multipart/form-data">
     <h1 class="titulo">Registrate</h1>
     <div class="form">
         <div class="conteinerB">
@@ -26,11 +26,16 @@
           <div class="conteinerB">
               <label for="correo">Correo Electronico</label>
               <input type="email" name="email" placeholder="insertar correo" id="correo" required class="input">
-          </div>                                                             
+          </div>
+          
+        <div class="conteinerB">
+            <label for="image">Imagen</label>
+            <input type="file" name="image" id="image" class="input">
+        </div> 
             
        <div class="conteinerB">
           <label for="contraseña">Contraseña</label>
-          <input type="password" class="input" id="contraseña">
+          <input type="password" class="input" name="pass" id="contraseña">
        </div>  
       <div class="conteinerB">
           <label for="confirm">Confirmar Contraseña</label>
@@ -43,8 +48,7 @@
       <div class="conteinerB">
         <input type="reset" value="Eliminar Datos" class="btn">
       </div>
-    </div> 
-    
+    </div>   
 </form>
 </main>
 </body>
