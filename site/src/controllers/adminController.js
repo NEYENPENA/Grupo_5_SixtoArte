@@ -31,7 +31,7 @@ module.exports = {
 		product.descripcion = descripcion
         product.categoria = 'otro'
          product.relacionado = 'Decoraciones con diseños a pedido. ¡Colores con la gama que elijas!'
-		product.imagen = req.file ? req.file.filename : 'default-image.png'
+		product.imagen = req.file ? req.file.filename : 'default icon.jpeg'
 
         products.push(product)
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
