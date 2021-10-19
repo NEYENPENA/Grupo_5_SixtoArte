@@ -1,17 +1,16 @@
 [
    {
       "id": 0,
-      "Nombre": "espejo azul",
+      "nombre": "espejo azul",
       "imagen": "espejoazul.png",
       "precio": 5500,
       "descripcion": "Espejo rectangular. Bordes mosaiqueados con azulejos y venecitas 45cm x 24cm",
       "categoria": "Espejos",
-      "relacionado": "Espejos con diseños a pedido. ¡Colores con la gama que elijas!",
-      "nombre": "espejo azul"
+      "relacionado": "Espejos con diseños a pedido. ¡Colores con la gama que elijas!"
    },
    {
       "id": 1,
-      "Nombre": "porta vela",
+      "nombre": "porta vela",
       "imagen": "portaVelag.png",
       "precio": 1600,
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam aliquet tellus a iaculis pretium.",
@@ -20,7 +19,7 @@
    },
    {
       "id": 2,
-      "Nombre": "lampara de mesa",
+      "nombre": "lampara de mesa",
       "imagen": "lampara.png",
       "precio": 7800,
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum lorem sit amet vestibulum ultrices.",
@@ -29,7 +28,7 @@
    },
    {
       "id": 3,
-      "Nombre": "lampara de pie",
+      "nombre": "lampara de pie",
       "imagen": "lamparaPie.png",
       "precio": 10200,
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -38,7 +37,7 @@
    },
    {
       "id": 4,
-      "Nombre": "soporte de metal",
+      "nombre": "soporte de metal",
       "imagen": "soporte.png",
       "precio": 3400,
       "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -47,7 +46,7 @@
    },
    {
       "id": 5,
-      "Nombre": "posa vasos",
+      "nombre": "posa vasos",
       "imagen": "portaVasos.png",
       "precio": 1000,
       "descripcion": "Phasellus est turpis, tempor vitae felis non, tempus lacinia augue.",
@@ -56,7 +55,7 @@
    },
    {
       "id": 6,
-      "Nombre": "posa pava",
+      "nombre": "posa pava",
       "imagen": "posapava-hoja.png",
       "precio": 400,
       "descripcion": "Posapavas en fibrofácil mosaiqueados!",
@@ -65,7 +64,7 @@
    },
    {
       "id": 7,
-      "Nombre": "caja multiuso",
+      "nombre": "caja multiuso",
       "imagen": "caja-roja.png",
       "precio": 650,
       "descripcion": "Caja de fibrofácil con patina a la cera y tapa mosaiqueada en tonos malva. 19.5 x 19.5 x 8 cm de altura.",
@@ -74,7 +73,7 @@
    },
    {
       "id": 8,
-      "Nombre": "espejo marron",
+      "nombre": "espejo marron",
       "imagen": "espejo-marron.png",
       "precio": 5500,
       "descripcion": "Espejo rectangular. Bordes mosaiqueados con azulejos y venecitas 45cm x 24cm",
@@ -83,7 +82,7 @@
    },
    {
       "id": 9,
-      "Nombre": "espejo sol",
+      "nombre": "espejo sol",
       "imagen": "espejo-sol.png",
       "precio": 2100,
       "descripcion": "Espejo mosaiqueado sobre soporte de yeso",
@@ -92,7 +91,7 @@
    },
    {
       "id": 10,
-      "Nombre": "libelula decoración",
+      "nombre": "libelula decoración",
       "imagen": "libelula.png",
       "precio": 900,
       "descripcion": "Libelula mosaiqueada en chapa con pintura epoxi. Apto para exteriores",
@@ -101,7 +100,7 @@
    },
    {
       "id": 11,
-      "Nombre": "posa pava",
+      "nombre": "posa pava",
       "imagen": "madre.png",
       "precio": 400,
       "descripcion": "Posa pavas en fibrofácil mosaiqueados! 20 x 20 cm",
@@ -110,7 +109,7 @@
    },
    {
       "id": 12,
-      "Nombre": "Wiphalas en red",
+      "nombre": "Wiphalas en red",
       "imagen": "nose.png",
       "precio": 1000,
       "descripcion": "Wiphalas en red. Listas para cementar ....dale color y sentido a tus paredes!!!",
@@ -119,7 +118,7 @@
    },
    {
       "id": 13,
-      "Nombre": "posa pava",
+      "nombre": "posa pava",
       "imagen": "nose2.png",
       "precio": 1000,
       "descripcion": "Posa pavas en fibrofácil mosaiqueados con venacitas. 20 cm de diametro",
@@ -128,7 +127,7 @@
    },
    {
       "id": 14,
-      "Nombre": "cuadro circular",
+      "nombre": "cuadro circular",
       "imagen": "nose3.png",
       "precio": 1000,
       "descripcion": "Cuadro circular mosaiqueado sobre venecitas y espejos. 30 cm. de diametro",
@@ -137,7 +136,7 @@
    },
    {
       "id": 15,
-      "Nombre": "posa fuentes",
+      "nombre": "posa fuentes",
       "imagen": "posapava2.png",
       "precio": 1000,
       "descripcion": "Posa fuente mosaiqueado sobre fibro facil. 28 cm. de diametro",
@@ -146,7 +145,7 @@
    },
    {
       "id": 16,
-      "Nombre": "bandeja de pino",
+      "nombre": "bandeja de pino",
       "imagen": "bandeja.png",
       "precio": 700,
       "descripcion": "Bandeja de pino con manijas de hierro. 30 x 20 cm",
@@ -155,7 +154,7 @@
    },
    {
       "id": 17,
-      "Nombre": "caja multiuso",
+      "nombre": "caja multiuso",
       "imagen": "caja-rosa.png",
       "precio": 650,
       "descripcion": "Caja de fibrofácil pintadas con acrílicos y tapa mosaiqueada con diseños de mandalas . 19.5 x 19.5 x 8 cm de altura.",
@@ -164,7 +163,7 @@
    },
    {
       "id": 18,
-      "Nombre": "numeracion para casas",
+      "nombre": "numeracion para casas",
       "imagen": "numero-casa.png",
       "precio": 300,
       "descripcion": "Hogar dulce hogar...numeración para tu casa!",
@@ -173,7 +172,7 @@
    },
    {
       "id": 19,
-      "Nombre": "cuadro circular",
+      "nombre": "cuadro circular",
       "imagen": "pajaro-marron.png",
       "precio": 800,
       "descripcion": "Cuadro circular mosaiqueado con diseño precolombino",
@@ -182,7 +181,7 @@
    },
    {
       "id": 20,
-      "Nombre": "numeracion para casas",
+      "nombre": "numeracion para casas",
       "imagen": "numero-casa2.png",
       "precio": 300,
       "descripcion": "Hogar dulce hogar...numeración para tu casa!",
@@ -191,7 +190,7 @@
    },
    {
       "id": 21,
-      "Nombre": "plancha decoracion",
+      "nombre": "plancha decoracion",
       "imagen": "plancha.png",
       "precio": 600,
       "descripcion": "Plancha de fierro. Restaurando.... arte sustentable!",
@@ -200,7 +199,7 @@
    },
    {
       "id": 22,
-      "Nombre": "porta repasadores",
+      "nombre": "porta repasadores",
       "imagen": "portallaves.png",
       "precio": 400,
       "descripcion": "porta repasadores en forma de pala pizzera",
@@ -209,7 +208,7 @@
    },
    {
       "id": 23,
-      "Nombre": "porta llaves",
+      "nombre": "porta llaves",
       "imagen": "portallaves2.png",
       "precio": 700,
       "descripcion": "Porta llaves mosaiqueado con venecitas sobre fibro facil ",
@@ -218,7 +217,7 @@
    },
    {
       "id": 24,
-      "Nombre": "reloj",
+      "nombre": "reloj",
       "imagen": "reloj-amarillo.png",
       "precio": 1500,
       "descripcion": "reloj realizado en tecnica de picassiette",
@@ -227,7 +226,7 @@
    },
    {
       "id": 25,
-      "Nombre": "porta llaves",
+      "nombre": "porta llaves",
       "imagen": "portallaves3.png",
       "precio": 500,
       "descripcion": "porta llaves realizado en mosaicos y tecnica de micromosaicos",
@@ -236,7 +235,7 @@
    },
    {
       "id": 26,
-      "Nombre": "Bandeja doble diseño",
+      "nombre": "Bandeja doble diseño",
       "imagen": "tabla.png",
       "precio": 1200,
       "descripcion": "Bandeja con doble diseño mosaiqueada. Composición personalizada.",
@@ -245,7 +244,7 @@
    },
    {
       "id": 27,
-      "Nombre": "cuñetes de carton",
+      "nombre": "cuñetes de carton",
       "imagen": "tambor.png",
       "precio": 2000,
       "descripcion": "Cuñetes de cartón, con tapa y base de madera, cierre hermético. Mosaiqueados con venecitas y azulejos, forrado en arpillera.",
@@ -254,7 +253,7 @@
    },
    {
       "id": 28,
-      "Nombre": "tutores",
+      "nombre": "tutores",
       "imagen": "decoracion-planta.png",
       "precio": 450,
       "descripcion": "Tutores mosaiqueados sobre fibro facil. Ideales para plantas de interior",
@@ -263,7 +262,7 @@
    },
    {
       "id": 29,
-      "Nombre": "Caricatura nestor kirchner",
+      "nombre": "Caricatura nestor kirchner",
       "imagen": "decoracion-k.png",
       "precio": 1500,
       "descripcion": "Trabajo realizado en malla para adherir sobre cualquier superficie de cemento",
@@ -272,7 +271,7 @@
    },
    {
       "id": 30,
-      "Nombre": "posa pava",
+      "nombre": "posa pava",
       "imagen": "cuadro.png",
       "precio": 700,
       "descripcion": "Posa pavas en fibrofácil mosaiqueados! 20 x 20 cm",
@@ -281,7 +280,7 @@
    },
    {
       "id": 31,
-      "Nombre": "posa pava",
+      "nombre": "posa pava",
       "imagen": "decoracion-buho.png",
       "precio": 800,
       "descripcion": "Posa pavas en fibrofácil mosaiqueados! 20 x 20 cm",
@@ -290,7 +289,7 @@
    },
    {
       "id": 32,
-      "Nombre": "posa pava",
+      "nombre": "posa pava",
       "imagen": "decoracion-hoja.png",
       "precio": 700,
       "descripcion": "Posa pavas en fibrofácil mosaiqueados! 20 x 20 cm",
@@ -299,7 +298,7 @@
    },
    {
       "id": 33,
-      "Nombre": "porta rollos",
+      "nombre": "porta rollos",
       "imagen": "servilletero.png",
       "precio": 800,
       "descripcion": "Portarollos para pared, en tonos verde esperanza",
@@ -308,7 +307,7 @@
    },
    {
       "id": 34,
-      "Nombre": "fanal",
+      "nombre": "fanal",
       "imagen": "Portavela1.jpeg",
       "precio": 800,
       "descripcion": "fanales mosaiqueados en venecitas sobre soporte de vidrio, lo que permite traslucir la luz",

@@ -105,6 +105,13 @@
     width: 10%;
     text-align: center;
 }
+.admin main section .atributos .delet3 form button{
+    border: none;
+    
+}
+.admin main section .atributos .delet3 form button i{
+    font-size: 18px;
+}
 .admin main section .atributos .delet i{
     text-align: center;
 }
