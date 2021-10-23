@@ -1,3 +1,11 @@
 [
-   
+   {
+      "id": 1,
+      "name": "Gabriel alejandro Sotelo",
+      "username": "gabhy1997",
+      "fecha": "1997-01-22",
+      "email": "gabriel_alejandro_sotelo@hotmail.com",
+      "pass": "$2a$10$TcW.uoXNL3d5IZWupD4C7OD0MrAlFqbkuoNJ7qfofL1ZjF7.iU2am",
+      "image": "default-user.png"
+   }
 ]
