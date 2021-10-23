@@ -1,88 +1,96 @@
 .login{    
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: #ededed;    
-  }
- .login .contenedor {
-    max-width: 500px;
-    width: 90%;
-    background: #fff;
-    margin: 20px auto;
-    box-shadow: 1px 0px 5px 4px rgba(0,0,0,0.125);
-    padding: 30px;
-    margin-top: 100px; 
-  }
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #EDEDED;    
+}
+.login .contenedor {
+  max-width: 500px;
+  width: 90%;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 1px 0px 5px 4px rgba(0,0,0,0.125);
+  padding: 30px;
+  margin-top: 100px;
+}
 .login .titulolog {
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: var(--azul);
-    text-transform: uppercase;
-    text-align: center;
-  }
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--azul);
+  text-transform: uppercase;
+  text-align: center;
+}
 .login .contenedor .form{
-    width: 100%;
-  }
-
+  width: 100%;
+}
+.login .contenedor .form small{
+  color: red;
+}
+.login .contenedor .form .recordarme{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 10px;
+}
+input[type=checkbox]{
+  -webkit-transform: scale(1.1);
+}
 .login .contenedor .form .contenedorA {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-  }
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
 .login .contenedor .form .contenedorA label{
-    width: 200px;
-    color: #757575;
-    margin-right: 10px;
-   font-size: 14px;
- }
+  width: 200px;
+  color: #757575;
+  margin-right: 10px;
+ font-size: 14px;
+}
 .login .contenedor .form .contenedorA .input {
-    width: 100%;
-    outline: none;
-    border: 1px solid #d5dbd9;
-    font-size: 15px;
-    padding: 8px 10px;
-    border-radius: 3px;
-    transition: all 0.5s ease;
-  }
+  width: 100%;
+  outline: none;
+  border: 1px solid #D5DBD9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.5s ease;
+}
 .login .contenedor .form .contenedorA .input:focus {
-    border: 1.3px solid var(--azulOscuro);
-  }
+  border: 1.3px solid var(--azulOscuro);
+}
 .login .contenedor .form .contenedorA .btn{
-    width: 100%;
-     padding: 8px 10px;
-    font-size: 15px; 
-    border: 0px;
-    background:  var(--azul);
-    color: #fff;
-    cursor: pointer;
-    border-radius: 3px;
-    text-align: center;    
-  }
-  
+  width: 100%;
+   padding: 8px 10px;
+  font-size: 15px;
+  border: 0px;
+  background:  var(--azul);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  text-align: center;    
+}
 .login .contenedor .form .contenedorA .btn:hover{
-    background: var(--azulOscuro);
-  }
-  
+  background: var(--azulOscuro);
+}
 .login .contenedor .form .contenedorA:last-child{
-    margin-bottom: 0;
-  } 
-
+  margin-bottom: 0;
+}
 @media(min-width:769px){
 .login .contenedor {
-    margin-top: 150px;   
-    width: 100%;
-    max-width: 550px; 
-    }
-    .login .titulolog {
-      font-size: 30px;
-      margin-bottom: 35px;
-    }
-.login .contenedor .form .contenedorA{
-      flex-direction: column;
-      align-items: flex-start;
-    }
-.login .contenedor .form .contenedorA label{
-      margin-bottom: 8px;
-      font-size: 15px;
-    }    
+  margin-top: 150px;  
+  width: 100%;
+  max-width: 550px;
   }
+  .login .titulolog {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+.login .contenedor .form .contenedorA{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+.login .contenedor .form .contenedorA label{
+    margin-bottom: 8px;
+    font-size: 15px;
+  }    
+}

@@ -2,15 +2,19 @@
     <div class="logo">
         <a href="/"><img src="/images/logoprincipal.jpg" alt=""></a>
     </div>
-
     <div class="nav">
         <nav>
-            <ul class="user">
-                <li><a class="login1" href="/user/login">Login</a></li>
-                <li><a class="regi1" href="/user/register">Register</a></li>
-            </ul>
+                <% if(!(locals.user)){ %>
+                    <ul class="user">
+                    <li><a class="login1" href="/user/login">Login</a></li>
+                    <li><a class="regi1" href="/user/register">Register</a></li>
+                </ul>
+                <%}else{%>
+                    <ul class="user2">
+                        <li ><form action="/user/cerrar" method="get" class="formcerrar2"><button type="submit" class="cerrar2">Cerrar Sesión</button></form></li>
+                    </ul>
+                <%} %>
         </nav>
-                
         <div class="nav2">
             <form action="">
                     <input type="text" placeholder="Buscar">
@@ -18,7 +22,6 @@
             </form>
             <div class="icons">
                     <a href="#"><i class="fas fa-adjust"></i></a>
-                    
                     <a class="user" href="/admin"><i class="fas fa-user"></i></a>
                     <a href="/product/productCart/"><i class="fas fa-shopping-cart"></i></a>
                     <i class="fas fa-bars"></i>
@@ -28,14 +31,15 @@
         <input class="check" type="checkbox">
         <div class="menudespleglable">
             <ul>
-                <li><a class="login2" href="/user/login">Login</a></li>
-                <li><a class="regi2" href="/user/register">Register</a></li>
                 <li><a class="favoritos" href="/favoritos">Favoritos</a></li>
                 <li><a class="admin" href="/admin">Admin</a></li>
+                <% if(!(locals.user)){ %>
+                    <li><a class="login2" href="/user/login">Login</a></li>
+                    <li><a class="regi2" href="/user/register">Register</a></li>
+                <%}else{%>
+                    <li ><form action="/user/cerrar" method="get" class="formcerrar"><button type="submit" class="cerrar">Cerrar Sesión</button></form></li>
+                <%} %>
             </ul>
-
         </div>
-                
     </div>
-        
 </header>

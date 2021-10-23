@@ -4,6 +4,9 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
+const session = require('express-session');
+const recordame = require('./middlewares/cookieRecordame')
+const logueado =require('./middlewares/logueado')
 
 const main = require('./routes/main');
 const user = require('./routes/user');
@@ -22,6 +25,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
+app.use(session({secret: 'shh, es un secreto'}));
+app.use(recordame)
+app.use(logueado)
+
 
 app.use('/', main);
 app.use('/product', product)
