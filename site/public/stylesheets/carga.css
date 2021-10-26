@@ -25,6 +25,10 @@
     align-items: center;
     max-width: 740px;
 }
+.carga main .form small{ 
+    color: black;
+    font-size: 17px;
+}
 .carga main .cancel{
     display: flex;
     flex-direction: column;
@@ -47,11 +51,12 @@
     max-width: 630px;
 }
 .carga main form input{
-    font-size: 18px;
+    font-size: 17px;
     border-radius: 6px;
     border-color: white;
     max-width: 630px;
     width: 95%;
+    font-family: var(--letra);
 }
 @media(min-width:426px){
 

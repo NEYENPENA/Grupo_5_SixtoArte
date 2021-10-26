@@ -15,13 +15,22 @@
     <form class="form" action="/admin/" method="POST" enctype="multipart/form-data">
 
         <label for="nombre">Nombre del Producto</label>
-          <input type="text" name="nombre" placeholder="nombre del producto" id="nombre" required>
+          <input type="text" name="nombre" placeholder="nombre del producto" id="nombre" value=<%= locals.old && old.nombre ? old.nombre : null %>>
+          <% if(locals.errors && errors.nombre){ %>
+            <small> <%= errors.nombre.msg %> </small>
+          <% } %> 
 
           <label for="precio">Precio del Producto</label>
-          <input type="number" name="precio" placeholder="precio del producto" id="precio" required>
+          <input type="number" name="precio" placeholder="precio del producto" id="precio" value=<%= locals.old && old.precio ? old.precio : null %>>
+          <% if(locals.errors && errors.precio){ %>
+            <small> <%= errors.precio.msg %> </small>
+          <% } %> 
 
           <label for="descripcion">Descripción del Producto</label>
-          <input type="text" name="descripcion" placeholder="descripcion del producto" id="descripcion" required>
+          <input type="text" name="descripcion" placeholder="descripcion del producto" id="descripcion" value=<%= locals.old && old.descripcion ? old.descripcion : null %>>
+          <% if(locals.errors && errors.descripcion){ %>
+            <small> <%= errors.descripcion.msg %> </small>
+          <% } %> 
 
           <label for="image">suba una imagen</label>
           <input type="file" name="image" id="image" >
