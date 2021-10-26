@@ -3,7 +3,7 @@ const path = require('path');
 const router = express.Router();
 const { admin, carga, edit, guardar, guardarEdit, detalleAdmin, eliminar } = require('../controllers/adminController')
 const multer = require('multer');
-
+const validateCarga= require('../middlewares/validacionCarga')
 
 const storage = multer.diskStorage({
     destination: function (req, file, callback) {
@@ -21,7 +21,7 @@ router.get('/', admin)
 
 //crear
 router.get('/carga', carga)
-router.post('/', upload.single('image'), guardar) 
+router.post('/', upload.single('image'), validateCarga, guardar) 
 //editar
 router.get('/edit/:id', edit)
 router.put('/', guardarEdit)
