@@ -14,11 +14,18 @@
 
     <form class="form" action="/admin/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
-        <label for="nombre">Nombre del Producto</label>
-          <input type="text" name="nombre" value="<%= productEdit.nombre %>" id="nombre" required>
+        <label for="nombre">Nombre del Producto</label>                   
+          <% if(locals.old && old.nombre){%> 
+          <input type="text" name="nombre" id="nombre" value=<%= old.nombre%>> 
+            <% } %> 
+          <% if(locals.errors && errors.nombre) { %>            
+            <small> <%= errors.nombre.msg %> </small>
+          <% } else {%>
+            <input type="text" name="nombre" value=<%= productEdit.nombre %> id="nombre">
+            <% } %> 
 
           <label for="precio">Precio del Producto</label>
-          <input type="number" name="precio" value="<%= productEdit.precio %>"  id="precio" required>
+          <input type="number" name="precio" value="<%= productEdit.precio %>"  id="precio" >
 
           <label for="descripcion">Descripción del Producto</label>
           <input type="text" name="descripcion"value="<%= productEdit.descripcion %>" id="descripcion" required>
