@@ -37,3 +37,15 @@
 
 -**Seguir haciendo**: 
 
+
+## **RETROSPECTIVA de sprint 4** ##
+
+-**Hacer menos**: 
+
+-**Hacer mas**: Hacer mas reuniones diarias, ponerse las pilas, dedicacion, 
+
+-**Parar de hacer**:comprometerse con  tareas  y no terminarlas a tiempo, esperar que otros hagan tu trabajo a ultima hora
+
+-**Empezar a hacer**:arreglar siempre cosas pendientes en el proyecto a tiempo, nueva forma de distribucion de tareas.
+
+-**Seguir haciendo**: 

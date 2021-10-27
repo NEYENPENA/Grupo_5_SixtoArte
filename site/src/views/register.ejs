@@ -11,35 +11,60 @@
     <h1 class="titulo">Registrate</h1>
     <div class="form">
         <div class="conteinerB">
+
           <label for="nombre">Nombre y Apellido</label>
-          <input type="text" class="input" name="name" id="nombre">
+          <input type="text" class="input" name="name" id="nombre" value=<%= locals.old && old.name ? old.name : null %> >
+          <% if(locals.errors && errors.name){ %>
+            <small> <%= errors.name.msg %> </small>
+          <% } %> 
+          
         </div>       
         <div class="conteinerB">
+
             <label for="user">Nombre de Usuario</label>
-          <input type="username" class="input" name="username" id="user">
+          <input type="username" class="input" name="username" id="user" value=<%= locals.old && old.username ? old.username : null %>>
+          <% if(locals.errors && errors.username){ %>
+            <small> <%= errors.username.msg %> </small>
+          <% } %> 
        </div> 
        <div class="conteinerB">
+
             <label for="date">Fecha de Nacimiento</label>
             <input type="date" class="input" name="fecha" id="date"> 
+
        </div>        
 
           <div class="conteinerB">
+
               <label for="correo">Correo Electronico</label>
-              <input type="email" name="email" placeholder="insertar correo" id="correo" required class="input">
+              <input type="email" name="email" placeholder="insertar correo" id="correo" class="input" value=<%= locals.old && old.email ? old.email : null %>>
+              <% if(locals.errors && errors.email){ %>
+                <small> <%= errors.email.msg %> </small>
+              <% } %> 
           </div>
           
         <div class="conteinerB">
+
             <label for="image">Imagen</label>
             <input type="file" name="image" id="image" class="input">
+
         </div> 
             
        <div class="conteinerB">
+
           <label for="contraseña">Contraseña</label>
-          <input type="password" class="input" name="pass" id="contraseña">
+          <input type="password" class="input" name="pass" id="contraseña" >
+          <% if(locals.errors && errors.pass){ %>
+            <small> <%= errors.pass.msg %> </small>
+          <% } %> 
        </div>  
       <div class="conteinerB">
+
           <label for="confirm">Confirmar Contraseña</label>
           <input type="password" class="input" name="confirmpassword" id="confirm">
+          <% if(locals.errors && errors.confirmpassword){ %>
+            <small> <%= errors.confirmpassword.msg %> </small>
+          <% } %> 
        </div> 
      
        <div class="conteinerB">

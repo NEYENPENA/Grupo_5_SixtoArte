@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- HEAD -->
-<%- include('./partials/head')%> 
-
+<%- include('./partials/head')%>
 <body class="login">
     <!-- HEADER -->
     <%- include('./partials/header') %>
 <main class="contenedor">
-    <form  action="/user/register" method="POST">
-		<h1 class="titulolog">iniciar sesión</h1>
-		<div class="form">
-		   <div class="contenedorA">
-				<label for="user">Nombre de Usuario:</label>
-				<input class="input" type="username" name="username" id="user" required="" placeholder="Usuario">
-		   </div>
-
-			<div class="contenedorA">                                
-				<label for="contraseña">Contraseña:</label>
-				<input class="input" type="password" name="password" id="contraseña" required="" placeholder="Contraseña">
-			</div>
-							
-			<div class="contenedorA">
-				<input class="btn" type="submit" value="Ingresar">
-			</div>
-
-			<div class="contenedorA">
-				<a  class="btn"  href="register">¿Desea crear una cuenta?</a>
-			</div>
-		</div>        
-	</form>
+    <form  action="/user/login" method="POST">
+        <h1 class="titulolog">iniciar sesión</h1>
+        <div class="form">
+           <div class="contenedorA">
+                <label for="user">Nombre de Usuario:</label>
+                <input class="input" type="username" name="username" id="user" value=<%= locals.old && old.username ? old.username : null %> >
+                <% if(locals.errors && errors.username){ %>
+                    <small> <%= errors.username.msg %> </small>
+                  <% } %>
+           </div>
+            <div class="contenedorA">
+                <label for="contraseña">Contraseña:</label>
+                <input class="input" type="password" name="password" id="contraseña"  >
+                <% if(locals.errors && errors.password){ %>
+                    <small> <%= errors.password.msg %> </small>
+                  <% } %>
+            </div>
+            <div class="recordarme">
+                <input type="checkbox" name="recordame" id="checkbox">
+                <label for="recordame">Recordarme</label>
+            </div>
+            <% if(locals.invalid){ %>
+                <small> <%= invalid %> </small>
+              <% } %>          
+            <div class="contenedorA">
+                <input class="btn" type="submit" value="Ingresar">
+            </div>
+            <div class="contenedorA">
+                <a  class="btn"  href="register">¿Desea crear una cuenta?</a>
+            </div>
+        </div>        
+    </form>
 </main>    
 </body>
 </html>
