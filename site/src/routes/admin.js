@@ -24,7 +24,7 @@ router.get('/carga', carga)
 router.post('/', upload.single('image'), validateCarga, guardar) 
 //editar
 router.get('/edit/:id', edit)
-router.put('/', guardarEdit)
+router.put('/:id', upload.single('image'), guardarEdit)
 // detalle
 router.get('/detalle/:id', detalleAdmin)
 router.put('/edit/:id', guardarEdit)

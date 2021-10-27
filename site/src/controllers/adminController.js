@@ -55,24 +55,26 @@ module.exports = {
         
     },
 
-    guardarEdit:(req,res) => {        
+    guardarEdit:(req,res) => { 
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));       
             const productUpdate = products.find(p => p.id === +req.params.id)
             let {nombre, precio, descripcion} = req.body
             if(productUpdate){
 			    productUpdate.nombre = nombre
 			    productUpdate.precio = +precio
 			    productUpdate.descripcion = descripcion
-                productUpdate.imagen = req.file ? req.file.filename : 'default icon.jpeg'
+                productUpdate.imagen = req.file ? req.file.filename : productUpdate.imagen
 
 			    fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 3))
-		        res.redirect('/product/detalle/'+req.params.id)
+		        res.redirect('/admin/detalle/'+req.params.id)
 
 		    }else{
-			    res.redirect('/product/detalle/'+req.params.id)
+			    res.redirect('/admin/detalle/'+req.params.id)
 		    }            
         
     },    
-     detalleAdmin: (req,res) => {        
+     detalleAdmin: (req,res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));        
         const {id} = req.params;
         const producto = products.find(element => element.id === +id);
         res.render('admin/detalle', {producto}); 

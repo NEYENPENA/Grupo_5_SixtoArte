@@ -12,7 +12,7 @@
    <main >
     <h2>EDITAR PRODUCTO</h2>
 
-    <form class="form" action="/admin/edit/<%= productEdit.id %>?_method=PUT" method="POST">
+    <form class="form" action="/admin/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
         <label for="nombre">Nombre del Producto</label>
           <input type="text" name="nombre" value="<%= productEdit.nombre %>" id="nombre" required>
@@ -24,7 +24,7 @@
           <input type="text" name="descripcion"value="<%= productEdit.descripcion %>" id="descripcion" required>
 
           <label for="">suba una imagen</label>
-          <input type="file" name="imagen" value="<%= productEdit.imagen%>">
+          <input type="file" name="image" value="<%= productEdit.imagen%>">
 
           <button type="submit" >EDITAR </button>
           
