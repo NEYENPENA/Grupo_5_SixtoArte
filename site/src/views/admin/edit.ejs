@@ -14,21 +14,23 @@
 
     <form class="form" action="/admin/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
-        <label for="nombre">Nombre del Producto</label>                   
-          <% if(locals.old && old.nombre){%> 
-          <input type="text" name="nombre" id="nombre" value=<%= old.nombre%>> 
-            <% } %> 
-          <% if(locals.errors && errors.nombre) { %>            
-            <small> <%= errors.nombre.msg %> </small>
-          <% } else {%>
-            <input type="text" name="nombre" value=<%= productEdit.nombre %> id="nombre">
-            <% } %> 
+        <label for="nombre">Nombre del Producto</label>                             
+        <input type="text" name="nombre" value="<%= productEdit.nombre %>" id="nombre" >
+        <% if(locals.errors && errors.nombre){ %>
+          <small> <%= errors.nombre.msg %> </small>
+        <% } %>
 
           <label for="precio">Precio del Producto</label>
           <input type="number" name="precio" value="<%= productEdit.precio %>"  id="precio" >
+          <% if(locals.errors && errors.precio){ %>
+            <small> <%= errors.precio.msg %> </small>
+          <% } %>
 
           <label for="descripcion">Descripción del Producto</label>
-          <input type="text" name="descripcion"value="<%= productEdit.descripcion %>" id="descripcion" required>
+          <input type="text" name="descripcion" value="<%= productEdit.descripcion %>" id="descripcion" >
+          <% if(locals.errors && errors.descripcion){ %>
+            <small> <%= errors.descripcion.msg %> </small>
+          <% } %>
 
           <label for="">suba una imagen</label>
           <input type="file" name="image" value="<%= productEdit.imagen%>">
@@ -40,7 +42,6 @@
         <button type="submit">CANCELAR </button></form>
     
    </main>
-
    
 </body>
 </html>
