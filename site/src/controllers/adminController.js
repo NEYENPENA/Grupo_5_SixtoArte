@@ -49,14 +49,18 @@ module.exports = {
 
     //editar
     edit: (req,res) => {
+        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
         const {id} =req.params
         let productEdit = products.find(e => e.id === +id)
         res.render('admin/edit', {productEdit})
         
     },
 
-    guardarEdit:(req,res) => { 
-        const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));       
+    guardarEdit:(req,res) => {
+        const errors = validationResult(req);
+        if(errors.isEmpty()) {
+
+            const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));       
             const productUpdate = products.find(p => p.id === +req.params.id)
             let {nombre, precio, descripcion} = req.body
             if(productUpdate){
@@ -70,8 +74,14 @@ module.exports = {
 
 		    }else{
 			    res.redirect('/admin/detalle/'+req.params.id)
-		    }            
-        
+		    } 
+        } else {
+            // Si hay errores los envia a la vista de admin/edit
+            const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+            const {id} =req.params
+            let productEdit = products.find(e => e.id === +id)            
+            res.render('admin/edit', {errors: errors.mapped(), productEdit});
+        }        
     },    
      detalleAdmin: (req,res) => {
         const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));        
