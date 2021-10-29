@@ -266,4 +266,10 @@ footer{
     main .favoritos form i:hover{    
         animation: latir 1.5s normal linear infinite;
     }
+    main .nombredeproducto{
+        padding-bottom: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
 }

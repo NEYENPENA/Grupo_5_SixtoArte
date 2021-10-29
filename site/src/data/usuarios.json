@@ -38,5 +38,25 @@
       "pass": "$2a$10$8d/w5BqRBPK8jBGgr2boqe/TniGeItnCGiZ0gyltOaKpk5YV10LNm",
       "image": "default-user.png",
       "rol": "user"
+   },
+   {
+      "id": 5,
+      "name": "Marcos Alfredo Esquivel",
+      "username": "Maikel",
+      "fecha": "1996-08-25",
+      "email": "marcostorres04031997@gmail.com",
+      "pass": "$2a$10$1VpFVbearBgXSlghGniOy.OUJk/B99PppxKH4pONHJXwHi6kOR3Uu",
+      "image": "default-user.png",
+      "rol": "admin"
+   },
+   {
+      "id": 6,
+      "name": "Maximo Rodriguez",
+      "username": "Maxi2002",
+      "fecha": "2002-01-05",
+      "email": "halfox427@gmail.com",
+      "pass": "$2a$10$QnNUPOz0gQERzjDJ09Uf6emgFZk.9//n5VuevTpEXFEUzS3juDzEC",
+      "image": "default-user.png",
+      "rol": "admin"
    }
 ]
