@@ -25,6 +25,9 @@
 .register .conteiner .form{
   width: 100%;
 }
+.register .conteiner .form small{
+  color: red;
+}
 
 .register .conteiner .form .conteinerB{
   margin-bottom: 15px;
