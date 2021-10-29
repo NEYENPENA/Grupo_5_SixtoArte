@@ -19,7 +19,6 @@ header .logo a{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 header .logo a img{
     width: 55px;
@@ -47,7 +46,6 @@ header form input{
     border-radius: 10px;
     border: none;
 }
-
 header form i{
      position: absolute;
      right: 8%;
@@ -84,18 +82,34 @@ width: 40vw;
 border-radius: 10px;
 visibility: collapse;
 }
+header .nav .menudespleglable ul li {
+    height: 40px;
+}
 header .nav .menudespleglable ul li a{
     color: black;
     font-size: 26px;
 }
-header .nav .menudespleglable ul li{
+header .nav .menudespleglable ul li, header .cerrar{
     border-bottom: 2px solid white;
+}
+header .formcerrar{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-radius: 10px;
+}
+header .cerrar{
+    color: black;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
 }
 header .nav .menudespleglable ul li:last-of-type{
     border-bottom: none
 }
-
-
 header .nav  .check{
     transform: scale(1.5);
     z-index: 3;
@@ -108,41 +122,29 @@ header .nav .check:checked ~ .menudespleglable{
     visibility:visible;
     animation: desplegar 1s;
 }
-
-
-
-
  @media(min-width:426px){
-
     header .logo a img{
         width: 70px;
         height: 60px;
     }
     header form{
         width: 50%;
-        
     }
     header form input{
         width: 90%;
         height: 35px;
-        
     }
     header .icons a i, header .icons  i{
         font-size: 30px;
-        
     }
     header .icons{
         justify-content: space-around;
-        
     }
     header .nav  .check{
         transform: scale(2);
         position: absolute;
         right: 9%;
     }
-
-    
-
 }
 @media(min-width:769px){
     header{
@@ -171,23 +173,33 @@ header .nav .check:checked ~ .menudespleglable{
         display: flex;
         width: 20%; /* otra opcion 35% */
         height: 15%;
-        justify-content: center;
-        background-color: white;
+        justify-content: center;        
         border-radius: 5px;
         margin-top: 5px;
         margin-right: 1px;
         margin-bottom: 30px;
+        padding-top: 10px;
     }
     header .nav .nav2{
         width: 100%;
         display: flex;
     }
-    
     nav ul.user{
         display: flex;
         width: 25%;
         justify-content: center;
         align-items: center;
+    }
+    nav ul.user2{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul.user2 li{
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
     nav ul.user li{
         font-size: 13px;
@@ -197,15 +209,28 @@ header .nav .check:checked ~ .menudespleglable{
         padding-right: 10px;
         font-weight: 900;
         color: black;
+        font-size: 16px;
     }
     nav ul.user li a.regi1{
         font-weight: 900;
         margin-left: 10px;
         color: black;
+        font-size: 16px;
+    }
+    nav ul.user2 li .formcerrar2{
+        width: 100%;
+        border: none;
+    }
+    nav ul.user2 li .cerrar2{
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        padding-top: 5px;        
+        max-width: max-content;
     }
     header form {
         width: 65%;
-        
     }
     header form input{
         width: 100%;
@@ -221,7 +246,6 @@ header .nav .check:checked ~ .menudespleglable{
         right: 0;
         max-width: 300px;
     }
-    
     header .nav .nav2 .icons .heart, header .nav .nav2 .icons .user{
         display: block;
         position: static;
@@ -231,7 +255,6 @@ header .nav .check:checked ~ .menudespleglable{
         position: absolute;
     }
     header .nav{
-        
         justify-content: flex-end;
     }
     header .nav  .check, .fa-bars{
@@ -240,14 +263,8 @@ header .nav .check:checked ~ .menudespleglable{
     header .nav .menudespleglable{
         display: none;
         }
-
-
 /* ----------------animaciones------------------ */
-
-
     header .icons a i:hover{
         animation: giro 2s normal linear infinite;
     }
-    
-    
-} 
+}

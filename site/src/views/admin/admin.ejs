@@ -29,11 +29,15 @@
     <% products.map(producto => { %> 
     <div class="atributos">
         <div class="id"> <%= producto.id  %> </div>
-        <div class="name"> <%= producto.Nombre  %> </div>
+        <div class="name"> <%= producto.nombre  %> </div>
         <div class="precio"> <%= producto.precio  %> </div>
-        <div class="ver3"><a href="/product/detalle/<%= producto.id %> "><i class="far fa-eye"></i></a></div>
-        <div class="edit3"><a href="/admin/edit/<%= producto.id %>"><i class="far fa-edit"></i></a></div>
-        <div class="delet3"><i class="far fa-trash-alt"></i></div>
+        <div class="ver3"><a href="/admin/detalle/<%= producto.id %> "><i class="far fa-eye"></i></a></div>
+        <div class="edit3"><a href="/admin/edit/<%= producto.id %>"><i class="far fa-edit"></i></a></div>         
+        <div class="delet3">
+            <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                <button type="submit" ><i class="far fa-trash-alt"></i></button>
+            </form> 
+        </div>
     </div>
         <% }) %>  
     
