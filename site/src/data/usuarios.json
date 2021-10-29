@@ -28,5 +28,15 @@
       "pass": "$2a$10$arOHgD7zpY9TJmm4lePev.QSCMEKz6VjzPNGxdEm9sjzLMex2uLse",
       "image": "default-user.png",
       "rol": "user"
+   },
+   {
+      "id": 4,
+      "name": "pepa",
+      "username": "pepa",
+      "fecha": "",
+      "email": "pepapig@gmail.com",
+      "pass": "$2a$10$8d/w5BqRBPK8jBGgr2boqe/TniGeItnCGiZ0gyltOaKpk5YV10LNm",
+      "image": "default-user.png",
+      "rol": "user"
    }
 ]
