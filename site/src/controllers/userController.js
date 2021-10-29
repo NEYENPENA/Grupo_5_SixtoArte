@@ -25,8 +25,9 @@ module.exports = {
             usuario.email= email
             usuario.pass= bcrypt.hashSync(pass, 10);
             usuario.image= req.file ? req.file.filename: 'default-user.png'
-            usuario.rol= "user"
+            usuario.rol= "user"    
             users.push(usuario)
+            req.session.user = usuario
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 3))
             res.redirect('/')
         }else{
