@@ -25,7 +25,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
-app.use(session({secret: 'shh, es un secreto'}));
+app.use(session({
+  secret: 'shh es un secreto',
+  resave: false,
+  saveUninitialized: true
+  }));
 app.use(recordame)
 app.use(logueado)
 

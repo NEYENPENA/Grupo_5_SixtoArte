@@ -3,7 +3,11 @@
 <!-- HEAD -->
 <%- include('./partials/head')%> 
 <body class="error">
-
+        <% if(error) {%> 
+            <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+        <pre><%= error.stack %></pre>
+        <% } else { %> 
         <div class="conten">
             <div class="conten__img">
                 <img src="../images/404/404.png" alt="">
@@ -20,6 +24,7 @@
             <a href="/" class="conten__button">RETURN HOME.</a>
             </div>
         </div>
+        <% } %> 
    
 </body>
 </html>

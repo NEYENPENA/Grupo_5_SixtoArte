@@ -238,8 +238,7 @@ footer{
     }
     main .principio .cont-right .descripcion h4{
         text-align: center; 
-        color: rgb(67, 67, 67);
-        background-color: var(--cian);
+        color: rgb(67, 67, 67);       
     }
     main .comprar form .agregar i{
         font-size: 22px;
