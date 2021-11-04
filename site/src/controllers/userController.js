@@ -64,5 +64,11 @@ module.exports = {
             res.cookie('recordame', '', {maxAge: -1})
         }
         res.redirect('/')
-    }
+    },
+
+   profile: (req,res) => {
+       res.render('perfilDeUsuario')
+
+   }
+
 }
