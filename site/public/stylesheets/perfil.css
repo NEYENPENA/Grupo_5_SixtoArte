@@ -1,0 +1,156 @@
+/* MEDIDAS DE MOVIL */
+
+/* PERFIL */
+.perfil {
+    width: 98%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: -18px;
+}
+
+.perfil section {
+    margin-top: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.perfil section div.imgperfil{
+    width: 50%;
+}
+
+.perfil section div {
+margin-top: 20px;
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+.perfil section ul {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.perfil section ul li p{
+    margin: 10px 10px;
+    border-radius: 5px;
+    background-color:  var(--azulOscuro)
+}
+
+.perfil section ul li a{
+    margin: 10px 10px;
+    border-radius: 5px;
+    background-color:  var(--azul)
+}
+
+/* MEDIDAS TABLET */
+
+@media (min-width: 426px){
+    .perfil {
+        width: 98%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: -18px;
+    }
+    
+    .perfil section {
+        margin-top: 72px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+    
+    .perfil section div.imgperfil{
+        width: 50%;
+    }
+    
+    .perfil section div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    .perfil section ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .perfil section ul li p{
+        margin: 10px 10px;
+        border-radius: 5px;
+        background-color:  var(--azulOscuro)
+    }
+    
+    .perfil section ul li a{
+        margin: 10px 10px;
+        border-radius: 5px;
+        background-color:  var(--azul)
+    }    
+}
+
+/* MEDIDAS DE ESCRITORIO */
+
+@media (min-width: 769px){
+
+    .perfil section {
+        width: 98%;
+        margin-top: 150px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 350px;
+    }
+    
+    .perfil section div.imgperfil{
+        width: 25%;
+        border-radius: 50px;
+    }
+    
+    .perfil section div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    .perfil section ul {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .perfil section ul li{
+        font-size: 25px;
+    }    
+
+    .perfil section ul li p{
+        margin: 10px 10px;
+        border-radius: 5px;
+        background-color:  var(--azulOscuro)
+    }
+    
+    .perfil section ul li a{
+        margin: 10px 10px;
+        border-radius: 5px;
+        background-color:  var(--azul)
+    }    
+ }

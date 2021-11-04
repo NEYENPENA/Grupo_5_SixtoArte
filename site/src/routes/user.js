@@ -18,13 +18,15 @@ const storage = multer.diskStorage({
   })
   const upload = multer({ storage: storage })
 
-const { registro, login, crearUsuario, validateUser, cerrarSesion} = require('../controllers/userController');
+const { registro, login, crearUsuario, validateUser, cerrarSesion, profile} = require('../controllers/userController');
 
 router.get('/register',noRegistrado, registro);
 router.post('/register', upload.single('image'), validate ,crearUsuario);
 
 router.get('/login',noRegistrado, login);
 router.post('/login', validateL, validateUser)
+
+router.get('/perfil', profile)
 
 router.get('/cerrar', cerrarSesion)
 

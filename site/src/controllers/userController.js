@@ -69,5 +69,11 @@ module.exports = {
             res.cookie('sixtoArte', '', {maxAge: -1})
         }
         res.redirect('/')
-    }
+    },
+
+   profile: (req,res) => {
+       res.render('perfilDeUsuario')
+
+   }
+
 }
