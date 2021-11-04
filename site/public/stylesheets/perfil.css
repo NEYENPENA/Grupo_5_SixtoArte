@@ -112,9 +112,9 @@ flex-direction: column;
         width: 98%;
         margin-top: 150px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
-        margin-bottom: 150px;
+        margin-bottom: 350px;
     }
     
     .perfil section div.imgperfil{
