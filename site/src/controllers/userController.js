@@ -40,12 +40,17 @@ module.exports = {
             const usersFilePath = path.join(__dirname, '../data/usuarios.json');
             const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
             const {username, password} = req.body
-            let usuariologueado = users.find(u =>u.username === username)
+            let usuariologueado = users.find(u =>u.username === username)            
             if(usuariologueado){
                 if(bcrypt.compareSync( password, usuariologueado.pass)){
-                    req.session.user=usuariologueado
+                    req.session.user = {
+                        id: usuariologueado.id,
+                        username: usuariologueado.username,
+                        rol: usuariologueado.rol,
+                        image: usuariologueado.image                        
+                    }
                     if(req.body.recordame != undefined){
-                        res.cookie('recordame', usuariologueado.username, {maxAge: 600*1000})
+                        res.cookie('sixtoArte', req.session.user, {maxAge: 900*1000})
                     }
                     res.redirect('/')
                 }else{
@@ -60,8 +65,8 @@ module.exports = {
     },
     cerrarSesion: (req, res)=> {
         req.session.destroy()
-        if(req.cookies.recordame !== undefined){
-            res.cookie('recordame', '', {maxAge: -1})
+        if(req.cookies.sixtoArte !== undefined){
+            res.cookie('sixtoArte', '', {maxAge: -1})
         }
         res.redirect('/')
     },
