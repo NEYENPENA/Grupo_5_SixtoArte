@@ -6,7 +6,7 @@
       "fecha": "1997-01-22",
       "email": "gabriel_alejandro_sotelo@hotmail.com",
       "pass": "$2a$10$TcW.uoXNL3d5IZWupD4C7OD0MrAlFqbkuoNJ7qfofL1ZjF7.iU2am",
-      "image": "default-user.png",
+      "image": "default-icon.jpeg",
       "rol": "admin"
    },
    {
@@ -26,7 +26,7 @@
       "fecha": "2000-08-01",
       "email": "jorgeperez@gmail.com",
       "pass": "$2a$10$arOHgD7zpY9TJmm4lePev.QSCMEKz6VjzPNGxdEm9sjzLMex2uLse",
-      "image": "default-user.png",
+      "image": "default-icon.jpeg",
       "rol": "user"
    },
    {
@@ -36,7 +36,7 @@
       "fecha": "",
       "email": "pepapig@gmail.com",
       "pass": "$2a$10$8d/w5BqRBPK8jBGgr2boqe/TniGeItnCGiZ0gyltOaKpk5YV10LNm",
-      "image": "default-user.png",
+      "image": "default-icon.jpeg",
       "rol": "user"
    },
    {
@@ -46,7 +46,7 @@
       "fecha": "1996-08-25",
       "email": "marcostorres04031997@gmail.com",
       "pass": "$2a$10$1VpFVbearBgXSlghGniOy.OUJk/B99PppxKH4pONHJXwHi6kOR3Uu",
-      "image": "default-user.png",
+      "image": "default-icon.jpeg",
       "rol": "admin"
    },
    {
@@ -56,7 +56,7 @@
       "fecha": "2002-01-05",
       "email": "halfox427@gmail.com",
       "pass": "$2a$10$QnNUPOz0gQERzjDJ09Uf6emgFZk.9//n5VuevTpEXFEUzS3juDzEC",
-      "image": "default-user.png",
+      "image": "default-icon.jpeg",
       "rol": "admin"
    }  
 ]

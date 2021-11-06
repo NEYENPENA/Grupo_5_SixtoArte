@@ -5,6 +5,7 @@ const multer = require('multer');
 const validate = require('../middlewares/validacionCreateUsers')
 const validateL = require('../middlewares/validacionLogin')
 const noRegistrado = require('../middlewares/usuarioNoRegistrado')
+const registrado = require('../middlewares/usuarioRegistrado')
 
 /* let upload = multer({dest: 'uploads/'});  */
 
@@ -26,7 +27,7 @@ router.post('/register', upload.single('image'), validate ,crearUsuario);
 router.get('/login',noRegistrado, login);
 router.post('/login', validateL, validateUser)
 
-router.get('/perfil', profile)
+router.get('/perfil',registrado, profile)
 
 router.get('/cerrar', cerrarSesion)
 

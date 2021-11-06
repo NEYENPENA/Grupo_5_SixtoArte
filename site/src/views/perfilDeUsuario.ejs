@@ -12,15 +12,16 @@
   <section>
 
     <div class="imgperfil">
-      <img src="/images/usuarios/OIP (1).jpg" alt="Avatar Personal" />
+      <img src="/images/usuarios/<%= user.image %>" alt="Avatar Personal" />
     </div>
 
-    <ul>
+    <ul class="perfilul">
       <li>
-        <p>Nombre: Marcos Esquivel</p>
-        <p>Nombre de Usuario: Maikel</p>
-        <a href="mailto: marcostorres04031997@gmail.com">marcostorres04031997@gmail.com</a>
-        <p>Rol: Usuario</p>
+        <p><b>Nombre:</b> <%= user.name %></p>
+        <p><b>Nombre de Usuario:</b> <%= user.username %></p>
+        <p><b>Email:</b> <%= user.email%></p>
+        <p><b>Rol:</b> <%= user.rol%></p>
+        <p><b>Fecha de nacimiento:</b> <%= user.fecha%></p>
       </li>
     </ul>
 

@@ -24,7 +24,7 @@ module.exports = {
             usuario.fecha= fecha
             usuario.email= email
             usuario.pass= bcrypt.hashSync(pass, 10);
-            usuario.image= req.file ? req.file.filename: 'default-user.png'
+            usuario.image= req.file ? req.file.filename: "default-icon.jpeg"
             usuario.rol= "user"    
             users.push(usuario)
             req.session.user = usuario
@@ -44,15 +44,18 @@ module.exports = {
             if(usuariologueado){
                 if(bcrypt.compareSync( password, usuariologueado.pass)){
                     req.session.user = {
+                        name: usuariologueado.name,
                         id: usuariologueado.id,
                         username: usuariologueado.username,
                         rol: usuariologueado.rol,
-                        image: usuariologueado.image                        
+                        image: usuariologueado.image,
+                        email: usuariologueado.email,
+                        fecha: usuariologueado.fecha
                     }
                     if(req.body.recordame != undefined){
                         res.cookie('sixtoArte', req.session.user, {maxAge: 900*1000})
                     }
-                    res.redirect('/')
+                    res.redirect('/user/perfil')
                 }else{
                     res.render('login', {invalid: 'contraseña invalida'})
                 }
@@ -72,8 +75,9 @@ module.exports = {
     },
 
    profile: (req,res) => {
-       res.render('perfilDeUsuario')
-
+    const user = req.session.user
+       res.render('perfilDeUsuario',{user})
+    console.log(user)
    }
 
 }

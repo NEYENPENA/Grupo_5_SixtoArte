@@ -21,11 +21,15 @@
                     <i class="fas fa-search"></i>
             </form>
             <div class="icons">
+                
+                <a href="/user/perfil/"><i class="fas fa-user"></i></a>
                     <a href="#"><i class="fas fa-adjust"></i></a>
                     <% if(locals.user && locals.user.rol === "admin") { %>
-                        <a class="user" href="/admin"><i class="fas fa-user"></i></a>
-                        <% } %>                     
-                    <a href="/product/productCart/"><i class="fas fa-shopping-cart"></i></a>
+                        <a class="user" href="/admin"><i class="fas fa-user-cog"></i></a>
+                        <% }else{ %>
+                            <a href="/product/productCart/"><i class="fas fa-shopping-cart"></i></a>
+                            <% } %> 
+                    
                     <i class="fas fa-bars"></i>
                     <a class="heart" href="/favoritos"><i class="fas fa-heart"></i></a>
             </div>
