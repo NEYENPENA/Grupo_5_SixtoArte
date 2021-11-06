@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: -18px;
+    height: 100vh;
 }
 
 .perfil section {
@@ -39,16 +39,14 @@ flex-direction: column;
 }
 
 
-.perfil section ul li p{
-    margin: 10px 10px;
-    border-radius: 5px;
-    background-color:  var(--azulOscuro)
-}
 
-.perfil section ul li a{
+
+.perfil .perfilul p{
     margin: 10px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     border-radius: 5px;
-    background-color:  var(--azul)
+    border-color: var(--azulOscuro);
 }
 
 /* MEDIDAS TABLET */
@@ -91,17 +89,7 @@ flex-direction: column;
         flex-direction: column;
     }
 
-    .perfil section ul li p{
-        margin: 10px 10px;
-        border-radius: 5px;
-        background-color:  var(--azulOscuro)
-    }
-    
-    .perfil section ul li a{
-        margin: 10px 10px;
-        border-radius: 5px;
-        background-color:  var(--azul)
-    }    
+      
 }
 
 /* MEDIDAS DE ESCRITORIO */
@@ -115,7 +103,9 @@ flex-direction: column;
         flex-direction: row;
         align-items: flex-start;
         margin-bottom: 350px;
+        justify-content: space-around;
     }
+    
     
     .perfil section div.imgperfil{
         width: 25%;
@@ -142,15 +132,10 @@ flex-direction: column;
         font-size: 25px;
     }    
 
-    .perfil section ul li p{
-        margin: 10px 10px;
-        border-radius: 5px;
-        background-color:  var(--azulOscuro)
-    }
-    
-    .perfil section ul li a{
-        margin: 10px 10px;
-        border-radius: 5px;
-        background-color:  var(--azul)
-    }    
+    .perfil .perfilul p{
+        
+        margin-top: 30px;
+        margin-bottom: 30px;
+        
+    } 
  }
