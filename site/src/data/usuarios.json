@@ -58,5 +58,15 @@
       "pass": "$2a$10$QnNUPOz0gQERzjDJ09Uf6emgFZk.9//n5VuevTpEXFEUzS3juDzEC",
       "image": "default-icon.jpeg",
       "rol": "admin"
-   }  
+   },
+   {
+      "id": 7,
+      "name": "pedro diaz",
+      "username": "pedrito",
+      "fecha": "2021-11-02",
+      "email": "pepe@hotmail.com",
+      "pass": "$2a$10$YMK6MtWx4Z9gHqTbCg59deIwrXdKsPt9tiYQpHLhdh5liZ2qAoSry",
+      "image": "img-1636163841175.jpg",
+      "rol": "user"
+   }
 ]
