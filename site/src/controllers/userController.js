@@ -27,9 +27,17 @@ module.exports = {
             usuario.image= req.file ? req.file.filename: "default-icon.jpeg"
             usuario.rol= "user"    
             users.push(usuario)
-            req.session.user = usuario
+            req.session.user = {
+                name: usuario.name,
+                id: usuario.id,
+                username: usuario.username,
+                rol: usuario.rol,
+                image: usuario.image,
+                email: usuario.email,
+                fecha: usuario.fecha
+            }
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 3))
-            res.redirect('/')
+            res.render('perfilDeUsuario',{user:usuario })
         }else{
            res.render('register', {errors: errors.mapped(), old: req.body})
         }
@@ -77,7 +85,6 @@ module.exports = {
    profile: (req,res) => {
     const user = req.session.user
        res.render('perfilDeUsuario',{user})
-    console.log(user)
    }
 
 }
