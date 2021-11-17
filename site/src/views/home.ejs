@@ -27,18 +27,18 @@
         </div>
         <section>
 
-            <% productos.map(producto => { %>
+            <% for (let i = 0; i < productos.length; i++) { %>
                 <article>
-                    <a href="/product/detalle/<%= producto.id %> ">
+                    <a href="/product/detalle/<%= productos[i].id %>">
                     <div class="imagen">
-                        <img src="../images/productos/<%= producto.imagen %>" alt="">
+                        <img src="../images/productos/<%= productos[i].imagen[0].name %>" alt="">
                     </div>
                     <div class="art2">
                         <p class="descripcion">
-                            <%= producto.nombre %>
+                            <%= productos[i].name %>
                         </p>
                         <p class="precio">
-                            <%= producto.precio %>
+                            <%= productos[i].price %>
                         </p>
                         <div class="icons2">
                             <form action="#" method="POST">
@@ -52,8 +52,7 @@
                 </a>
                 </article>
         
-                <% }) %> 
-
+                <% } %> 
 
         </section>
 
