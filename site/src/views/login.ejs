@@ -12,16 +12,25 @@
            <div class="contenedorA">
                 <label for="user">Nombre de Usuario:</label>
                 <input class="input" type="username" name="username" id="user" value=<%= locals.old && old.username ? old.username : null %> >
-                <% if(locals.errors && errors.username){ %>
-                    <small> <%= errors.username.msg %> </small>
-                  <% } %>
+                
            </div>
             <div class="contenedorA">
                 <label for="contraseña">Contraseña:</label>
                 <input class="input" type="password" name="password" id="contraseña"  >
-                <% if(locals.errors && errors.password){ %>
-                    <small> <%= errors.password.msg %> </small>
+                <% if(locals.errors && (errors.password || errors.username)){ %>
+                    <% if(errors.password && errors.username){%>
+                        <small> complete los campos </small>
+                    <%} %> 
+                    <% if(errors.password){%>
+                        <small> <%= errors.password.msg %> </small>
+                    <%}%>
+                    <% if(errors.username){ %> 
+                        <small> <%= errors.username.msg %> </small>
+                    <%} %> 
+                    
                   <% } %>
+                  
+                 
             </div>
             <div class="recordarme">
                 <input type="checkbox" name="recordame" id="checkbox">
