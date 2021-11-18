@@ -4,6 +4,9 @@ const bcrypt = require('bcryptjs')
 const {validationResult} = require('express-validator')
 const usersFilePath = path.join(__dirname, '../data/usuarios.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models');
+const sequelize = db.sequelize;
+
 module.exports = {
     registro: (req,res) => res.render('register'),
     login: (req,res) => res.render('login'),
@@ -17,8 +20,28 @@ module.exports = {
                 }
             });
             const {name, username, fecha, email, pass} = req.body
-            const usuario = {}
-            usuario.id= max+1
+           /*  const usuario = {} */
+
+            db.user.create({
+                name:name.trim,
+                username:username.trim,
+                birthday:fecha,
+                email:email.trim,
+                contraseña:bcryptjs.hashSync(pass.trim,10),
+                id_role:2,
+                avatar: img ? img : 'default-icon.jpeg'
+            })
+            .then(usuario => {
+                req.session.user ={
+                    id: usuario.id,
+                    username: usuario.username,
+                    rol: usuario.id_role,
+                    image: usuario.avatar,
+                }
+            return res.redirect('/user/perfil')
+            })
+            .cath(error => console.log(error))
+            /* usuario.id= max+1
             usuario.name= name
             usuario.username= username
             usuario.fecha= fecha
@@ -37,7 +60,7 @@ module.exports = {
                 fecha: usuario.fecha
             }
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 3))
-            res.render('perfilDeUsuario',{user:usuario })
+            res.render('perfilDeUsuario',{user:usuario }) */
         }else{
            res.render('register', {errors: errors.mapped(), old: req.body})
         }
