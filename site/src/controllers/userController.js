@@ -2,78 +2,127 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs')
 const {validationResult} = require('express-validator')
-const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+
+const db = require('../database/models');
+const { Console } = require('console');
+const sequelize = db.sequelize;
+
+
 module.exports = {
     registro: (req,res) => res.render('register'),
     login: (req,res) => res.render('login'),
+
+
     crearUsuario: (req,res) => {
         const errors = validationResult(req)
         if(errors.isEmpty()) {
-            let max = 0
-            users.forEach(element => {
-                if(max < element.id){
-                max = element.id
-                }
-            });
+            
             const {name, username, fecha, email, pass} = req.body
-            const usuario = {}
-            usuario.id= max+1
-            usuario.name= name
-            usuario.username= username
-            usuario.fecha= fecha
-            usuario.email= email
-            usuario.pass= bcrypt.hashSync(pass, 10);
-            usuario.image= req.file ? req.file.filename: "default-icon.jpeg"
-            usuario.rol= "user"    
-            users.push(usuario)
-            req.session.user = {
-                name: usuario.name,
-                id: usuario.id,
-                username: usuario.username,
-                rol: usuario.rol,
-                image: usuario.image,
-                email: usuario.email,
-                fecha: usuario.fecha
-            }
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 3))
-            res.render('perfilDeUsuario',{user:usuario })
+
+            db.user.create({
+                name: name,
+                username: username,
+                birthday: fecha,
+                email: email,
+                contraseña: bcrypt.hashSync(pass, 10),
+                avatar:req.file ? req.file.filename: "default-icon.jpeg",
+                id_role :2
+
+            })
+            .then(result =>{
+                res.render('login')
+            })
+
+            .catch(err=>{
+                res.render('error', {error: err})
+            })
+
+            /* usuario.pass= bcrypt.hashSync(pass, 10);
+            usuario.image= req.file ? req.file.filename: "default-icon.jpeg"  */  
+            
+            
         }else{
            res.render('register', {errors: errors.mapped(), old: req.body})
         }
     },
+
+
+    
     validateUser:(req, res) =>{
         const errors = validationResult(req)
         if(errors.isEmpty()) {
-            const usersFilePath = path.join(__dirname, '../data/usuarios.json');
-            const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+           
             const {username, password} = req.body
-            let usuariologueado = users.find(u =>u.username === username)            
-            if(usuariologueado){
-                if(bcrypt.compareSync( password, usuariologueado.pass)){
-                    req.session.user = {
-                        name: usuariologueado.name,
-                        id: usuariologueado.id,
-                        username: usuariologueado.username,
-                        rol: usuariologueado.rol,
-                        image: usuariologueado.image,
-                        email: usuariologueado.email,
-                        fecha: usuariologueado.fecha
-                    }
+
+            db.user.findOne({
+                where:{
+                    username: username,
+                    /* contraseña : bcrypt.hashSync(password, 10) */
+                }
+            })
+
+            .then(result =>{
+                
+                 if(bcrypt.compareSync(password, result.contraseña)){
+
+                    req.session.user = result;
+                    const user = req.session.user
                     if(req.body.recordame != undefined){
                         res.cookie('sixtoArte', req.session.user, {maxAge: 900*1000})
-                    }
-                    res.redirect('/user/perfil')
-                }else{
-                    res.render('login', {invalid: 'contraseña invalida'})
-                }
-            }else{
-                res.render('login', {invalid: 'usuario invalido'})
-            }
+
+                        
+                            db.rol.findOne({
+                                where:{
+                                    id :result.id_role
+                                }
+                            })
+                            .then(roll =>{
+                                res.render('perfilDeUsuario',{user, rol:roll.dataValues.name} )
+                            })
+                            .catch(err=>{
+                                res.render('error', {error: err})
+                            })
+                        
+
+                        .catch(err=>{
+                            res.render('error', {error: err})
+                        })
+                         
+                    }else{
+                         db.rol.findOne({
+                                where:{
+                                    id :result.id_role
+                                }
+                            })
+                            .then(roll =>{
+                                res.render('perfilDeUsuario',{user, rol:roll.dataValues.name} )
+                            })
+                            .catch(err=>{
+                                res.render('error', {error: err})
+                            })
+                        
+
+                        .catch(err=>{
+                            res.render('error', {error: err})
+                        })
+
+                }}else{
+                    
+                    res.render('login')
+            } 
+            })
+
+            .catch(err=>{
+                res.send('nombre de usuario incorrecto')
+            })
+
         }else{
            res.render('login', {errors: errors.mapped(), old: req.body})
         }
-    },
+    }, 
+
+
     cerrarSesion: (req, res)=> {
         req.session.destroy()
         if(req.cookies.sixtoArte !== undefined){
@@ -84,7 +133,19 @@ module.exports = {
 
    profile: (req,res) => {
     const user = req.session.user
-       res.render('perfilDeUsuario',{user})
+    db.rol.findOne({
+        where:{
+            id :user.id_role
+        }
+    })
+    .then(roll =>{
+        console.log(roll)
+        res.render('perfilDeUsuario',{user, rol:roll.dataValues.name} )
+    })
+    .catch(err=>{
+        res.render('error', {error: err})
+    })
+    
    }
 
-}
+} 
