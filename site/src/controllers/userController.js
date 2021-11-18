@@ -51,7 +51,7 @@ module.exports = {
     
     validateUser:(req, res) =>{
         const errors = validationResult(req)
-        if(errors.isEmpty()) {
+        if(errors.isEmpty()) {  /* pregunta si hay errores */
            
             const {username, password} = req.body
 

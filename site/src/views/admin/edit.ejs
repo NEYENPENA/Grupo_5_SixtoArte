@@ -32,6 +32,54 @@
             <small> <%= errors.descripcion.msg %> </small>
           <% } %>
 
+          <label for="categoria">Categoria del Producto</label>
+          <input type="text" name="categoria" value="<%= productEdit.categoria %>" id="categoria" >
+          <select name="categoria" value="<%= productEdit.categoria id="categoria"%> ">
+            <option value="1">cuñetes de carton</option>
+            <option value="2">bandejas</option>
+            <option value="3">lamparas</option>
+            <option value="4">espejos</option>
+            <option value="5">soportes</option>
+            <option value="6">posa vasos</option>
+            <option value="7">posa pavas</option>
+            <option value="8">cajas</option>
+            <option value="9">wiphalas en red</option>
+            <option value="10">cuadros</option>
+            <option value="11">posa fuentes</option>
+            <option value="12">bandejas</option>
+            <option value="13">numeracion para casas</option>
+            <option value="14">decoracion</option>
+            <option value="15">porta llaves</option>
+            <option value="16">relojes</option>
+            <option value="17">decoraciones de plantas</option>
+            <option value="18">fanales</option>
+            <option value="18">otros</option>
+          </select>
+          <% if(locals.errors && errors.categoria){ %>
+            <small> <%= errors.categoria.msg %> </small>
+          <% } %>
+
+          <label for="color">Color del Producto</label>
+          <input type="text" name="color" value="<%= productEdit.color %>" id="color" >
+          <select name="color" value="<%= productEdit.color id="color"%> ">
+            <option value="1">rojo</option>
+            <option value="2">azul</option>
+            <option value="3">verde</option>
+            <option value="4">blanco</option>
+            <option value="5">negro</option>
+            <option value="6">celeste</option>
+            <option value="7">amarillo</option>
+            <option value="8">marron</option>
+            <option value="9">gris</option>
+            <option value="10">rosa</option>
+            <option value="11">naranja</option>
+            <option value="12">violeta</option>
+            <option value="13">multicolor</option>
+          </select>
+          <% if(locals.errors && errors.color){ %>
+            <small> <%= errors.color.msg %> </small>
+          <% } %>
+
           <label for="">suba una imagen</label>
           <input type="file" name="image" value="<%= productEdit.imagen%>">
 
