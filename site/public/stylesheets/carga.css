@@ -58,10 +58,21 @@
     width: 95%;
     font-family: var(--letra);
 }
+.carga select{
+    width: 95%;
+    text-align: center;
+    font-size: 18px;
+    
+}
 @media(min-width:426px){
 
     .carga main form label{
         font-size: 18px;
+    }
+    .carga select{
+        width: 85%;
+        border-radius: 6px;
+        border-color: white;
     }
 
 }

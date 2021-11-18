@@ -32,6 +32,36 @@
             <small> <%= errors.descripcion.msg %> </small>
           <% } %> 
 
+
+          <label for="categoria">Categoria del Producto</label>
+          
+          <select name="categoria"  id="categoria">
+
+            <% categorias.map(categoria => { %>
+
+              <option value="<%= categoria.id %>" ><%= categoria.name %></option>
+              
+            <%}) %> 
+
+          </select>
+          <% if(locals.errors && errors.categoria){ %>
+            <small> <%= errors.categoria.msg %> </small>
+          <% } %>
+
+          <label for="color">Color del Producto</label>
+         
+          <select name="color" id="color"%> ">
+            <% colores.map(color => { %>
+
+              <option value="<%= color.id %> "><%= color.name %> </option>
+
+            <%}) %> 
+          </select>
+          <% if(locals.errors && errors.color){ %>
+            <small> <%= errors.color.msg %> </small>
+          <% } %>
+
+
           <label for="image">suba una imagen</label>
           <input type="file" name="image" id="image" >
 
