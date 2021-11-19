@@ -32,7 +32,7 @@ app.use(session({
   }));
 app.use(recordame)
 app.use(logueado)
-app.use(express.json()) 
+
 
 
 app.use('/', main);

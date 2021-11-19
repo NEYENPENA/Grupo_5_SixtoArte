@@ -49,6 +49,12 @@ flex-direction: column;
     border-color: var(--azulOscuro);
 }
 
+
+.perfil div .auseredit i{
+    font-size: 28px;
+    color: var(--azulOscuro);
+}
+
 /* MEDIDAS TABLET */
 
 @media (min-width: 426px){
@@ -138,4 +144,8 @@ flex-direction: column;
         margin-bottom: 30px;
         
     } 
+    .perfil div .auseredit i{
+        font-size: 35px;
+        color: var(--azulOscuro);
+    }
  }

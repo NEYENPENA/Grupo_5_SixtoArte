@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs')
 const {validationResult} = require('express-validator')
-
+const moment = require('moment');
 
 const db = require('../database/models');
 const { Console } = require('console');
@@ -139,13 +139,80 @@ module.exports = {
         }
     })
     .then(roll =>{
-        console.log(roll)
+        
         res.render('perfilDeUsuario',{user, rol:roll.dataValues.name} )
     })
     .catch(err=>{
         res.render('error', {error: err})
     })
     
+   },
+
+   formEdit: (req,res)=>{
+       db.user.findByPk(+req.params.id)
+       .then(usuario=>{
+           
+        res.render('editUser',{usuario:usuario.dataValues, fecha:moment(usuario.dataValues.birthday).format('L')} )
+        
+       })
+       .catch(error=>{
+        res.send(error)
+    })
+    
+   },
+   guardaEdit:(req , res) => {
+    db.user.findByPk(+req.params.id)
+    .then(usuario=>{
+        
+            db.rol.findOne({
+                where:{
+                    id :usuario.dataValues.id_role
+                }
+            })
+            .then(roll =>{
+                let {name, username, fecha, pass} = req.body
+                
+                db.user.update({
+                    name: name ? name : usuario.dataValues.name,
+                    username: username ? username : usuario.dataValues.username,
+                    birthday: fecha ? fecha : usuario.dataValues.birthday,
+                    contraseña: pass ? bcrypt.hashSync(pass, 10) : usuario.dataValues.contraseña,
+                    avatar: req.file ? req.file.filename : usuario.dataValues.avatar,
+            
+                },{
+                    where:{id: +req.params.id}
+                })
+                .then(confirm =>{
+                    db.user.findByPk(+req.params.id)
+                    .then(user =>{
+                        
+                        req.session.user = user.dataValues
+                        console.log(req.session.user,'-----------------------------')
+                        res.redirect('/user/perfil/') 
+                    })
+                    .catch(error=>{
+                        res.send(error)
+                })
+                    res.redirect('/user/perfil/') 
+                })
+                .catch(error=>{
+                        res.send(error)
+                })
+  
+            })
+            .catch(error=>{
+                res.send(error)
+            })
+        })
+    
+    
+        
+    
+    .catch(error=>{
+        res.send(error)
+        
+    })
    }
 
 } 
+
