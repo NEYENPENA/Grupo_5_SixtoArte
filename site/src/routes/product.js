@@ -3,7 +3,6 @@ const path = require('path');
 const router = express.Router();
 const {carrito, detalle} =require('../controllers/productosController')
 const registrado = require('../middlewares/usuarioRegistrado')
-/* router.get('/productDetail', detalles); */
 
 router.get('/productCart',registrado, carrito);
 

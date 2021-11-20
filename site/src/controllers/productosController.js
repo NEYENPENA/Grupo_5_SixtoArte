@@ -1,15 +1,26 @@
 const productos = require('../data/productos.json');
+const db = require('../database/models');
+const sequelize = db.sequelize;
 
 module.exports = {        
-    detalle: (req,res) => {
-        const {id} = req.params;
-        const producto = productos.find(element => element.id === +id);
-        res.render('productDetail', {producto});  
+    detalle: (req,res) => {        
+        db.product.findByPk(req.params.id, {
+            include: [{association: 'imagen'}]
+            })
+            .then(producto => {
+                res.render('productDetail', {producto})                                         
+            })
+            .catch(err => {
+                res.send(err)
+            })        
     },
-    /* carrito: (req,res) => res.render('productCart', {productos}), */
+    
     carrito: (req,res) => {
         let carritos = productos.filter(producto =>  producto.precio <800 )
         res.render('productCart', {carritos});
         }
-    /* detalles: (req,res) => res.render('productDetail', {productos}), */
+    
 }
+/* const {id} = req.params;
+        const producto = productos.find(element => element.id === +id);
+        res.render('productDetail', {producto}); */

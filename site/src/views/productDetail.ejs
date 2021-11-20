@@ -11,7 +11,10 @@
             <section class="principio">
                             
                             <article class="producto">
-                                <img src="/images/productos/<%= producto.imagen %>" alt="">
+                                <% producto.imagen.forEach(element => { %>
+                                                                    
+                                <img src="/images/productos/<%= element.name %>" alt="">
+                                <% }) %> 
                                 <div class="fotos">
                                     <span>1/1</span>
                                  </div> 
@@ -19,9 +22,9 @@
                             </article>
                             <article class="cont-right">
                                 <div class="descripcion">
-                                    <h2 class="nombredeproducto"><%= producto.nombre %></h2>
-                                    <h4> <%= producto.descripcion %> </h4>
-                                    <p> $<%= producto.precio  %> </p>
+                                    <h2 class="nombredeproducto"><%= producto.name %></h2>
+                                    <h4> <%= producto.description %> </h4>
+                                    <p> $<%= producto.price  %> </p>
                                 </div>                                                
                         <div class="comprar">                
                             <form action="">
@@ -45,40 +48,8 @@
                             </div>                    
                     </article>                    
                     <article class="pedidos">
-                        <div >
-                            <% if(producto.categoria === "Espejos") { %>                                 
-                                <h3><%=producto.relacionado %></h3>
-
-                                <% }else if(producto.categoria === "Soportes") { %> 
-                                    <h3><%=producto.relacionado %></h3>
-
-                                <% }else if(producto.categoria === "posa Vasos") { %>    
-                                    <h3><%=producto.relacionado %></h3>
-
-                                <% }else if(producto.categoria === "Lamparas") { %>
-                                    <h3><%=producto.relacionado %></h3>
-                                    
-                                <% }else if(producto.categoria === "posa pava") { %>    
-                                    <h3><%=producto.relacionado %></h3>
-    
-                                <% }else if(producto.categoria === "porta rollos") { %>    
-                                    <h3><%=producto.relacionado %></h3>
-                                    
-                                <% }else if(producto.categoria === "numeracion para casas") { %>    
-                                    <h3><%=producto.relacionado %></h3>
-    
-                                <% }else if(producto.categoria === "cuñetes de carton") { %>    
-                                    <h3><%=producto.relacionado %></h3>
-    
-                                <% }else if(producto.categoria === "Wiphalas en red") { %>    
-                                    <h3><%=producto.relacionado %></h3>
-
-                                <% }else if(producto.categoria === "espejo sol") { %>    
-                                    <h3><%=producto.relacionado %></h3>
- 
-                                <% }else { %>                                                                
-                                    <h3>Diseños personalizados para vos, ¡no dudes en consultarnos!</h3>
-                                    <% } %>                                                                                           
+                        <div >                                                           
+                                <h3><%=producto.related %></h3>                                                                                          
                             </div>
                     </article>
                     
