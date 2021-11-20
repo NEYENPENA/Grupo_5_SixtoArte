@@ -132,18 +132,25 @@ module.exports = {
     },
 
    profile: (req,res) => {
-    const user = req.session.user
-    db.rol.findOne({
-        where:{
-            id :user.id_role
-        }
-    })
-    .then(roll =>{
+    
+
+    db.user.findByPk(req.session.user.id)
+    .then(usuario =>{
+       
+        db.rol.findOne({
+            where:{id:usuario.dataValues.id_role}
+        })
+        .then(rol=>{
+            res.render('perfilDeUsuario',{user:usuario.dataValues, rol:rol.dataValues.name} )
+            
+        })
+        .catch(error=>{
+            res.send(error)
+        })
         
-        res.render('perfilDeUsuario',{user, rol:roll.dataValues.name} )
     })
-    .catch(err=>{
-        res.render('error', {error: err})
+    .catch(error=>{
+        res.send(error)
     })
     
    },
@@ -185,9 +192,16 @@ module.exports = {
                 .then(confirm =>{
                     db.user.findByPk(+req.params.id)
                     .then(user =>{
+                        req.session.destroy()
+                        if(req.cookies.sixtoArte !== undefined){
+                                 res.cookie('sixtoArte', '', {maxAge: -1})
+                                 req.session.user = user.dataValues
+                                 res.cookie('sixtoArte', req.session.user, {maxAge: 900*1000})
+                         }else{
+                               req.session.user = user.dataValues
+                            }
                         
-                        req.session.user = user.dataValues
-                        console.log(req.session.user,'-----------------------------')
+                        
                         res.redirect('/user/perfil/') 
                     })
                     .catch(error=>{
