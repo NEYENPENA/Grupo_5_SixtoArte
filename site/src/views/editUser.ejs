@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head') %>
+<body class="register">
+    
+   <!-- HEADER -->
+   <%- include('./partials/header') %>
+  <main class="conteiner">
+
+
+
+  <form action="/user/edit/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <h1 class="titulo">editar</h1>
+    <div class="form">
+        <div class="conteinerB">
+           
+          <label for="nombre"> Nombre y Apellido</label>
+          <input type="text" class="input" name="name" id="nombre" value='<%= usuario.name%>'>
+          
+          <% if(locals.errors && errors.name){ %>
+            <small> <%= errors.name.msg %> </small>
+          <% } %> 
+          
+        </div>       
+        <div class="conteinerB">
+            <label for="user">Nombre de Usuario</label>
+          <input type="username" class="input" name="username" id="user" value='<%= usuario.username%>'>
+          <% if(locals.errors && errors.username){ %>
+            <small> <%= errors.username.msg %> </small>
+          <% } %> 
+       </div> 
+
+
+       <div class="conteinerB">
+
+            <label for="date">Fecha de Nacimiento</label>
+            <input type="date" class="input" name="fecha" id="date"  value="<%= fecha %> "> 
+       </div>        
+
+          
+          
+        <div class="conteinerB">
+
+            <label for="image">Imagen</label>
+            <input type="file" name="image" id="image" class="input">
+
+        </div> 
+            
+       <div class="conteinerB">
+
+          <label for="contraseña">Contraseña</label>
+          <input type="password" class="input" name="pass" id="contraseña" >
+          <% if(locals.errors && errors.pass){ %>
+            <small> <%= errors.pass.msg %> </small>
+          <% } %> 
+       </div>  
+       
+     
+       <div class="conteinerB">
+        <input type="submit" value="EDITAR" class="btn">
+      </div>        
+      <div class="conteinerB">
+        <input type="reset" value="Eliminar Datos" class="btn">
+      </div>
+    </div>   
+  </form>
+
+
+
+</main>
+</body>
+</html>

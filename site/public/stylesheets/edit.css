@@ -52,10 +52,23 @@
     max-width: 630px;
     width: 95%;
 }
+.edit select{
+    width: 95%;
+    text-align: center;
+    font-size: 18px;
+    
+}
+
+
 @media(min-width:426px){
 
     .edit main form label{
         font-size: 18px;
+    }
+    .edit select{
+        width: 85%;
+        border-radius: 6px;
+        border-color: white;
     }
 
 }

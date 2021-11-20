@@ -29,8 +29,8 @@
     <% products.map(producto => { %> 
     <div class="atributos">
         <div class="id"> <%= producto.id  %> </div>
-        <div class="name"> <%= producto.nombre  %> </div>
-        <div class="precio"> <%= producto.precio  %> </div>
+        <div class="name"> <%= producto.name  %> </div>
+        <div class="precio"> <%= producto.price  %> </div>
         <div class="ver3"><a href="/admin/detalle/<%= producto.id %> "><i class="far fa-eye"></i></a></div>
         <div class="edit3"><a href="/admin/edit/<%= producto.id %>"><i class="far fa-edit"></i></a></div>         
         <div class="delet3">

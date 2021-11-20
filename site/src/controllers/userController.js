@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const bcrypt = require('bcryptjs')
 const {validationResult} = require('express-validator')
-
+const moment = require('moment');
 
 const db = require('../database/models');
 const { Console } = require('console');
@@ -51,7 +51,7 @@ module.exports = {
     
     validateUser:(req, res) =>{
         const errors = validationResult(req)
-        if(errors.isEmpty()) {
+        if(errors.isEmpty()) {  /* pregunta si hay errores */
            
             const {username, password} = req.body
 
@@ -132,20 +132,101 @@ module.exports = {
     },
 
    profile: (req,res) => {
-    const user = req.session.user
-    db.rol.findOne({
-        where:{
-            id :user.id_role
-        }
+    
+
+    db.user.findByPk(req.session.user.id)
+    .then(usuario =>{
+       
+        db.rol.findOne({
+            where:{id:usuario.dataValues.id_role}
+        })
+        .then(rol=>{
+            res.render('perfilDeUsuario',{user:usuario.dataValues, rol:rol.dataValues.name} )
+            
+        })
+        .catch(error=>{
+            res.send(error)
+        })
+        
     })
-    .then(roll =>{
-        console.log(roll)
-        res.render('perfilDeUsuario',{user, rol:roll.dataValues.name} )
-    })
-    .catch(err=>{
-        res.render('error', {error: err})
+    .catch(error=>{
+        res.send(error)
     })
     
+   },
+
+   formEdit: (req,res)=>{
+       db.user.findByPk(+req.params.id)
+       .then(usuario=>{
+           
+        res.render('editUser',{usuario:usuario.dataValues, fecha:moment(usuario.dataValues.birthday).format('L')} )
+        
+       })
+       .catch(error=>{
+        res.send(error)
+    })
+    
+   },
+   guardaEdit:(req , res) => {
+    db.user.findByPk(+req.params.id)
+    .then(usuario=>{
+        
+            db.rol.findOne({
+                where:{
+                    id :usuario.dataValues.id_role
+                }
+            })
+            .then(roll =>{
+                let {name, username, fecha, pass} = req.body
+                
+                db.user.update({
+                    name: name ? name : usuario.dataValues.name,
+                    username: username ? username : usuario.dataValues.username,
+                    birthday: fecha ? fecha : usuario.dataValues.birthday,
+                    contraseña: pass ? bcrypt.hashSync(pass, 10) : usuario.dataValues.contraseña,
+                    avatar: req.file ? req.file.filename : usuario.dataValues.avatar,
+            
+                },{
+                    where:{id: +req.params.id}
+                })
+                .then(confirm =>{
+                    db.user.findByPk(+req.params.id)
+                    .then(user =>{
+                        req.session.destroy()
+                        if(req.cookies.sixtoArte !== undefined){
+                                 res.cookie('sixtoArte', '', {maxAge: -1})
+                                 req.session.user = user.dataValues
+                                 res.cookie('sixtoArte', req.session.user, {maxAge: 900*1000})
+                         }else{
+                               req.session.user = user.dataValues
+                            }
+                        
+                        
+                        res.redirect('/user/perfil/') 
+                    })
+                    .catch(error=>{
+                        res.send(error)
+                })
+                    res.redirect('/user/perfil/') 
+                })
+                .catch(error=>{
+                        res.send(error)
+                })
+  
+            })
+            .catch(error=>{
+                res.send(error)
+            })
+        })
+    
+    
+        
+    
+    .catch(error=>{
+        res.send(error)
+        
+    })
    }
 
 } 
+
