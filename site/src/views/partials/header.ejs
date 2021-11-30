@@ -16,9 +16,10 @@
                 <%} %>
         </nav>
         <div class="nav2">
-            <form action="">
-                    <input type="text" placeholder="Buscar">
-                    <i class="fas fa-search"></i>
+            <form action="/buscar" method="get" >
+                    <input type="text" class="buscador" name="buscador" id="buscador" placeholder="Buscar">
+                    <button class="botonBuscar" type="submit" ><i class="fas fa-search"></i> </button>
+                    
             </form>
             <div class="icons">
                 <a href="/user/perfil/"><i class="fas fa-user"></i></a>
