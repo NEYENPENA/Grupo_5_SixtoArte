@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const sequelize = db.sequelize;
+const Op = db.Sequelize.Op
 
 
 const controller = {
@@ -14,12 +15,24 @@ const controller = {
             .catch(err => {
                 res.send(err)
             })
+        },
+    buscar: (req, res)=>{
+        
+        db.product.findAll({    
+            where:{
+                name:{[Op.like]:`%${req.query.buscador.trim()}%`} 
+            },        
 
-    /* home: function (req,res) {
-        const productos = require('../data/productos.json')
-        res.render('home', {productos});
-    }  */
-}
+            include: [{association: 'imagen'}]
+        })
+        .then(productos => {              
+            res.render('home', {productos: productos}) 
+        })
+        .catch(err => {
+                res.send(err)
+        })
+    }
+
 }
 
 module.exports = controller;

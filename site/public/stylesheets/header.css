@@ -48,8 +48,13 @@ header form input{
 }
 header form i{
      position: absolute;
-     right: 8%;
-     top: 27px;
+     right: 0%;
+     top: -5px;
+}
+header .botonBuscar{
+    position: absolute;
+    right: 10%;
+     top: 33px;
 }
 header .icons{
     width: 35%;
@@ -122,6 +127,7 @@ header .nav .check:checked ~ .menudespleglable{
     visibility:visible;
     animation: desplegar 1s;
 }
+
  @media(min-width:426px){
     header .logo a img{
         width: 70px;
@@ -145,6 +151,17 @@ header .nav .check:checked ~ .menudespleglable{
         position: absolute;
         right: 9%;
     }
+    header form i{
+        position: absolute;
+        right: 0%;
+        top: -7px;
+        font-size: 20px;
+   }
+   header .botonBuscar{
+       position: absolute;
+       right: 10%;
+        top: 33px;
+   }
 }
 @media(min-width:769px){
     header{
@@ -237,10 +254,16 @@ header .nav .check:checked ~ .menudespleglable{
         font-size: 25px;
     }
     header form i{
+        position: absolute;
+        right: 0%;
+        top: -7px;
         font-size: 25px;
-        top: 10%;
-        right: 2%;
-    }
+   }
+   header .botonBuscar{
+       position: absolute;
+       right: 1%;
+        top: 11px;
+   }
     header .icons{
         position: relative;
         right: 0;

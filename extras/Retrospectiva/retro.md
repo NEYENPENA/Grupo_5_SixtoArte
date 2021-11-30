@@ -49,3 +49,15 @@
 -**Empezar a hacer**:arreglar siempre cosas pendientes en el proyecto a tiempo, nueva forma de distribucion de tareas.
 
 -**Seguir haciendo**: 
+
+## **RETROSPECTIVA de sprint 5** ##
+
+-**Hacer menos**: 
+
+-**Hacer mas**: Hacer mas reuniones diarias y/o mensajes al grupo con resumen de lo se esta trabajando
+
+-**Parar de hacer**:
+
+-**Empezar a hacer**:arreglar siempre cosas pendientes en el proyecto a tiempo.
+
+-**Seguir haciendo**:  nueva forma de distribucion de tareas,ponerse las pilas
