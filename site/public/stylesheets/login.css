@@ -32,6 +32,11 @@
   align-items: center;
   margin-bottom: 10px;
 }
+.login .contenedor .form .recordarme input{
+  margin-left: 0%;
+  margin-right: 1%;
+  margin-top: 0.5%;
+} 
 input[type=checkbox]{
   -webkit-transform: scale(1.1);
 }
