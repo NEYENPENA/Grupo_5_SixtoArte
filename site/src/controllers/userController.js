@@ -178,7 +178,11 @@ module.exports = {
             })
             .then(roll =>{
                 let {name, username, fecha, pass} = req.body
-                
+                if(req.file){
+                    fs.unlink(`public/images/usuarios/${usuario.dataValues.avatar}`, (error)=>{
+                        console.log(error)
+                    })
+                }
                 db.user.update({
                     name: name ? name : usuario.dataValues.name,
                     username: username ? username : usuario.dataValues.username,
