@@ -178,7 +178,7 @@ module.exports = {
             })
             .then(roll =>{
                 let {name, username, fecha, pass} = req.body
-                if(req.file){
+                if(req.file){ 
                     fs.unlink(`public/images/usuarios/${usuario.dataValues.avatar}`, (error)=>{
                         console.log(error)
                     })
