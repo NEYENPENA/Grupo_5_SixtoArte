@@ -6,17 +6,18 @@
     <!-- HEADER -->
     <%- include('./partials/header') %>
 <main class="contenedor">
-    <form  action="/user/login" method="POST">
+    <form  action="/user/login" method="POST" id="form">
         <h1 class="titulolog">iniciar sesión</h1>
         <div class="form">
            <div class="contenedorA">
                 <label for="user">Nombre de Usuario:</label>
                 <input class="input" type="username" name="username" id="user" value=<%= locals.old && old.username ? old.username : null %> >
-                
+                <small class="small7"></small>
            </div>
             <div class="contenedorA">
                 <label for="contraseña">Contraseña:</label>
                 <input class="input" type="password" name="password" id="contraseña"  >
+                <small class="small8"></small>
                 <% if(locals.errors && (errors.password || errors.username)){ %>
                     <% if(errors.password && errors.username){%>
                         <small> complete los campos </small>
@@ -47,6 +48,7 @@
             </div>
         </div>        
     </form>
+    <script src="/javascripts/login.js"></script>
 </main>    
 </body>
 </html>

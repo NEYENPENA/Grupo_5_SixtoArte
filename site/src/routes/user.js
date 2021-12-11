@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
   })
   const upload = multer({ storage: storage })
 
-const { registro, login, crearUsuario, validateUser, cerrarSesion, profile, formEdit, guardaEdit } = require('../controllers/userController');
+const { registro, login, crearUsuario, validateUser, cerrarSesion, profile, formEdit, guardaEdit} = require('../controllers/userController');
 
 
 

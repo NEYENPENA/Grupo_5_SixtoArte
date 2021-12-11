@@ -75,6 +75,14 @@
   margin-bottom: 0;
 } 
 
+.inputInvalid{
+  
+  color: red;
+}
+.inputValid{
+  color: green;
+}
+
 @media (min-width: 769px) {
   .register .conteiner {
     margin-top: 150px;   
