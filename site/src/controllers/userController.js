@@ -159,7 +159,7 @@ module.exports = {
        db.user.findByPk(+req.params.id)
        .then(usuario=>{
            
-        res.render('editUser',{usuario:usuario.dataValues, fecha:moment(usuario.dataValues.birthday).format('L')} )
+        res.render('editUser',{usuario:usuario.dataValues} )
         
        })
        .catch(error=>{

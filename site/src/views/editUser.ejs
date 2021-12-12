@@ -10,14 +10,14 @@
 
 
 
-  <form action="/user/edit/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+  <form action="/user/edit/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="form">
     <h1 class="titulo">editar</h1>
     <div class="form">
         <div class="conteinerB">
            
           <label for="nombre"> Nombre y Apellido</label>
           <input type="text" class="input" name="name" id="nombre" value='<%= usuario.name%>'>
-          
+          <small class="smallJS10"></small>
           <% if(locals.errors && errors.name){ %>
             <small> <%= errors.name.msg %> </small>
           <% } %> 
@@ -26,17 +26,14 @@
         <div class="conteinerB">
             <label for="user">Nombre de Usuario</label>
           <input type="username" class="input" name="username" id="user" value='<%= usuario.username%>'>
+          <small class="smallJS11"></small>
           <% if(locals.errors && errors.username){ %>
             <small> <%= errors.username.msg %> </small>
           <% } %> 
        </div> 
 
 
-       <div class="conteinerB">
-
-            <label for="date">Fecha de Nacimiento</label>
-            <input type="date" class="input" name="fecha" id="date"  value="<%= fecha %> "> 
-       </div>        
+            
 
           
           
@@ -51,6 +48,7 @@
 
           <label for="contraseña">Contraseña</label>
           <input type="password" class="input" name="pass" id="contraseña" >
+          <small class="smallJS12"></small>
           <% if(locals.errors && errors.pass){ %>
             <small> <%= errors.pass.msg %> </small>
           <% } %> 
@@ -66,7 +64,7 @@
     </div>   
   </form>
 
-
+  <script src="/javascripts/editUser.js"></script>
 
 </main>
 </body>
