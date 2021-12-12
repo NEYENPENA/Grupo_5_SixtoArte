@@ -54,17 +54,40 @@ window.addEventListener('load',()=>{
 
     })
     user.addEventListener('input', (e)=>{
-        if(e.target.value.length < 3){
+        
+        if(e.target.value == ''){
             user.classList.add('inputInvalid')
             user.classList.remove('inputValid')
-            small2.innerHTML = ('minimo de 3 caracteres')
+            small2.innerHTML = ('no puede estar vacio')
             usuario = false
-        }else{
+            
+           } else {
+            usuario = false
+            user.classList.add('inputValid')
+            user.classList.remove('inputInvalid')
+            small2.innerHTML = ('')
+            for (let i = 0; i < usuarios.length; i++) {
+                if(usuarios[i].username === e.target.value){
+                    usuario = usuarios[i].username
+                }
+            }
+
+           }
+           
+        if(usuario != false){
+            user.classList.add('inputInvalid')
+            user.classList.remove('inputValid')
+            small2.innerHTML = ('el usuario ya existe')
+            usuario = 'mal'
+           }
+           
+           else {
             user.classList.add('inputValid')
             user.classList.remove('inputInvalid')
             small2.innerHTML = ('')
             usuario = e.target.value
-        }
+           }
+
 
     })
     email.addEventListener('input', (e)=>{
@@ -226,7 +249,7 @@ window.addEventListener('load',()=>{
         }
         
         
-        e.preventDefault()
+        
     })
 
     
