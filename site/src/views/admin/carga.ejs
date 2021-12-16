@@ -12,22 +12,25 @@
    <main >
     <h2>CARGA DE PRODUCTO</h2>
 
-    <form class="form" action="/admin/" method="POST" enctype="multipart/form-data">
+    <form class="form" action="/admin/" method="POST" enctype="multipart/form-data" id="form">
 
         <label for="nombre">Nombre del Producto</label>
           <input type="text" name="nombre" placeholder="nombre del producto" id="nombre" value=<%= locals.old && old.nombre ? old.nombre : null %>>
+          <small class="smallJS20"></small>
           <% if(locals.errors && errors.nombre){ %>
             <small> <%= errors.nombre.msg %> </small>
           <% } %> 
 
           <label for="precio">Precio del Producto</label>
           <input type="number" name="precio" placeholder="precio del producto" id="precio" value=<%= locals.old && old.precio ? old.precio : null %>>
+          <small class="smallJS21"></small>
           <% if(locals.errors && errors.precio){ %>
             <small> <%= errors.precio.msg %> </small>
           <% } %> 
 
           <label for="descripcion">Descripción del Producto</label>
           <input type="text" name="descripcion" placeholder="descripcion del producto" id="descripcion" value=<%= locals.old && old.descripcion ? old.descripcion : null %>>
+          <small class="smallJS22"></small>
           <% if(locals.errors && errors.descripcion){ %>
             <small> <%= errors.descripcion.msg %> </small>
           <% } %> 
@@ -44,6 +47,7 @@
             <%}) %> 
 
           </select>
+          <small class="smallJS23"></small>
           <% if(locals.errors && errors.categoria){ %>
             <small> <%= errors.categoria.msg %> </small>
           <% } %>
@@ -57,6 +61,7 @@
 
             <%}) %> 
           </select>
+          <small class="smallJS24"></small>
           <% if(locals.errors && errors.color){ %>
             <small> <%= errors.color.msg %> </small>
           <% } %>
@@ -66,13 +71,13 @@
           <input type="file" name="image" id="image" >
 
           <button type="submit" >CARGAR </button>
-          
+          <small class="smallJS25"></small>
     </form>
     <form class="cancel" action="/admin">
         <button type="submit">CANCELAR </button></form>
     
    </main>
 
-   
+   <script src="/javascripts/cargaProducts.js"></script>
 </body>
 </html>
