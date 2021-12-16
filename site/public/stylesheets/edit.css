@@ -58,7 +58,9 @@
     font-size: 18px;
     
 }
-
+.edit small{
+    color: red;
+}
 
 @media(min-width:426px){
 

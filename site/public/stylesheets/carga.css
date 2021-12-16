@@ -26,7 +26,7 @@
     max-width: 740px;
 }
 .carga main .form small{ 
-    color: black;
+    color: rgb(255, 0, 0);
     font-size: 17px;
 }
 .carga main .cancel{
@@ -64,6 +64,13 @@
     font-size: 18px;
     
 }
+.inputInvalid{
+  
+    color: red;
+  }
+.inputValid{
+    color: green;
+  }
 @media(min-width:426px){
 
     .carga main form label{
