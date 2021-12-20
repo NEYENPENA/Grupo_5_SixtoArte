@@ -252,5 +252,22 @@ window.addEventListener('load',()=>{
         
     })
 
-    
+
+   /*  const qsa =(tag)=>{
+        return document.querySelectorAll(tag)
+    }  */
+
+    const div = qs('.icons')
+    let main = qs('.conteiner')
+    let h1 = qs('.titulo')
+    /* let button = qs('.btn') */
+    /* let label = qsa('label') */
+
+
+    div.addEventListener("click", (e) => {
+      main.style.backgroundColor = '#121212'
+      h1.style.color = '#FFFFFF'
+      /* button.style.backgroundColor = 'green' */
+      /* label.style.color = '#FFFFFF' */
+       })
 })

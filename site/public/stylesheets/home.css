@@ -129,6 +129,7 @@
 }
 .home section article div .icons2 form button{
     border: none;
+    display: flex;
 }
 .home section article div .icons2 i{
     font-size: 25px;

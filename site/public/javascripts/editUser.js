@@ -25,7 +25,6 @@ window.addEventListener('load', (e)=>{
     const small11 = qs ('.smallJS11')
     const small12 = qs ('.smallJS12')
 
-
     let name = true
     let usuario = true
     let contra = true
@@ -137,21 +136,25 @@ form.addEventListener('submit', (e)=>{
         
     })
 
+ /*    const main = qs ('.conteiner')
+    const h1 = qs ('.titulo')
+    const input = qs ('#image')
+    const darkmode = confirm ('¿Desea modo oscuro?')
 
+    if (darkmode){
+    main.style.backgroundColor = '#121212'
+    h1.style.color = '#FFFFFF'
+    input.style.backgroundColor = '#FFFFFF'
+} */
+const main = qs ('.conteiner')
+const h1 = qs ('.titulo')
+const input = qs ('#image')
+const div = qs('.icons')
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+div.addEventListener("click", (e) => {
+    main.style.backgroundColor = '#121212'
+    h1.style.color = '#FFFFFF'
+    input.style.backgroundColor = '#FFFFFF'
+   })
 
 })

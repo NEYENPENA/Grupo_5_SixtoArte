@@ -1,4 +1,3 @@
-
 window.addEventListener('load',()=>{
     let usuarios = 'nada'
     fetch('http://localhost:3000/api/user/list')
@@ -93,5 +92,40 @@ window.addEventListener('load',()=>{
 
 
     })
+    
+    const main = qs('.contenedor')
+    const h1 = qs('h1')
+    const label = qs('label')
+    const label2 = qs('.r')
+    const label3 = qs('.c')
+    /* const input = qs('.btn') */
+    /* const a = qs('.btn') */
+    const div = qs('.icons')
+
+/*     const darkmode = confirm ('¿Desea modo oscuro?')
+
+    if (darkmode){
+    main.style.backgroundColor = '#121212'
+    h1.style.color = '#FFFFFF'
+    label.style.color = '#FFFFFF'
+    label2.style.color = '#FFFFFF'
+    label3.style.color = '#FFFFFF'
+    input.style.backgroundColor = '#FFFFFF'
+    input.style.color = '#121212'
+    a.style.backgroundColor = '#121212'
+
+ } */
+ div.addEventListener("click", (e) => {
+    main.style.backgroundColor = '#121212'
+    h1.style.color = '#FFFFFF'
+    label.style.color = '#FFFFFF'
+    label2.style.color = '#FFFFFF'
+    label3.style.color = '#FFFFFF'
+    /* input.style.backgroundColor = '#FFFFFF'
+    input.style.color = '#121212' */
+    /* a.style.backgroundColor = '#121212' */
+   })
+
+
 
 })
