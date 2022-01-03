@@ -3,7 +3,7 @@ const path = require('path');
 const {validationResult} = require('express-validator');
 
 const db = require('../database/models');
-const { Console } = require('console');
+const { Console, log } = require('console');
 const { DEFAULT_ECDH_CURVE } = require('tls');
 const sequelize = db.sequelize;
 
@@ -106,6 +106,7 @@ module.exports = {
                         })
                         .then(image=>{
                             
+                            
                             res.render('admin/edit', {productEdit:producto.dataValues, categorias:categorias, colores:colores, imagen:image.dataValues.name})
                             
                         })
@@ -153,12 +154,31 @@ module.exports = {
                     where:{id:req.params.id}
                 })
                 .then(producto=>{
-                    db.image.update({
-                        name:req.file ? req.file.filename: null
-                    },{
-                        where:{id_product:req.params.id}
+                    db.image.findOne({
+                        where:{
+                            id_product:req.params.id
+                        }
                     })
-                    res.redirect('/admin/detalle/'+req.params.id)
+                    .then(image =>{
+                        if(req.file){ 
+                            fs.unlink(`public/images/productos/${image.dataValues.name}`, (error)=>{
+                                console.log(error)
+                            })
+                            
+                        } 
+                        db.image.update({
+                        
+                            name:req.file ? req.file.filename: null
+                        },{
+                            where:{id_product:req.params.id}
+                        })
+                        res.redirect('/admin/detalle/'+req.params.id)
+                    })
+                    .catch(error=>{
+                        res.send(error)
+                    })
+                    
+                    
                 })
                 .catch(error=>{
                     res.send(error)
@@ -209,29 +229,46 @@ module.exports = {
 
     //eliminar
     eliminar: (req,res) => {
-        db.image.destroy({
+        db.image.findOne({
             where:{
                 id_product: +req.params.id
             }
         })
+        .then(image =>{
+            console.log(+req.params.id, 'entro --------------------------------------------');
+            fs.unlink(`public/images/productos/${image.dataValues.name}`, (error)=>{
+                console.log(error)
+            })
+            
+            db.image.destroy({
+            where:{
+                id_product: +req.params.id
+            }
+            })
        
-        .then(confirm=>{
+            .then(confirm=>{
             db.product.destroy({
                 where:{
                     id: +req.params.id
                 }
             })
-            .then(confirmacio=>{
+                .then(confirmacio=>{
+                
                 res.redirect('/admin')
+                 
             })
-            .catch(error=>{
+                .catch(error=>{
                 res.send(error)
             })
             
+            })
+            .catch(error=>{
+            res.send(error)
+            })
         })
         .catch(error=>{
             res.send(error)
-        })
+            })
 
     }    
  
