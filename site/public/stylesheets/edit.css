@@ -61,6 +61,10 @@
 .edit small{
     color: red;
 }
+.edit  .preview2{
+    margin-top: 15px;
+width: 90%;
+}
 
 @media(min-width:426px){
 
@@ -71,6 +75,10 @@
         width: 85%;
         border-radius: 6px;
         border-color: white;
+    }
+    .carga  .preview2{
+        margin-top: 15px;
+    width: 80%;
     }
 
 }
