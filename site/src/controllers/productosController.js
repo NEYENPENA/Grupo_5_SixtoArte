@@ -1,3 +1,4 @@
+const fs = require('fs');
 const productos = require('../data/productos.json');
 const db = require('../database/models');
 const sequelize = db.sequelize;
