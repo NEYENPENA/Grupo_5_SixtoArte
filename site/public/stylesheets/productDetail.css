@@ -226,6 +226,7 @@ footer{
     }
     main .principio .cont-right{
         width: 60%;
+        height: 100%;
         margin: 0;
         flex-direction: row;
         
