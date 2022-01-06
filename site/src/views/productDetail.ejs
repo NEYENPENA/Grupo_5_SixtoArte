@@ -22,30 +22,21 @@
                             </article>
                             <article class="cont-right">
                                 <div class="descripcion">
-                                    <h2 class="nombredeproducto"><%= producto.name %></h2>
+                                    <h2 class="nombredeproducto" style="text-transform: uppercase" ><%= producto.name %></h2>
                                     <h4> <%= producto.description %> </h4>
                                     <p> $<%= producto.price  %> </p>
                                 </div>                                                
                         <div class="comprar">                
                             <form action="">
                                 
-                                <div class="cantidadd">
-                                    <label for="cantidad">Cantidad</label>
-                                    
-                                    <input type="number" id="cantidad" value="1">
-                                </div>                                
+                                                              
                                 <div class="agregar">
                                     <i class="fas fa-shopping-cart"></i>
                                     <input type="submit" value="Agregar al carrito">
                                 </div>
                             </form>
                         </div>
-                        <div class="favoritos">
-                                <form  action="">                    
-                                        <i class="fas fa-heart"></i>
-                                        <input type="submit" value="Agregar a favoritos">                                       
-                                </form>
-                            </div>                    
+                                           
                     </article>                    
                     <article class="pedidos">
                         <div >                                                           
