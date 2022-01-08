@@ -156,6 +156,8 @@
 .home .top a i{
     color: var(--cian);
     font-size: 28px;
+    background-color: #FFFFFF;
+    border-radius: 25px;
 }
 
 @media(min-width:426px){

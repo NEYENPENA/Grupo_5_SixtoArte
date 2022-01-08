@@ -2,6 +2,7 @@ window.onload = function(){
     let main = document.querySelector('.home')
     let p = document.querySelector('.precio')
     let p2 = document.querySelector('p')
+
     const div = document.querySelector('.icons')
     /* let div = document.querySelector('.carrousel') */
     /* const darkmode = confirm('¿Desea modo oscuro?') */
@@ -30,4 +31,3 @@ window.onload = function(){
     console.log(p2);
     console.log(darkmode); */
 }
-

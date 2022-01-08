@@ -23,6 +23,7 @@
     color: black;
     border: 2px solid var(--azul);
     padding: 2px;
+    background-color: var(--azul);
 
 }
 .admin main h3:hover{

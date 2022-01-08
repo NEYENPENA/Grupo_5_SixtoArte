@@ -24,6 +24,7 @@ p3.style.color = '#FFFFFF'
       p2.style.color = '#FFFFFF'
       p2.style.backgroundColor = '#808080'
       button.style.backgroundColor = '#4592AF'
+      button.style.color = '#FFFFFF'
       p3.style.color = '#FFFFFF'
      })
 

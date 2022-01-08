@@ -41,7 +41,8 @@ window.addEventListener('load',()=>{
             }else{
                 user.classList.add('inputInvalid')
             user.classList.remove('inputValid')
-            small7.innerHTML = ('el usuario no existe')
+            small7.innerHTML = ('Debes escribir un nombre de usuario')
+            /* small7.innerHTML = ('el usuario no existe') */
             }
         
     })

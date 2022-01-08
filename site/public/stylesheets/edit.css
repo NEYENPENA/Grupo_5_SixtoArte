@@ -23,6 +23,7 @@
     background-color: var(--azulOscuro);
     align-items: center;
     max-width: 740px;
+    border-radius: 20px;
 }
 .edit main .cancel{
     display: flex;
