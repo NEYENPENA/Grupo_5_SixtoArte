@@ -1,8 +1,11 @@
 window.onload = function(){
     let main = document.querySelector('.home')
     let p = document.querySelector('.precio')
-    let p2 = document.querySelector('p')
-
+    let p2 = document.querySelectorAll('p')
+    let button = document.querySelectorAll('button')
+    
+/*     console.log(p2);
+ */
     const div = document.querySelector('.icons')
     /* let div = document.querySelector('.carrousel') */
     /* const darkmode = confirm('¿Desea modo oscuro?') */
@@ -17,9 +20,16 @@ window.onload = function(){
     /* } */
 
    div.addEventListener("click", (e) => {
-    main.style.backgroundColor = '#121212'
+    p2.forEach( e => {
+      e.style.color = '#FFFFFF'
+    })
+    main.style.backgroundColor = '#222426'
     p.style.color = '#FFFFFF' 
-    p2.style.color = '#FFFFFF'
+    button.forEach( e => {
+      e.style.backgroundColor = '#4592AF'
+      e.style.borderRadius = '5px'
+    })
+
    })
   /*   let mododarkbutton = document.querySelector('.fas fa-adjust')
 

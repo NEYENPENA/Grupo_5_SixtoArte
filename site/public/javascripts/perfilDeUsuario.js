@@ -8,7 +8,7 @@ window.onload = function (){
     ul.style.color = '#FFFFFF'
         } */
         div.addEventListener("click", (e) => {
-            main.style.backgroundColor = '#121212'
+            main.style.backgroundColor = '#222426'
             ul.style.color = '#FFFFFF'
            })
 }

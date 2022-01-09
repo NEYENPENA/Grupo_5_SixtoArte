@@ -5,7 +5,7 @@ window.onload = function(){
     let div = document.querySelector('.icons')
 
     div.addEventListener("click", (e) => {
-     main.style.backgroundColor = '#121212'
+     main.style.backgroundColor = '#222426'
      h2.style.color = '#FFFFFF'
      form.style.color = '#FFFFFF'
      form.style.backgroundColor = '#19181a'

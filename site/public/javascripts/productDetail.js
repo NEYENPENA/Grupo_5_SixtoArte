@@ -23,7 +23,7 @@ window.onload = function () {
     } */
 
     div.addEventListener("click", (e) => {
-        section.style.backgroundColor = '#121212'
+        section.style.backgroundColor = '#222426'
         div4.style.color = '#FFFFFF'
         h4.style.color ='#FFFFFF'
         p.style.color ='#FFFFFF'

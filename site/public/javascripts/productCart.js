@@ -19,7 +19,7 @@ button.style.backgroundColor = '#4592AF'
 p3.style.color = '#FFFFFF'
    }  */
    div.addEventListener("click", (e) => {
-      main.style.backgroundColor = '#121212'
+      main.style.backgroundColor = '#222426'
       p.style.color = '#FFFFFF'
       p2.style.color = '#FFFFFF'
       p2.style.backgroundColor = '#808080'

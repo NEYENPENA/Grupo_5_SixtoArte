@@ -152,7 +152,7 @@ const input = qs ('#image')
 const div = qs('.icons')
 
 div.addEventListener("click", (e) => {
-    main.style.backgroundColor = '#121212'
+    main.style.backgroundColor = '#222426'
     h1.style.color = '#FFFFFF'
     input.style.backgroundColor = '#FFFFFF'
    })

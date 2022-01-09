@@ -265,7 +265,7 @@ window.addEventListener('load',()=>{
 
 
     div.addEventListener("click", (e) => {
-      main.style.backgroundColor = '#121212'
+      main.style.backgroundColor = '#222426'
       h1.style.color = '#FFFFFF'
       /* button.style.backgroundColor = 'green' */
       /* label.style.color = '#FFFFFF' */
