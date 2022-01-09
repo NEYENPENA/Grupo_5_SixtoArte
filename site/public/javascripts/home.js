@@ -1,43 +1,37 @@
-window.onload = function(){
-    let main = document.querySelector('.home')
-    let p = document.querySelector('.precio')
-    let p2 = document.querySelectorAll('p')
-    let button = document.querySelectorAll('button')
-    
-/*     console.log(p2);
- */
-    const div = document.querySelector('.icons')
-    /* let div = document.querySelector('.carrousel') */
-    /* const darkmode = confirm('¿Desea modo oscuro?') */
+const darkGray = "#222426";
+const darker = "#4592AF";
+const white = "#FFFFFF";
 
-  /*   if (darkmode) { */
+const whiteGray = "#FFFFFF";
 
-    /* main.style.backgroundColor = '#191919' */
-    /* main.style.backgroundColor = '#121212'
-    p.style.color = '#FFFFFF' 
-    p2.style.color = '#FFFFFF' */
-    /* div.style.backgroundColor = 'white' */
-    /* } */
+function changeMode (mode = "dark"){
+  let main = document.querySelector(".home");
+  let p = document.querySelector(".precio");
+  let p2 = document.querySelectorAll("p");
+  let button = document.querySelectorAll("button");
 
-   div.addEventListener("click", (e) => {
-    p2.forEach( e => {
-      e.style.color = '#FFFFFF'
-    })
-    main.style.backgroundColor = '#222426'
-    p.style.color = '#FFFFFF' 
-    button.forEach( e => {
-      e.style.backgroundColor = '#4592AF'
-      e.style.borderRadius = '5px'
-    })
+  p2.forEach((e) => {
+    e.style.color = mode == "dark" ? white : darker;
+  });
+  main.style.backgroundColor = mode == "dark" ? darkGray : white;
+  p.style.color = white;
+  button.forEach((e) => {
+    e.style.backgroundColor = mode == "dark" ? darker : white;
+    e.style.borderRadius = "5px";
+  });
+};
 
-   })
-  /*   let mododarkbutton = document.querySelector('.fas fa-adjust')
 
-    mododarkbutton.addEventListener(click, function(){
-    mododarkbutton.style.color = 'red'
-    }) */
- /*    console.log(main);
-    console.log(p);
-    console.log(p2);
-    console.log(darkmode); */
-}
+window.onload = function () {
+  const darkModeButton = document.querySelector(".icons");
+
+  darkModeButton.addEventListener("click", function() {
+        // next two code lines should be replaced by store functions
+    let main = document.querySelector(".home");
+    if (main.style.backgroundColor == darkGray) {
+      changeMode("light");
+    } else {
+      changeMode("dark");
+    }
+  }, false);
+};
