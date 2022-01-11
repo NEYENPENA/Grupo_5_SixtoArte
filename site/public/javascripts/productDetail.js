@@ -1,36 +1,24 @@
 window.onload = function () {
-    let section = document.querySelector('.principio')
-    let div4 = document.querySelector('.descripcion')
+    
+    let darkModeButton = document.querySelector(".botonDark");
+    let h2 = document.querySelector('h2')
     let h4 = document.querySelector('h4')
-    let p = document.querySelector('p')
-    let div2 = document.querySelector('.comprar')
-    let label = document.querySelector('label')
-    let div3 = document.querySelector('.favoritos')
     let h3 = document.querySelector('h3')
-    const div =  document.querySelector('.icons')
-    /* const darkmode = confirm ('¿Desea modo oscuro?')
+    let p = document.querySelector('p')
+    let body = document.querySelector('.bodyDetail')
+    let main = document.querySelector('.mainDetail')
+    let principio = document.querySelector('.principio')
+    let comprar =document.querySelector('.comprar')
+    let relacionado =document.querySelector('.relacionadoOscuro')
 
-    if (darkmode) {
-        section.style.backgroundColor = '#121212'
-        div.style.color = '#FFFFFF'
-        h4.style.color ='#FFFFFF'
-        p.style.color ='#FFFFFF'
-        div2.style.backgroundColor = '#121212'
-        label.style.color = '#FFFFFF'
-        div3.style.backgroundColor = '#121212'
-        h3.style.color = '#121212'
-        h3.style.backgroundColor = '#121212' 
-    } */
-
-    div.addEventListener("click", (e) => {
-        section.style.backgroundColor = '#222426'
-        div4.style.color = '#FFFFFF'
-        h4.style.color ='#FFFFFF'
-        p.style.color ='#FFFFFF'
-        div2.style.backgroundColor = '#121212'
-        label.style.color = '#FFFFFF'
-        div3.style.backgroundColor = '#121212'
-        h3.style.color = '#121212'
-        /* h3.style.backgroundColor = '#121212'  */
+    darkModeButton.addEventListener("click", (e) => {
+        h2.classList.toggle('blanco')
+        body.classList.toggle('fondoNegro2')
+        main.classList.toggle('fondoNegro')
+        principio.classList.toggle('fondoNegro2')
+        h4.classList.toggle('blanco')
+        p.classList.toggle('blanco')
+        h3.classList.toggle('fondoNegro')
+        relacionado.classList.toggle('fondoNegro')
        })
 }

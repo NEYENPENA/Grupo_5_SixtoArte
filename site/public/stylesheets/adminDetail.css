@@ -59,20 +59,22 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    border-bottom: 2px solid var(--azul);
-    flex-direction: column;    
+    border-bottom: 2px solid var(--azul);   
     justify-content: center;
     
 }
-.detalleAdm main .principio .cont-right .descripcion h1{
+.detalleAdm main .principio .cont-right .descripcion h2{
     text-align: center;    
     padding: 15px 0px 15px 0px;
-    font-size: 25px;
+    font-size: 24px;
+    color: var(--azul);
+    width: 100%;
 }
 .detalleAdm main .principio .cont-right .descripcion h4{
     text-align: center; 
-    color: black; 
-    font-size: 25px;   
+    color: rgb(0, 0, 0);
+    font-size: 25px; 
+    width: 100%;  
 }
 .detalleAdm main .principio .cont-right .descripcion p{
     font-size: 26px;    
@@ -209,6 +211,19 @@ footer{
     .detalleAdm main .pedidos div h3{        
         text-shadow: 1px 1px darkcyan;
     }
+    .detalleAdm main .principio .cont-right .descripcion h2{
+        text-align: center;    
+        padding: 15px 0px 15px 0px;
+        font-size: 28px;
+        color: var(--azul);
+        width: 100%;
+    }
+    .detalleAdm main .principio .cont-right .descripcion h4{
+        text-align: center; 
+        color: rgb(0, 0, 0);
+        font-size: 25px; 
+        width: 100%;  
+    }
 }
 
 @media(min-width:769px){
@@ -240,10 +255,21 @@ footer{
         margin-top: 5%;
         width: 76.5%;
         padding: 3% 0%;
-        
+        align-items: center;
+    }
+    .detalleAdm main .principio .cont-right .descripcion h2{
+        text-align: center;    
+        padding: 15px 0px 15px 0px;
+        font-size: 28px;
+        color: var(--azul);
+        width: 50%;
     }
     .detalleAdm main .principio .cont-right .descripcion h4{
-        text-align: center;          
+        text-align: center; 
+        color: rgb(0, 0, 0);
+        font-size: 28px; 
+        width: 50%;  
+        padding: 15px 0px 15px 0px;
     }
     .detalleAdm main .comprar .editar i{
         font-size: 22px;

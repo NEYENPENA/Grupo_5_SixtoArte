@@ -68,6 +68,8 @@ header .icons a i, .fa-bars{
     color: var(--grafito);
     filter:brightness(150%);
     font-weight: 900;
+    color: black;
+    background-color: transparent;
 }
 header .nav .nav2 .icons .heart, header .nav .nav2 .icons .user{
     display: none;

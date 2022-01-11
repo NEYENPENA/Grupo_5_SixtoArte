@@ -50,5 +50,32 @@ window.addEventListener('load',()=>{
 
 
 
+    let main = document.querySelector(".home");
+    
+    let p2 = document.querySelectorAll("p");
+    let button = document.querySelectorAll("button");
+    let carrito = document.querySelectorAll('.fa-shopping-cart')
+    let body = document.querySelector('.bodyHome')
+  
+    
+      let darkModeButton = document.querySelector(".botonDark");
+    
+      
+      darkModeButton.addEventListener('click',()=>{
+        main.classList.toggle('fondoNegro')
+
+        p2.forEach(parrafo =>{
+          parrafo.classList.toggle('blanco')
+        })
+        carrito.forEach(car =>{
+          car.classList.toggle('blanco') 
+        })
+        carrito.forEach(car =>{
+          car.classList.toggle('fondoNegro') 
+        })
+        body.classList.toggle('fondoNegro2')
+      })
+    
+
 
 })
