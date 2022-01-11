@@ -94,21 +94,21 @@ window.addEventListener('load',()=>{
         
         for (let i = 0; i < usuarios.length; i++) {
             if(usuarios[i].email === e.target.value){
-                correo = usuarios[i].email
+                correo = 'existe'
             }
         }
         if(e.target.value == ''){
             email.classList.add('inputInvalid')
             email.classList.remove('inputValid')
             small4.innerHTML = ('no puede estar vacio')
-            correo = e.target.value
+            correo = false
             }
             else if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(e.target.value)){
             email.classList.add('inputInvalid')
             email.classList.remove('inputValid')
             small4.innerHTML = ('no es un correo valido')
             correo = false
-           } else if(correo != false){
+           } else if(correo === 'existe'){
             email.classList.add('inputInvalid')
             email.classList.remove('inputValid')
             small4.innerHTML = ('el correo ya existe')
@@ -119,7 +119,7 @@ window.addEventListener('load',()=>{
             email.classList.add('inputValid')
             email.classList.remove('inputInvalid')
             small4.innerHTML = ('')
-            correo = e.target.value
+            correo = true
            }
            
     })
@@ -225,7 +225,7 @@ window.addEventListener('load',()=>{
             email.classList.add('inputInvalid')
             email.classList.remove('inputValid')
             small4.innerHTML = ('el campo no puede estar vacio')
-        }else if(correo = 'mal'){
+        }else if(correo == 'mal'){
             e.preventDefault()
             email.classList.add('inputInvalid')
             email.classList.remove('inputValid')
