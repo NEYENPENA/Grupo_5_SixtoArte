@@ -273,10 +273,14 @@ document.getElementById("image").onchange = (e)=> {
     };
   }
 
+  
+  let h1 = document.querySelector('titulo')
+
+
   let darkModeButton = document.querySelector(".botonDark");
 
 
-  darkModeButton.addEventListener("click", (e) => {
-      
+  darkModeButton.addEventListener("click", () => {
+      h1.classList.toggle('blanco')
        })
 })

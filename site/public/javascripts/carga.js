@@ -1,13 +1,15 @@
 window.onload = function(){
-    let main = document.querySelector('main')
+    let main = document.querySelector('main ')
     let h2 = document.querySelector('h2')
     let form = document.querySelector('.form')
-    let div = document.querySelector('.icons')
+    
+    let darkModeButton = document.querySelector(".botonDark");
+    
 
-    div.addEventListener("click", (e) => {
-     main.style.backgroundColor = '#222426'
-     h2.style.color = '#FFFFFF'
-     form.style.color = '#FFFFFF'
-     form.style.backgroundColor = '#19181a'
+    darkModeButton.addEventListener("click", () => {
+     main.classList.toggle('fondoNegro2')
+     h2.classList.toggle('fondoNegro2')
+     h2.classList.toggle('blanco')
+     form.classList.toggle('fondoNegro')
     })
 }
