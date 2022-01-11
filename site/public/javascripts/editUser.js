@@ -136,25 +136,25 @@ form.addEventListener('submit', (e)=>{
         
     })
 
- /*    const main = qs ('.conteiner')
-    const h1 = qs ('.titulo')
-    const input = qs ('#image')
-    const darkmode = confirm ('¿Desea modo oscuro?')
 
-    if (darkmode){
-    main.style.backgroundColor = '#121212'
-    h1.style.color = '#FFFFFF'
-    input.style.backgroundColor = '#FFFFFF'
-} */
-const main = qs ('.conteiner')
-const h1 = qs ('.titulo')
-const input = qs ('#image')
-const div = qs('.icons')
-
-div.addEventListener("click", (e) => {
-    main.style.backgroundColor = '#222426'
-    h1.style.color = '#FFFFFF'
-    input.style.backgroundColor = '#FFFFFF'
-   })
 
 })
+
+document.getElementById("image").onchange = (e)=> {
+    // Creamos el objeto de la clase FileReader
+    let reader = new FileReader();
+  
+    // Leemos el archivo subido y se lo pasamos a nuestro fileReader
+    reader.readAsDataURL(e.target.files[0]);
+  
+    // Le decimos que cuando este listo ejecute el código interno
+    reader.onload = function(){
+      let preview = document.getElementById('preview4'),
+              image = document.createElement('img');
+  
+      image.src = reader.result;
+  
+      preview.innerHTML = '';
+      preview.append(image);
+    };
+  }

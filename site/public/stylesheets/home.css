@@ -6,59 +6,12 @@
     align-items: center;
     position: relative;
 }
-
 .home .carrousel{
-    border: 2px solid var(--grafito);
+    
     display: none;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 0;
-    margin-top: 72px;
-    height: 406px;
-    position: relative;
-    width: 100%;
-    justify-content: center;
-}
-.home .carrousel img{
-    width: 90%;
-    height: 90%;
-    max-width: 400px;
-}
-
-
-
-
-.home .carrousel .c1{
-    position: absolute;
-    animation: pasar1 12s infinite;
-    
-}
-.home .carrousel .c2{
-    position: absolute;
-    animation: pasar2 12s infinite;
     
 }
 
-.home .carrousel .c3{
-    position: absolute;
-    animation: pasar3 12s infinite;
-    
-}
-
-.home .carrousel .flechal i{
-    font-size: 40px;
-    color: gray;
-    width: 15%;
-    top: 50%;
-    left: 0%;
-}
-.home .carrousel .flechar i{
-    font-size: 40px;
-    color: gray;
-    width: 15%;
-    right: 0%;
-    top: 45%;
-}
 .home section{
     width: 70%;
     margin: 0 auto;
@@ -165,14 +118,14 @@
         padding-top: 5px;
     }
     .home .carrousel{
-        display: flex;
+        display: none;
     }
     .home section{
         width: 90%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        margin-top: 0;
+        margin-top: 40px;
         
     }
 
@@ -199,8 +152,73 @@
 
 @media(min-width:769px){
     .home .carrousel{
-        margin-top: 120px;
+    
+        width: 90%;
+        display: block;
+        position: relative;
+        margin-top: 150px;
+        box-shadow: 0 0 0 10px var(--azul), 0 15px 50px;
+        overflow: hidden;
+    }
+    
+    .home .slider{
+        width: 300%;
+        height: 400%;
+        display: flex;
+        margin: auto;
+        margin-left: -100%;
+    }
+    .home .slider_section{
+        background-color: white;
+        width: 100%;
+        height: 500px;
+    }
+    .home .carrousel img{
+        display: block;
+        width: 75%;
+        height: 100%;
+        margin: auto;
+        /* object-fit: cover; */
+    }
+    .home .carrousel .flechal{
+        position: absolute;
+        color: gray;
+        width: 15%;
+        top: 45%;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    .home .carrousel .flechal i:hover{
+        color: var(--azul);
         
+    }
+    
+    .home .carrousel .flechar{
+        position: absolute;
+        color: gray;
+        top: 45%;
+        right: 0;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    .home .carrousel .flechar i:hover{
+        color: var(--azul);
+        
+    }
+    
+    .home .carrousel .flechal i{
+        font-size: 50px;
+        color: gray;
+        width: 15%;
+        top: 50%;
+        left: 0%;
+    }
+    .home .carrousel .flechar i{
+        font-size: 50px;
+        color: gray;
+        width: 15%;
+        right: 0%;
+        top: 45%;
     }
     .home section{
         margin-bottom: 174px;

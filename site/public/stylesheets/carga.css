@@ -27,7 +27,7 @@
     border-radius: 20px;
 }
 .carga main .form small{ 
-    color: black;
+    color: rgb(255, 0, 0);
     font-size: 17px;
 }
 .carga main .cancel{
@@ -65,6 +65,18 @@
     font-size: 18px;
     
 }
+.inputInvalid{
+  
+    color: red;
+  }
+.inputValid{
+    color: green;
+  }
+
+.carga  .preview{
+    margin-top: 15px;
+width: 90%;
+}
 @media(min-width:426px){
 
     .carga main form label{
@@ -74,6 +86,10 @@
         width: 85%;
         border-radius: 6px;
         border-color: white;
+    }
+    .carga  .preview{
+        margin-top: 15px;
+    width: 80%;
     }
 
 }

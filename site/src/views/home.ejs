@@ -10,21 +10,33 @@
 
 
     <main class="home">
+
+
         <div class="carrousel">
-            <div class="flechal">
-                <i class="fas fa-angle-left"></i>
+            <div class="slider" id="slider">
+
+                <div class="slider_section">
+                    <img class="c1" src="../images/carrousel/relojC.png" alt="">
+                </div>
+                <div class="slider_section">
+                    <img class="c2" src="../images/carrousel/lamparaC.png" alt="">
+                </div>
+                <div class="slider_section">
+                    <img class="c3" src="../images/carrousel/portaVelaC.png" alt=""> 
+                </div>
+
+                
+
             </div>
-            
-                <img class="c1" src="../images/carrousel/relojC.png" alt="">
-            
-                <img class="c2" src="../images/carrousel/lamparaC.png" alt="">
-            
-                <img class="c3" src="../images/carrousel/portaVelaC.png" alt="">
-            
+            <div class="flechal">
+                <i class="fas fa-angle-left" id="botonLeft"></i>
+            </div>
             <div class="flechar">
-                <i class="fas fa-angle-right"></i>
+                <i class="fas fa-angle-right" id="botonRight"></i>
             </div>
         </div>
+
+
         <section>
 
             <% for (let i = 0; i < productos.length; i++) { %>
@@ -34,11 +46,11 @@
                         <img src="../images/productos/<%= productos[i].imagen[0].name %>" alt="">
                     </div>
                     <div class="art2">
-                        <p class="descripcion">
+                        <p class="descripcion" style="text-transform: uppercase">
                             <%= productos[i].name %>
                         </p>
                         <p class="precio">
-                            <%= productos[i].price %>
+                            $<%= productos[i].price %>
                         </p>
                         <div class="icons2">
                             <form action="#" method="POST">
@@ -61,6 +73,6 @@
 
     <!-- FOOTER -->
     <%- include('./partials/footer') %>
-
+    <script src="/javascripts/home.js"></script>
 </body>
 </html>
