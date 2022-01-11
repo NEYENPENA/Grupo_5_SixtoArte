@@ -18,17 +18,13 @@
                             </article>
                             <article class="cont-right">
                                 <div class="descripcion">
-                                    <h1>Nombre del Producto: <%= producto.name %> </h1>
-                                    <h4> Descripcion: <%= producto.description%> </h4>                                    
-                                    <p>Precio: <%= producto.price  %> </p>
+                                    <h2>Nombre del Producto:</h2> <h4 style="text-transform: uppercase"><%= producto.name %></h4> 
+                                    <h2> Descripcion:</h2> <h4 style="text-transform: uppercase"> <%= producto.description%> </h4>                                   
+                                    <h2>Precio:</h2> <h4><%= producto.price  %></h4> 
                                 </div>                                                
                         <div class="comprar">               
                                 
-                                <div class="cantidadd">
-                                    <label for="cantidad">Cantidad</label>
-                                    
-                                    <input type="number" id="cantidad" value="1">
-                                </div>
+                                
 
                                 <div class="editar">
                                     <a href="/admin/edit/<%= producto.id %>">Editar Producto<i class="far fa-edit"></i></a>                                                                         
