@@ -24,6 +24,7 @@
     background-color: var(--azulOscuro);
     align-items: center;
     max-width: 740px;
+    border-radius: 20px;
 }
 .carga main .form small{ 
     color: rgb(255, 0, 0);

@@ -253,7 +253,7 @@ window.addEventListener('load',()=>{
     })
 
     
-})
+
 document.getElementById("image").onchange = (e)=> {
     // Creamos el objeto de la clase FileReader
     let reader = new FileReader();
@@ -272,3 +272,22 @@ document.getElementById("image").onchange = (e)=> {
       preview.append(image);
     };
   }
+
+   /*  const qsa =(tag)=>{
+        return document.querySelectorAll(tag)
+    }  */
+
+    const div = qs('.icons')
+    let main = qs('.conteiner')
+    let h1 = qs('.titulo')
+    /* let button = qs('.btn') */
+    /* let label = qsa('label') */
+
+
+    div.addEventListener("click", (e) => {
+      main.style.backgroundColor = '#222426'
+      h1.style.color = '#FFFFFF'
+      /* button.style.backgroundColor = 'green' */
+      /* label.style.color = '#FFFFFF' */
+       })
+})
