@@ -62,7 +62,7 @@
     margin-bottom: 10px;
     font-weight: 700;
     border-top: 2px solid var(--azul);
-    color: black;
+    
 }
 .home section article div p.precio{
     width: 44%;
@@ -72,7 +72,7 @@
     box-shadow: var(--caja);
     border-radius: 10px;
     margin-left: 10px;
-    color: black;
+    
     
 }
 .home section article div .icons2{
@@ -83,6 +83,8 @@
 .home section article div .icons2 form button{
     border: none;
     display: flex;
+    color: transparent;
+    background-color: transparent;
 }
 .home section article div .icons2 i{
     font-size: 25px;
@@ -90,9 +92,7 @@
 .home section article div .icons2 i.fa-heart{
     color: palevioletred;
 }
-.home section article div .icons2 i.fa-shopping-cart{
-    color: var(--grafito);
-}
+
 .home section article.tablet{
     display: none;
 }
@@ -111,6 +111,16 @@
     font-size: 28px;
     background-color: #FFFFFF;
     border-radius: 25px;
+}
+
+.negro{
+    color: black;
+}
+.blanco{
+    color: white;
+}
+.fondoNegro{
+    background-color: rgb(46, 45, 45);
 }
 
 @media(min-width:426px){
@@ -169,7 +179,7 @@
         margin-left: -100%;
     }
     .home .slider_section{
-        background-color: white;
+        
         width: 100%;
         height: 500px;
     }
