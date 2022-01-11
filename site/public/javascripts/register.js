@@ -273,21 +273,10 @@ document.getElementById("image").onchange = (e)=> {
     };
   }
 
-   /*  const qsa =(tag)=>{
-        return document.querySelectorAll(tag)
-    }  */
-
-    const div = qs('.icons')
-    let main = qs('.conteiner')
-    let h1 = qs('.titulo')
-    /* let button = qs('.btn') */
-    /* let label = qsa('label') */
+  let darkModeButton = document.querySelector(".botonDark");
 
 
-    div.addEventListener("click", (e) => {
-      main.style.backgroundColor = '#222426'
-      h1.style.color = '#FFFFFF'
-      /* button.style.backgroundColor = 'green' */
-      /* label.style.color = '#FFFFFF' */
+  darkModeButton.addEventListener("click", (e) => {
+      
        })
 })

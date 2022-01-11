@@ -113,15 +113,6 @@
     border-radius: 25px;
 }
 
-.negro{
-    color: black;
-}
-.blanco{
-    color: white;
-}
-.fondoNegro{
-    background-color: rgb(46, 45, 45);
-}
 
 @media(min-width:426px){
     .home{

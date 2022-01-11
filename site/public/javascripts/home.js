@@ -55,39 +55,12 @@ window.addEventListener('load',()=>{
     let p2 = document.querySelectorAll("p");
     let button = document.querySelectorAll("button");
     let carrito = document.querySelectorAll('.fa-shopping-cart')
-    /* const darkGray = "#222426";
-    const darker = "#4592AF";
-    const white = "#FFFFFF";
+    let body = document.querySelector('.bodyHome')
+  
     
-    const whiteGray = "#FFFFFF";
+      let darkModeButton = document.querySelector(".botonDark");
     
-    function changeMode (mode = "dark"){
       
-    
-      p2.forEach((e) => {
-        e.style.color = mode == "dark" ? white : darker;
-      });
-      main.style.backgroundColor = mode == "dark" ? darkGray : white;
-      p.style.color = white;
-      button.forEach((e) => {
-        e.style.backgroundColor = mode == "dark" ? darker : white;
-        e.style.borderRadius = "5px";
-      });
-    }; */
-    
-    
-    
-      let darkModeButton = document.querySelector(".fa-adjust");
-    
-      /* darkModeButton.addEventListener("click", function() {
-            // next two code lines should be replaced by store functions
-        let main = document.querySelector(".home");
-        if (main.style.backgroundColor == darkGray) {
-          changeMode("light");
-        } else {
-          changeMode("dark");
-        }
-      }, false); */
       darkModeButton.addEventListener('click',()=>{
         main.classList.toggle('fondoNegro')
 
@@ -100,7 +73,7 @@ window.addEventListener('load',()=>{
         carrito.forEach(car =>{
           car.classList.toggle('fondoNegro') 
         })
-        
+        body.classList.toggle('fondoNegro2')
       })
     
 

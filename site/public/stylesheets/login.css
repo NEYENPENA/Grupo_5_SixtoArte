@@ -1,12 +1,10 @@
 .login{    
   display: flex;
-  flex-wrap: nowrap;
-  background-color: #EDEDED;    
+  flex-wrap: nowrap;   
 }
 .login .contenedor {
   max-width: 500px;
   width: 90%;
-  background: #fff;
   margin: 20px auto;
   box-shadow: 1px 0px 5px 4px rgba(0,0,0,0.125);
   padding: 30px;
@@ -43,22 +41,25 @@ input[type=checkbox]{
 .login .contenedor .form .contenedorA {
   margin-bottom: 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 .login .contenedor .form .contenedorA label{
   width: 200px;
-  color: #757575;
+  margin-left: 10px;
   margin-right: 10px;
  font-size: 14px;
+ font-weight: 900;
 }
 .login .contenedor .form .contenedorA .input {
-  width: 100%;
+  width: 98%;
   outline: none;
   border: 1px solid #D5DBD9;
   font-size: 15px;
   padding: 8px 10px;
   border-radius: 3px;
   transition: all 0.5s ease;
+  margin: auto;
 }
 .login .contenedor .form .contenedorA .input:focus {
   border: 1.3px solid var(--azulOscuro);

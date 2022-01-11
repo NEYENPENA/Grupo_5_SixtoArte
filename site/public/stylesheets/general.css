@@ -35,3 +35,24 @@ img{
 ::placeholder{
     color: white;
 }
+.negro{
+    color: black;
+}
+.blanco{
+    color: white;
+}
+.azul{
+    color: var(--azul);
+}
+.fondoNegro{
+    background-color: rgb(46, 45, 45);
+}
+.fondoNegro2{
+    background-color: rgb(116, 114, 114);
+}
+.fondoBlanco{
+    background-color: white;
+}
+.fondoNegro3{
+    background-color: rgb(182, 181, 181);
+}

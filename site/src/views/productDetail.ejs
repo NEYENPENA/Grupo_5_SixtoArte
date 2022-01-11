@@ -3,10 +3,10 @@
 <!-- HEAD -->
 <%- include('./partials/head') %>
 
-<body>
+<body class="bodyDetail">
      <!-- HEADER -->
      <%- include('./partials/header') %>
-    <main>
+    <main class="mainDetail">
         <div class="color"></div>
             <section class="principio">
                             
@@ -22,11 +22,11 @@
                             </article>
                             <article class="cont-right">
                                 <div class="descripcion">
-                                    <h2 class="nombredeproducto" style="text-transform: uppercase" ><%= producto.name %></h2>
-                                    <h4> <%= producto.description %> </h4>
+                                    <h2 class="nombredeproducto azul" style="text-transform: uppercase" ><%= producto.name %></h2>
+                                    <h4 class="negro"> <%= producto.description %> </h4>
                                     <p> $<%= producto.price  %> </p>
                                 </div>                                                
-                        <div class="comprar">                
+                        <div class="comprar ">                
                             <form action="">
                                 
                                                               
@@ -39,7 +39,7 @@
                                            
                     </article>                    
                     <article class="pedidos">
-                        <div >                                                           
+                        <div class="relacionadoOscuro">                                                           
                                 <h3><%=producto.related %></h3>                                                                                          
                             </div>
                     </article>
