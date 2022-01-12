@@ -280,14 +280,15 @@ document.getElementById("image").onchange = (e)=> {
   let label = document.querySelectorAll('label')
 
   let darkModeButton = document.querySelector(".botonDark");
+ let main = qs('.register')
+ let conteiner = qs('.conteiner')
 
-  darkModeButton.addEventListener('click',()=>{
+  darkModeButton.addEventListener("click", (e) => {
+    main.classList.toggle('fondoNegro2')
+    conteiner.classList.toggle('fondoNegro3')
+    conteiner.classList.toggle('fondoBlanco')
 
-  /* h1.classList.toggle('blanco1') */
-  body.classList.toggle('fondoNegro2')
-  main.classList.toggle('fondoNegro3')
-  label.forEach(dato =>{
-      dato.classList.toggle('negro2')
-  })
-  })
+
+
+       })
 })

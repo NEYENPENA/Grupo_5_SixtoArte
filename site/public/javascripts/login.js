@@ -102,7 +102,7 @@ window.addEventListener('load',()=>{
     
         body.classList.toggle('fondoNegro2')
         contenedor.classList.toggle('fondoNegro3')
-        form.classList.toggle('fondoNegro3')
+        
        
    })
 
