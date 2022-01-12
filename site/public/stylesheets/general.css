@@ -48,12 +48,26 @@ img{
     background-color: rgb(46, 45, 45);
 }
 .fondoNegro2{
-    background-color: rgb(116, 114, 114);
+    background-color: rgb(116, 114, 114) !important;
 }
 .fondoBlanco{
     background-color: white;
 }
 .fondoNegro3{
-    background-color: rgb(182, 181, 181);
-    box-shadow: 1px 0px 5px 4px rgba(0, 0, 0, 0.445)!important; 
+    background-color: rgb(182, 181, 181) !important;
+}
+.blanco1{
+    color: #FFFFFF !important;
+}
+.negro2{
+    color: #030303 !important;
+}
+.blanco2{
+    color: #fffcfc !important;
+}
+.fondoNegro4{
+    background-color: rgb(46, 45, 45) !important;
+}
+.blanco3{
+    color: #eae7e7 !important;
 }

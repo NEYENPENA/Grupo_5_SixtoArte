@@ -155,25 +155,23 @@ form.addEventListener('submit', (e)=>{
         preview.append(image);
         };
   }
- /*    const main = qs ('.conteiner')
-    const h1 = qs ('.titulo')
-    const input = qs ('#image')
-    const darkmode = confirm ('¿Desea modo oscuro?')
+ 
+let body = document.querySelector('.register')
+let h1 = document.querySelector('.titulo')
+let main = document.querySelector('.conteiner')
+let label = document.querySelectorAll('label')
 
-    if (darkmode){
-    main.style.backgroundColor = '#121212'
-    h1.style.color = '#FFFFFF'
-    input.style.backgroundColor = '#FFFFFF'
-} */
-const main = qs ('.conteiner')
-const h1 = qs ('.titulo')
-const input = qs ('#image')
-const div = qs('.icons')
-
-div.addEventListener("click", (e) => {
-    main.style.backgroundColor = '#222426'
-    h1.style.color = '#FFFFFF'
-    input.style.backgroundColor = '#FFFFFF'
-   })
+let darkModeButton = document.querySelector(".botonDark");
+    
+      
+      darkModeButton.addEventListener('click',()=>{
+        main.classList.toggle('fondoNegro3')
+        h1.classList.toggle('blanco')
+        body.classList.toggle('fondoNegro2')
+        label.forEach(dato =>{
+            dato.classList.toggle('negro2')
+        })
+      })
+    
 
 })

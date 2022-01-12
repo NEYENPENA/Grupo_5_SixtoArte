@@ -53,10 +53,9 @@ window.addEventListener('load',()=>{
     let main = document.querySelector(".home");
     
     let p2 = document.querySelectorAll("p");
-    let button = document.querySelectorAll("button");
     let carrito = document.querySelectorAll('.fa-shopping-cart')
     let body = document.querySelector('.bodyHome')
-  
+    let i = document.querySelector('.fas fa-chevron-circle-up') 
     
       let darkModeButton = document.querySelector(".botonDark");
     
@@ -79,4 +78,3 @@ window.addEventListener('load',()=>{
 
 
 })
-

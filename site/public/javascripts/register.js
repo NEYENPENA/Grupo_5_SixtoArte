@@ -273,6 +273,12 @@ document.getElementById("image").onchange = (e)=> {
     };
   }
 
+  
+  let body = document.querySelector('.register')
+/*   let h1 = document.querySelector('.titulo') */
+  let main = document.querySelector('.conteiner')
+  let label = document.querySelectorAll('label')
+
   let darkModeButton = document.querySelector(".botonDark");
  let main = qs('.register')
  let conteiner = qs('.conteiner')
