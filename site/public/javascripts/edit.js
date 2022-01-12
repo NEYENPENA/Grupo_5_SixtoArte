@@ -3,12 +3,12 @@ window.onload = function(){
     let h2 = document.querySelector('h2')
     let form = document.querySelector('.form')
 
-    let div = document.querySelector('.icons')
-
-    div.addEventListener("click", (e) => {
-       main.style.backgroundColor = '#222426'
-       h2.style.color = '#FFFFFF'
-       form.style.backgroundColor = '#19181a'
-       form.style.color = '#FFFFFF'
-       })
+    let darkModeButton = document.querySelector(".botonDark");
+    
+      
+    darkModeButton.addEventListener('click',()=>{
+      main.classList.toggle('fondoNegro3')
+      h2.classList.toggle('blanco1')
+      form.classList.toggle('fondoNegro4')
+    })
 }
