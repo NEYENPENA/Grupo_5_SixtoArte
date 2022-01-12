@@ -15,7 +15,7 @@ window.onload = function(){
 
         body.classList.toggle('fondoNegro4')  
 
-        main.classList.toggle('fondoNegro4')
+        main.classList.toggle('fondoNegro')
 
         h4.forEach(dato =>{
           dato.classList.toggle('blanco2')
