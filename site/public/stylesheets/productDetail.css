@@ -1,4 +1,4 @@
-main{
+main.mainDetail{
     background-color: #ededed;
 }
 main .principio{
@@ -6,10 +6,10 @@ main .principio{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: #fff;
+    
 }
 main .color{
-    background-color: #ededed;
+    
     width: 100%;
     height: 85px;
 }
@@ -63,13 +63,12 @@ main .principio .cont-right .descripcion{
 }
 main .principio .cont-right .descripcion h4{
     text-align: center; 
-    color: var(--azul);
+    
 }
 main .principio .cont-right .descripcion p{
     font-size: 26px;    
     margin-bottom: 5px;
     border-radius: 10px;
-    color: var(--grafito);
     width: 100%;
     text-align: center;
 }
@@ -78,7 +77,6 @@ main .principio .cont-right .comprar {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: #fff;
 }
 main .principio .cont-right .comprar form{
     width: 100%;
@@ -86,6 +84,7 @@ main .principio .cont-right .comprar form{
     flex-wrap: wrap;
     justify-content: center;
     margin: 3% 0;
+    
 }
 main .principio .cont-right .comprar form .cantidadd{
     display: flex;
@@ -108,6 +107,7 @@ main .principio .cont-right .comprar form .agregar{
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
+    
 } 
 main .principio .cont-right .comprar form .agregar i{
     position: absolute;
@@ -157,8 +157,7 @@ main .principio .pedidos{
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto 12px;
-    border-top: 2px solid var(--azul);
-    border-bottom: 2px solid var(--azul);
+    border: 2px solid var(--azul);
     background-color: #fff;
 }
 main .principio .pedidos:last-child{
@@ -205,10 +204,13 @@ footer{
     }
 }
 
+
+
+
 @media(min-width:769px){
     /* Margen superior */
     main .color{
-        background-color: #ededed;
+        
         width: 100%;
         height: 135px;
     }
@@ -222,7 +224,7 @@ footer{
     }
     main .principio .producto{
         width: 30%;
-        border: none;
+        
     }
     main .principio .cont-right{
         width: 60%;
@@ -239,7 +241,7 @@ footer{
     }
     main .principio .cont-right .descripcion h4{
         text-align: center; 
-        color: rgb(67, 67, 67);       
+        font-size: 20px;
     }
     main .comprar form .agregar i{
         font-size: 22px;

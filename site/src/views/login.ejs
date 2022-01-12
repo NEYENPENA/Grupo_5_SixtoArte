@@ -5,7 +5,7 @@
 <body class="login">
     <!-- HEADER -->
     <%- include('./partials/header') %>
-<main class="contenedor">
+<main class="contenedor fondoBlanco">
     <form  action="/user/login" method="POST" id="form">
         <h1 class="titulolog">iniciar sesión</h1>
         <div class="form">
@@ -15,7 +15,7 @@
                 <small class="small7"></small>
            </div>
             <div class="contenedorA">
-                <label for="contraseña">Contraseña:</label>
+                <label class="c" for="contraseña">Contraseña:</label>
                 <input class="input" type="password" name="password" id="contraseña"  >
                 <small class="small8"></small>
                 <% if(locals.errors && (errors.password || errors.username)){ %>
@@ -35,7 +35,7 @@
             </div>
             <div class="recordarme">
                 <input type="checkbox" name="recordame" id="checkbox">
-                <label for="recordame">Recordarme</label>
+                <label class="r" for="recordame">Recordarme</label>
             </div>
             <% if(locals.invalid){ %>
                 <small> <%= invalid %> </small>

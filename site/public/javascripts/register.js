@@ -253,7 +253,7 @@ window.addEventListener('load',()=>{
     })
 
     
-})
+
 document.getElementById("image").onchange = (e)=> {
     // Creamos el objeto de la clase FileReader
     let reader = new FileReader();
@@ -272,3 +272,17 @@ document.getElementById("image").onchange = (e)=> {
       preview.append(image);
     };
   }
+
+  let darkModeButton = document.querySelector(".botonDark");
+ let main = qs('.register')
+ let conteiner = qs('.conteiner')
+
+  darkModeButton.addEventListener("click", (e) => {
+    main.classList.toggle('fondoNegro2')
+    conteiner.classList.toggle('fondoNegro3')
+    conteiner.classList.toggle('fondoBlanco')
+
+
+
+       })
+})

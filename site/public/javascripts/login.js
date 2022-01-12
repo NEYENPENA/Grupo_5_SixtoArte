@@ -1,4 +1,3 @@
-
 window.addEventListener('load',()=>{
     let usuarios = 'nada'
     fetch('http://localhost:3000/api/user/list')
@@ -42,7 +41,8 @@ window.addEventListener('load',()=>{
             }else{
                 user.classList.add('inputInvalid')
             user.classList.remove('inputValid')
-            small7.innerHTML = ('el usuario no existe')
+            small7.innerHTML = ('Debes escribir un nombre de usuario')
+            /* small7.innerHTML = ('el usuario no existe') */
             }
         
     })
@@ -93,5 +93,19 @@ window.addEventListener('load',()=>{
 
 
     })
+    
+    let darkModeButton = document.querySelector(".botonDark");
+   let body =qs('.login')
+    let contenedor = qs('.contenedor')
+    let label = document.querySelectorAll('label')
+    darkModeButton.addEventListener("click", (e) => {
+    
+        body.classList.toggle('fondoNegro2')
+        contenedor.classList.toggle('fondoNegro3')
+        
+       
+   })
+
+
 
 })

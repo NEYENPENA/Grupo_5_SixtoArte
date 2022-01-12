@@ -22,7 +22,9 @@
     margin-bottom: 15px;
     color: black;
     border: 2px solid var(--azul);
+    border-radius: 10px;
     padding: 2px;
+    background-color: var(--azul);
 
 }
 .admin main h3:hover{

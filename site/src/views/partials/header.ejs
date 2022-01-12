@@ -6,8 +6,8 @@
         <nav>
                 <% if(!(locals.user)){ %>
                     <ul class="user">
-                    <li><a class="login1" href="/user/login">Login</a></li>
-                    <li><a class="regi1" href="/user/register">Register</a></li>
+                    <li><a class="login1" href="/user/login">Iniciar Sesión</a></li>
+                    <li><a class="regi1" href="/user/register">Registrate</a></li>
                 </ul>
                 <%}else{%>
                     <ul class="user2">
@@ -23,7 +23,7 @@
             </form>
             <div class="icons">
                 <a href="/user/perfil/"><i class="fas fa-user"></i></a>
-                    <a href="#"><i class="fas fa-adjust"></i></a>
+                    <a class="1 botonDark"><i class="fas fa-adjust"></i></a>
                     <% if(locals.user && locals.user.id_role === 1) { %>
                         <a class="user" href="/admin"><i class="fas fa-user-cog"></i></a>
                         <% }else{ %>
