@@ -274,14 +274,20 @@ document.getElementById("image").onchange = (e)=> {
   }
 
   
+  let body = document.querySelector('.register')
+/*   let h1 = document.querySelector('.titulo') */
+  let main = document.querySelector('.conteiner')
+  let label = document.querySelectorAll('label')
 
-  let h1 = document.querySelector('.titulo')
-  
   let darkModeButton = document.querySelector(".botonDark");
 
   darkModeButton.addEventListener('click',()=>{
 
-  h1.classList.toggle('blanco')
-
+  /* h1.classList.toggle('blanco1') */
+  body.classList.toggle('fondoNegro2')
+  main.classList.toggle('fondoNegro3')
+  label.forEach(dato =>{
+      dato.classList.toggle('negro2')
+  })
   })
 })

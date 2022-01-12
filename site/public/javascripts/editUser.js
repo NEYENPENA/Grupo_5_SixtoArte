@@ -159,14 +159,18 @@ form.addEventListener('submit', (e)=>{
 let body = document.querySelector('.register')
 let h1 = document.querySelector('.titulo')
 let main = document.querySelector('.conteiner')
+let label = document.querySelectorAll('label')
 
 let darkModeButton = document.querySelector(".botonDark");
     
       
       darkModeButton.addEventListener('click',()=>{
-        main.classList.toggle('fondoNegro')
+        main.classList.toggle('fondoNegro3')
         h1.classList.toggle('blanco')
         body.classList.toggle('fondoNegro2')
+        label.forEach(dato =>{
+            dato.classList.toggle('negro2')
+        })
       })
     
 
