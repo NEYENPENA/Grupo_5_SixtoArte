@@ -1,14 +1,26 @@
 window.onload = function (){
-    let main = document.querySelector('.perfil')
-    let ul = document.querySelector('.perfilul')
-    const div = document.querySelector('.icons')
-    /* const darkmode = confirm('¿Desea modo oscuro?')
-        if (darkmode) {
-    main.style.backgroundColor = '#121212'
-    ul.style.color = '#FFFFFF'
-        } */
-        div.addEventListener("click", (e) => {
-            main.style.backgroundColor = '#222426'
-            ul.style.color = '#FFFFFF'
-           })
+    const qs =(tag)=>{
+        return document.querySelector(tag)
+    }
+    const qw =(e,v)=>{
+        return e.document.classList.toggle(v)
+    }
+
+    let darkModeButton = document.querySelector(".botonDark");
+    let main = qs('perfil')
+
+
+
+    darkModeButton.addEventListener('click', ()=>{
+
+        qw(main,'fondoNegro')
+
+
+
+
+
+    })
+
+
+
 }

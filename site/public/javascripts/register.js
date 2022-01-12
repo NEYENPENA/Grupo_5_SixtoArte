@@ -274,9 +274,15 @@ document.getElementById("image").onchange = (e)=> {
   }
 
   let darkModeButton = document.querySelector(".botonDark");
-
+ let main = qs('.register')
+ let conteiner = qs('.conteiner')
 
   darkModeButton.addEventListener("click", (e) => {
-      
+    main.classList.toggle('fondoNegro2')
+    conteiner.classList.toggle('fondoNegro3')
+    conteiner.classList.toggle('fondoBlanco')
+
+
+
        })
 })

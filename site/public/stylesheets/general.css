@@ -55,4 +55,5 @@ img{
 }
 .fondoNegro3{
     background-color: rgb(182, 181, 181);
+    box-shadow: 1px 0px 5px 4px rgba(0, 0, 0, 0.445)!important; 
 }
