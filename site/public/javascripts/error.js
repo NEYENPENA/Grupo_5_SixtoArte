@@ -4,7 +4,7 @@ window.onload = function () {
 
     const darkmode = confirm('¿Desea modo oscuro?')
     if (darkmode){
-        body.style.backgroundColor = '#222426'
+        body.style.backgroundColor = '#2e2d2d'
         /* p.style.color = '#8B0000' */
         p.style.color = '#328eaf'
     }

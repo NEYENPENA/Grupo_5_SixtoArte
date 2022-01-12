@@ -1,26 +1,14 @@
 window.onload = function (){
-    const qs =(tag)=>{
-        return document.querySelector(tag)
-    }
-    const qw =(e,v)=>{
-        return e.document.classList.toggle(v)
-    }
+    let main = document.querySelector('.perfil')
+    let body = document.querySelector('body')
+    let ul = document.querySelector('.perfilul')
+let darkModeButton = document.querySelector(".botonDark");
 
-    let darkModeButton = document.querySelector(".botonDark");
-    let main = qs('perfil')
+darkModeButton.addEventListener('click',()=>{
+    main.classList.toggle('fondoNegro')
+    
+    ul.classList.toggle('blanco')
 
-
-
-    darkModeButton.addEventListener('click', ()=>{
-
-        qw(main,'fondoNegro')
-
-
-
-
-
-    })
-
-
-
+    body.classList.toggle('fondoNegro2')
+  })
 }
