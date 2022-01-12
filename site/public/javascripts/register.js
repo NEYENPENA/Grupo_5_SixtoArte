@@ -274,13 +274,14 @@ document.getElementById("image").onchange = (e)=> {
   }
 
   
-  let h1 = document.querySelector('titulo')
 
-
+  let h1 = document.querySelector('.titulo')
+  
   let darkModeButton = document.querySelector(".botonDark");
 
+  darkModeButton.addEventListener('click',()=>{
 
-  darkModeButton.addEventListener("click", () => {
-      h1.classList.toggle('blanco')
-       })
+  h1.classList.toggle('blanco')
+
+  })
 })
