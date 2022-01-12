@@ -2,6 +2,7 @@ window.onload = function(){
     let main = document.querySelector('main')
     let h2 = document.querySelector('h2')
     let form = document.querySelector('.form')
+    let body = document.querySelector('.edit')
 
     let darkModeButton = document.querySelector(".botonDark");
     
@@ -10,5 +11,6 @@ window.onload = function(){
       main.classList.toggle('fondoNegro3')
       h2.classList.toggle('blanco1')
       form.classList.toggle('fondoNegro4')
+      body.classList.toggle('fondoNegro3')
     })
 }
