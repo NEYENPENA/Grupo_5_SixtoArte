@@ -10,7 +10,7 @@ window.onload = function(){
     darkModeButton.addEventListener("click", () => {
      main.classList.toggle('fondoNegro2')
      h2.classList.toggle('blanco2')
-     form.classList.toggle('fondoNegro4')
+     form.classList.toggle('fondoNegro3')
      body.classList.toggle('fondoNegro2')
     })
 }
