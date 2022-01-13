@@ -26,7 +26,7 @@ module.exports = {
                 birthday: fecha,
                 email: email,
                 contraseña: bcrypt.hashSync(pass, 10),
-                avatar:req.file ? req.file.filename: "default-icon.jpeg",
+                avatar:req.file ? req.file.filename: "default icon.jpeg",
                 id_role :2
 
             })
