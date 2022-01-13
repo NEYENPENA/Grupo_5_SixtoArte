@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- HEAD -->
+<%- include('./partials/head') %>
+
+<body>
+
+     <!-- HEADER -->
+     <%- include('./partials/header') %>
+
+    <main class="carritoDeProducto">
+     <% let total = 0 %> 
+        <section>        
+             <% carritos.map(carrito => { %>      
+               
+                    <article>
+                         <a href="/product/detalle/<%= carrito.id %> ">
+                                   <button ><i class="far fa-times-circle"></i></button>
+                              <div class="article1">
+                                   <div class="img">
+                                        <img src="/images/productos/<%= carrito.imagen %>" alt="imagen de producto">
+                                   </div>
+                                   <div class="descripcion">
+                                        <p class="producto"> <%= carrito.descripcion %> </p>
+                                   </div>
+                         
+                              </div>
+                              <div class="article2">
+                                   <p class="precio"> <%= carrito.precio%> </p>
+                              </div>
+                         </a>
+                    </article>    
+                 
+                    <%  total = total + carrito.precio %>       
+                    <% }) %>  
+               
+                                   
+             <p class="resultadofinal">TOTAL A PAGAR:$<%= total %> </p>
+             <form action="">
+              <button class="pagar">PAGAR</button>
+          </form>
+        </section>
+        <script src="/javascripts/productCart.js"></script>
+</main>
+
+     <!-- FOOTER -->
+      <%- include('./partials/footer') %>
+
+     </body>
+
+</html>

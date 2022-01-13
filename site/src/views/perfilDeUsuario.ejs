@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head')  %>
+
+<body>
+  <!-- HEADER -->
+<%- include('./partials/header')  %>
+
+<main class="perfil">
+
+  <section>
+
+    <div class="imgperfil">
+      <img src="/images/usuarios/<%= user.avatar %>" alt="Avatar Personal" />
+    </div>
+    <ul class="perfilul">
+      <li>
+        <p><b>Nombre:</b> <%= user.name %></p>
+        <p><b>Nombre de Usuario:</b> <%= user.username %></p>
+        <p><b>Email:</b> <%= user.email%></p>
+        <p><b>Rol:</b> <%= rol%></p>
+        <p><b>Fecha de nacimiento:</b> <%= user.birthday%></p>
+        
+      </li>
+    </ul>
+    <div class="useredit"> <a class="auseredit" href="/user/edit/<%= user.id %> "> <i class="fas fa-edit"> </i> </a> </div>
+  </section>
+  
+<script src="/javascripts/perfilDeUsuario.js"></script>
+</main>
+
+<!-- FOOTER -->
+<%- include('./partials/footer')  %> 
+</body>
+</html>

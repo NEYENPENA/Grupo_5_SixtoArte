@@ -1,0 +1,295 @@
+header{
+    background-color: var(--azul);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 72px;
+    position: fixed;
+    width: 100%;
+    max-width: 1440px;
+    z-index: 20;
+}
+header .logo{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo a img{
+    width: 55px;
+    border-radius: 50%;
+}
+header .nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+nav{
+    display: none;
+}
+header form {
+    position: relative;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header form input{
+    width: 90%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+header form i{
+     position: absolute;
+     right: 0%;
+     top: -5px;
+}
+header .botonBuscar{
+    position: absolute;
+    right: 10%;
+     top: 33px;
+}
+header .icons{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .icons a i, .fa-bars{
+    font-size: 20px;
+    color: var(--grafito);
+    filter:brightness(150%);
+    font-weight: 900;
+    color: black;
+    background-color: transparent;
+}
+header .nav .nav2 .icons .heart, header .nav .nav2 .icons .user{
+    display: none;
+    position: absolute;
+}
+header .nav .nav2{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+header .nav .menudespleglable{
+position: absolute;
+background-color: #328eafd0;
+right: 0;
+top: 75px;
+width: 40vw;
+border-radius: 10px;
+visibility: collapse;
+}
+header .nav .menudespleglable ul li {
+    height: 40px;
+}
+header .nav .menudespleglable ul li a{
+    color: black;
+    font-size: 26px;
+}
+header .nav .menudespleglable ul li, header .cerrar{
+    border-bottom: 2px solid white;
+}
+header .formcerrar{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-radius: 10px;
+}
+header .cerrar{
+    color: black;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+}
+header .nav .menudespleglable ul li:last-of-type{
+    border-bottom: none
+}
+header .nav  .check{
+    transform: scale(1.5);
+    z-index: 3;
+    opacity: 0;
+    position: absolute;
+    right: 7%;
+    top: 38%;
+}
+header .nav .check:checked ~ .menudespleglable{
+    visibility:visible;
+    animation: desplegar 1s;
+}
+
+ @media(min-width:426px){
+    header .logo a img{
+        width: 70px;
+        height: 60px;
+    }
+    header form{
+        width: 50%;
+    }
+    header form input{
+        width: 90%;
+        height: 35px;
+    }
+    header .icons a i, header .icons  i{
+        font-size: 30px;
+    }
+    header .icons{
+        justify-content: space-around;
+    }
+    header .nav  .check{
+        transform: scale(2);
+        position: absolute;
+        right: 9%;
+    }
+    header form i{
+        position: absolute;
+        right: 0%;
+        top: -7px;
+        font-size: 20px;
+   }
+   header .botonBuscar{
+       position: absolute;
+       right: 10%;
+        top: 33px;
+   }
+}
+@media(min-width:769px){
+    header{
+        height: 120px;
+    }
+    header .logo{
+        width: 20%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        max-width: 140px;
+    }
+    header .logo a {
+        width: 100%;
+    }
+    header .logo a img{
+        width: 80%;
+        height: 100px;
+    }
+    header .nav{
+        width: 80%;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+    header .nav nav{
+        display: flex;
+        width: 20%; /* otra opcion 35% */
+        height: 15%;
+        justify-content: center;        
+        border-radius: 5px;
+        margin-top: 5px;
+        margin-right: 1px;
+        margin-bottom: 30px;
+        padding-top: 10px;
+    }
+    header .nav .nav2{
+        width: 100%;
+        display: flex;
+    }
+    nav ul.user{
+        display: flex;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul.user2{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    nav ul.user2 li{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    nav ul.user li{
+        font-size: 13px;
+    }
+    nav ul.user li a.login1{
+        border-right: 1px solid black;
+        padding-right: 10px;
+        font-weight: 900;
+        color: black;
+        font-size: 16px;
+    }
+    nav ul.user li a.regi1{
+        font-weight: 900;
+        margin-left: 10px;
+        color: black;
+        font-size: 16px;
+    }
+    nav ul.user2 li .formcerrar2{
+        width: 100%;
+        border: none;
+    }
+    nav ul.user2 li .cerrar2{
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        font-size: 16px;
+        padding-top: 5px;        
+        max-width: max-content;
+    }
+    header form {
+        width: 65%;
+    }
+    header form input{
+        width: 100%;
+        font-size: 25px;
+    }
+    header form i{
+        position: absolute;
+        right: 0%;
+        top: -7px;
+        font-size: 25px;
+   }
+   header .botonBuscar{
+       position: absolute;
+       right: 1%;
+        top: 11px;
+   }
+    header .icons{
+        position: relative;
+        right: 0;
+        max-width: 300px;
+    }
+    header .nav .nav2 .icons .heart, header .nav .nav2 .icons .user{
+        display: block;
+        position: static;
+    }
+    header .nav .nav2 .icons .bars{
+        display: none;
+        position: absolute;
+    }
+    header .nav{
+        justify-content: flex-end;
+    }
+    header .nav  .check, .fa-bars{
+        display: none;
+    }
+    header .nav .menudespleglable{
+        display: none;
+        }
+/* ----------------animaciones------------------ */
+    header .icons a i:hover{
+        animation: giro 2s normal linear infinite;
+    }
+}

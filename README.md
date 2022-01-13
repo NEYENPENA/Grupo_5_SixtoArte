@@ -23,3 +23,6 @@
 - **Marcos Esquivel**: 24 años, de San Francisco Solano, estudiante del curso de desarrollo web full stack de Digital house y Fundacion formar. **pasatiempo** videojuegos, tecnologia. **estudios** ensamblado y reparacion de pc, reparacion de dispositivos moviles. [github](https://github.com/MarcosEsquivel)
 
 - **Maximo Rodriguez**:19 años,de san miguel,estudiante de maestro mayor de obra y de desarrolador full stack. **pasatiempo** videojuegos,tecnologias. **estudios** curso de autocad 2d, 3d y avanzado y estudiante de secundaria modalidad 'construccion'.[github](https://github.com/Maximo-Rodriguez)
+
+
+[Trello](https://trello.com/b/wMI4zijm/proyecto-sixtoarte)

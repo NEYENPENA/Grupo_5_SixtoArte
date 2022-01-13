@@ -1,0 +1,96 @@
+@keyframes giro {
+    0%{ -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    50%{-webkit-transform: rotate3d(0, 1, 0, 180deg);
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+}
+@keyframes latir{
+    0%{ -webkit-transform:scale(1);
+        transform: scale(1);
+    }
+    50%{-webkit-transform:scale(1.2);
+        transform: scale(1.2);
+    }
+}
+@keyframes pasar1{
+    0%{
+        -webkit-transform:scale(1);
+        transform: scale(1);
+        
+    }
+    33%{
+        -webkit-transform:scale(0);
+        transform: scale(0);
+        
+    }
+    66%{
+        -webkit-transform:scale(0);
+        transform: scale(0);
+        
+        
+    }
+    100%{
+        -webkit-transform:scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes pasar2{
+    0%{
+        -webkit-transform:scale(0);
+        transform: scale(0);
+        
+
+    }
+    33%{
+        -webkit-transform:scale(1);
+        transform: scale(1);
+        
+    }
+    66%{
+        -webkit-transform:scale(0);
+        transform: scale(0);
+        
+    }
+    100%{
+        -webkit-transform:scale(0);
+        transform: scale(0);
+    }
+}
+@keyframes pasar3{
+    0%{
+        -webkit-transform:scale(0);
+        transform: scale(0);
+    
+
+    }
+    33%{
+        -webkit-transform:scale(0);
+        transform: scale(0);
+        
+    }
+    66%{
+        -webkit-transform:scale(1);
+        transform: scale(1);
+        
+    }
+    100%{
+        -webkit-transform:scale(0);
+        transform: scale(0);
+    }
+    
+}
+@keyframes desplegar {
+    0%{
+        transform: translate(100%);
+    
+
+    }
+    100%{
+       transform: translate(0);
+    
+
+    }
+
+}

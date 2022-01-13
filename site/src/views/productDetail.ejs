@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head') %>
+
+<body class="bodyDetail">
+     <!-- HEADER -->
+     <%- include('./partials/header') %>
+    <main class="mainDetail fondoNegro3">
+        <div class="color"></div>
+            <section class="principio">
+                            
+                            <article class="producto">
+                                <% producto.imagen.forEach(element => { %>
+                                                                    
+                                <img src="/images/productos/<%= element.name %>" alt="">
+                                <% }) %> 
+                                <div class="fotos">
+                                    <span>1/1</span>
+                                 </div> 
+                                 <i class="fas fa-search-plus"></i>
+                            </article>
+                            <article class="cont-right">
+                                <div class="descripcion">
+                                    <h2 class="nombredeproducto azul" style="text-transform: uppercase" ><%= producto.name %></h2>
+                                    <h4 class="negro"> <%= producto.description %> </h4>
+                                    <p> $<%= producto.price  %> </p>
+                                </div>                                                
+                        <div class="comprar ">                
+                            <form action="">
+                                
+                                                              
+                                <div class="agregar">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <input type="submit" value="Agregar al carrito">
+                                </div>
+                            </form>
+                        </div>
+                                           
+                    </article>                    
+                    <article class="pedidos">
+                        <div class="relacionadoOscuro">                                                           
+                                <h3><%=producto.related %></h3>                                                                                          
+                            </div>
+                    </article>
+                    
+            </section>            
+            <script src="/javascripts/productDetail.js"></script>
+        </main>    
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+    </body>
+</html>

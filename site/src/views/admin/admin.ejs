@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+
+<%- include('../partials/head') %> 
+
+<body class="admin">
+   <!--  HEADER -->
+
+   <%- include('../partials/header') %> 
+
+   <main class="admin1">
+    <h2>ADMIN</h2>
+    <a href="/admin/carga"><h3>agregar nuevo producto</h3></a>
+    
+    <section>
+    <div class="atributos">
+        <div class="id">ID</div>
+        <div class="name">NOMBRE</div>
+        <div class="precio">PRECIO</div>
+        <div class="ver"><i class="far fa-eye"></i></div>
+        <div class="ver2">VER</div>
+        <div class="edit"><i class="far fa-edit"></i></div>
+        <div class="edit2">EDITAR</div>
+        <div class="delet"><i class="far fa-trash-alt"></i></div>
+        <div class="delet2">BORRAR</div>
+    </div>
+    
+    <% products.map(producto => { %> 
+    <div class="atributos">
+        <div class="id"> <%= producto.id  %> </div>
+        <div class="name"> <%= producto.name  %> </div>
+        <div class="precio"> <%= producto.price  %> </div>
+        <div class="ver3"><a href="/admin/detalle/<%= producto.id %> "><i class="far fa-eye"></i></a></div>
+        <div class="edit3"><a href="/admin/edit/<%= producto.id %>"><i class="far fa-edit"></i></a></div>         
+        <div class="delet3">
+            <form action="/admin/delete/<%= producto.id %>?_method=DELETE" method="POST" id="formEliminar">
+                <button type="submit" ><i class="far fa-trash-alt"></i></button>
+            </form> 
+        </div>
+    </div>
+        <% }) %>  
+    
+    </section>
+    <a href="/admin/carga"><h3>agregar nuevo producto</h3></a>
+   </main>
+   <script src="/javascripts/alertEliminarProduct.js"></script>
+   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/javascripts/admin.js"></script>
+  
+</body>
+</html>

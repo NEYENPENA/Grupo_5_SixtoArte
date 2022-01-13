@@ -1,0 +1,53 @@
+<header>
+    <div class="logo">
+        <a href="/"><img src="/images/logoprincipal.jpg" alt=""></a>
+    </div>
+    <div class="nav">
+        <nav>
+                <% if(!(locals.user)){ %>
+                    <ul class="user">
+                    <li><a class="login1" href="/user/login">Iniciar Sesión</a></li>
+                    <li><a class="regi1" href="/user/register">Registrarse</a></li>
+                </ul>
+                <%}else{%>
+                    <ul class="user2">
+                        <li ><form action="/user/cerrar" method="get" class="formcerrar2"><button type="submit" class="cerrar2">Cerrar Sesión</button></form></li>
+                    </ul>
+                <%} %>
+        </nav>
+        <div class="nav2">
+            <form action="/buscar" method="get" id="formBuscador">
+                    <input type="text" class="buscador" name="buscador" id="buscador" placeholder="Buscar">
+                    <button class="botonBuscar" type="submit" ><i class="fas fa-search"></i> </button>
+                    
+            </form>
+            <div class="icons">
+                <a href="/user/perfil/"><i class="fas fa-user"></i></a>
+                    <a class="1 botonDark"><i class="fas fa-adjust"></i></a>
+                    <% if(locals.user && locals.user.id_role === 1) { %>
+                        <a class="user" href="/admin"><i class="fas fa-user-cog"></i></a>
+                        <% }else{ %>
+                            <a href="/product/productCart/"><i class="fas fa-shopping-cart"></i></a>
+                            <% } %> 
+                    
+                    <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <input class="check" type="checkbox">
+        <div class="menudespleglable">
+            <ul>
+                <% if(locals.user && locals.user.id_role === 1) { %>
+                    <li><a class="admin" href="/admin">Admin</a></li>
+                    <% } %>
+                
+                <% if(!(locals.user)){ %>
+                    <li><a class="login2" href="/user/login">Login</a></li>
+                    <li><a class="regi2" href="/user/register">Register</a></li>
+                <%}else{%>
+                    <li ><form action="/user/cerrar" method="get" class="formcerrar"><button type="submit" class="cerrar">Cerrar Sesión</button></form></li>
+                <%} %>
+            </ul>
+        </div>
+    </div>
+    <script src="/javascripts/header.js"></script>
+</header>

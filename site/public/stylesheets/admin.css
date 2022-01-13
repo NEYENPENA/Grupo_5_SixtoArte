@@ -1,0 +1,160 @@
+
+.admin header{
+    position: static
+}
+.admin main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 150px;
+    /* background-color: white; */
+}
+
+.admin main h2{
+    padding-top: 5px;
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.admin main h3{
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: black;
+    border: 2px solid var(--azul);
+    border-radius: 10px;
+    padding: 2px;
+    background-color: var(--azul);
+
+}
+.admin main h3:hover{
+    text-decoration: underline;
+    
+}
+/* .admin footer{
+    position: static;
+} */
+.admin main section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 18px;
+}
+.admin main section .atributos{
+    display: flex;
+    width: 95%;
+}
+.admin main section .atributos a{
+    color: black;
+}
+.admin main section .atributos div{
+     background-color: white;
+     border: 1px solid var(--azul);
+}
+
+.admin main section .atributos .id{
+    width: 10%;
+    text-align: center;
+}
+.admin main section .atributos .name{
+    width: 35%;
+    text-align: center;
+}
+.admin main section .atributos .precio{
+    width: 25%;
+    text-align: center;
+}
+.admin main section .atributos .edit{
+    width: 10%;
+    text-align: center;
+}
+.admin main section .atributos .edit3{
+    width: 10%;
+    text-align: center;
+}
+.admin main section .atributos .edit2{
+    width: 10%;
+    text-align: center;
+    display: none;
+}
+.admin main section .atributos .ver{
+    width: 10%;
+    text-align: center;
+}
+.admin main section .atributos .ver2{
+    width: 10%;
+    text-align: center;
+    display: none;
+}
+.admin main section .atributos .ver3{
+    width: 10%;
+    text-align: center;
+}
+.admin main section .atributos .edit i{
+    text-align: center;
+}
+
+.admin main section .atributos .delet{
+    width: 10%;
+    text-align: center;
+}
+.admin main section .atributos .delet2{
+    width: 10%;
+    text-align: center;
+    display: none;
+}
+.admin main section .atributos .delet3{
+    width: 10%;
+    text-align: center;
+}
+.admin main section .atributos .delet3 form button{
+    border: none;
+    
+}
+.admin main section .atributos .delet3 form button i{
+    font-size: 18px;
+}
+.admin main section .atributos .delet i{
+    text-align: center;
+}
+
+@media(min-width:769px){
+
+    .admin main section .atributos .edit{
+        
+        display: none;
+    }
+    .admin main section .atributos .edit2{
+        width: 12%;
+        display: block;
+    }
+    .admin main section .atributos .edit3{
+        width: 12%;
+        display: block;
+    }
+
+    .admin main section .atributos .ver{
+        display: none;
+    }
+    .admin main section .atributos .ver2{
+        display: block;
+        width: 10%;
+    }
+    
+    .admin main section .atributos .delet{
+        display: none;
+    }
+    .admin main section .atributos .delet2{
+        width: 13%;
+        display: block;
+    }
+    .admin main section .atributos .delet3{
+        width: 13%;
+        display: block;
+    }
+
+    .admin main section .atributos .precio{
+        width: 20%;
+        text-align: center;
+    }
+}

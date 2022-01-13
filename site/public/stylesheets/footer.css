@@ -1,0 +1,67 @@
+footer{
+    border-top: 1px solid var(--grafito);
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    background-image: url(../images/fondoAzul.jpg);
+    position: absolute;
+    bottom: 0;
+}
+footer .logof{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .logof img{
+    width: 55px;
+    border-radius: 50%;
+}
+footer h3{
+    width: 40%;
+    font-weight: 900;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .redes{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer .redes a img{
+    width: 30px;
+}
+
+
+@media(min-width:426px){
+
+    footer h3{
+        font-size: 25px;
+    }
+}
+
+@media(min-width:769px){
+    footer{
+        padding-bottom: 10px;
+        height: 150px;
+    }
+    footer .logof img{
+        width: 100px;
+    }
+    footer .redes{
+        -webkit-box-reflect: below -7px linear-gradient(transparent 15px, white );;
+    }
+
+    footer .redes a img{
+        width: 40px;
+    }
+    footer .redes a img:hover{
+        animation: giro 2s normal linear infinite;
+    }
+    
+}

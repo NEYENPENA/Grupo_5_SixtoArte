@@ -1,0 +1,292 @@
+
+.detalleAdm main .principio{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.detalleAdm main .color{
+    background-color: #ededed;
+    width: 100%;
+    height: 85px;
+}
+.detalleAdm main .principio .producto{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid var(--azul);
+    margin-bottom: 5px;
+    border-radius: 1%;
+    position: relative;
+    margin: 0 auto;    
+}
+.detalleAdm main .principio .producto .fotos{
+    background-color: #f5f5f5;
+    border-radius: 12px;    
+    font-size: 12px;    
+    height: 26px;
+    left: 4px;    
+    position: absolute;
+    top: 2%;
+    width: 40px;
+}
+.detalleAdm main .principio .producto .fotos span{
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    font-weight: 600;
+}
+
+.detalleAdm main .principio .producto i{
+    position: absolute;
+    left: 88%;
+    top: 2%;
+    border: 1px solid rgba(67, 67, 67, 0.8);
+    padding: 1.5%;
+    border-radius: 35%;
+    background-color: #f5f5f5;
+}
+.detalleAdm main .principio .cont-right{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.detalleAdm main .principio .cont-right .descripcion{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--azul);   
+    justify-content: center;
+    
+}
+.detalleAdm main .principio .cont-right .descripcion h2{
+    text-align: center;    
+    padding: 15px 0px 15px 0px;
+    font-size: 24px;
+    color: var(--azul);
+    width: 100%;
+}
+.detalleAdm main .principio .cont-right .descripcion h4{
+    text-align: center; 
+    color: rgb(0, 0, 0);
+    font-size: 25px; 
+    width: 100%;  
+}
+.detalleAdm main .principio .cont-right .descripcion p{
+    font-size: 26px;    
+    margin: 5px 0px;
+    border-radius: 10px;    
+    width: 100%;
+    text-align: center;
+}
+.detalleAdm main .principio .cont-right .comprar {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;    
+    margin-top: 3%;
+    background-color: #fff;
+    justify-content: center;
+}
+.detalleAdm main .principio .cont-right .comprar .cantidadd{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 85%;
+    margin-bottom: 3%;
+    
+}
+.detalleAdm main .principio .cont-right .comprar .cantidadd input{
+    width: 12%;
+    border: 1px solid rgba(67, 67, 67, 0.8);
+    border-radius: 15%;
+    text-align: center;
+    background-color: #f5f5f5;
+} 
+.detalleAdm main .principio .cont-right .comprar .editar{
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+} 
+.detalleAdm main .principio .cont-right .comprar .editar i{
+    position: absolute;
+    right: 85%; 
+    top: 32%;
+    
+}
+.detalleAdm main .principio .cont-right .comprar .editar a{
+    width: 100%;
+    padding: 4%;
+    background-color: var(--cian);
+    font-size: 16px;
+    border: none;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+.detalleAdm main .principio .cont-right .trash {       
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-color: #fff;    
+}
+.detalleAdm main .principio .cont-right .trash form {
+ display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 3% 0;
+    position: relative;
+} 
+.detalleAdm main .principio .cont-right .trash form button{   
+    width: 85%;
+    padding: 3.4%;
+    background-color: var(--cian);
+    font-size: 16px;
+    border: none;
+    height: 100%;
+    font-family: var(--letra);
+}
+
+.detalleAdm main .principio .cont-right .trash i{
+    position: absolute;
+    right: 80%;
+    top: 34%; 
+}
+.detalleAdm main .principio .pedidos{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 12px;
+    border-top: 2px solid var(--azul);
+    border-bottom: 2px solid var(--azul);
+    background-color: #fff;
+}
+.detalleAdm main .principio .pedidos:last-child{
+    margin: 0 auto 112px;
+}
+.detalleAdm main .principio .pedidos div{
+    width: 100%;
+       
+}
+.detalleAdm main .principio .pedidos div h3{
+    text-align: center;
+    color: var(--cian);
+    margin: 10px 0;
+    text-shadow: 0.4px 0.4px darkcyan;
+    
+}
+footer{
+    margin-top: 20px;    
+    
+}
+@media(min-width:426px){   
+    .detalleAdm main .principio{
+        width: 80%;
+    }
+    .detalleAdm main .comprar {
+        width: 80%;
+    }
+    .detalleAdm main .trash {
+        width: 80%;
+    }
+    .detalleAdm main .pedidos {
+        width: 80%;
+    }
+    .detalleAdm main .comprar .editar i{
+        right: 90%; 
+        top: 32%;
+    }
+    .detalleAdm main .trash i{
+        right: 84%;
+        top: 34%; 
+    }
+    .detalleAdm main .pedidos div h3{        
+        text-shadow: 1px 1px darkcyan;
+    }
+    .detalleAdm main .principio .cont-right .descripcion h2{
+        text-align: center;    
+        padding: 15px 0px 15px 0px;
+        font-size: 28px;
+        color: var(--azul);
+        width: 100%;
+    }
+    .detalleAdm main .principio .cont-right .descripcion h4{
+        text-align: center; 
+        color: rgb(0, 0, 0);
+        font-size: 25px; 
+        width: 100%;  
+    }
+}
+
+@media(min-width:769px){
+    /* Margen superior */
+    .detalleAdm main .color{
+        background-color: #ededed;
+        width: 100%;
+        height: 135px;
+    }
+
+    .detalleAdm main .principio{
+        width: 95%;
+        justify-content: space-around;
+        align-items: flex-start; 
+        flex-direction: row;
+        /* margin-bottom: 174px; */
+    }
+    .detalleAdm main .principio .producto{
+        width: 30%;
+        border: none;
+    }
+    .detalleAdm main .principio .cont-right{
+        width: 60%;
+        margin: 0;
+        flex-direction: row;
+        
+    }
+    .detalleAdm main .principio .cont-right .descripcion{        
+        margin-top: 5%;
+        width: 76.5%;
+        padding: 3% 0%;
+        align-items: center;
+    }
+    .detalleAdm main .principio .cont-right .descripcion h2{
+        text-align: center;    
+        padding: 15px 0px 15px 0px;
+        font-size: 28px;
+        color: var(--azul);
+        width: 50%;
+    }
+    .detalleAdm main .principio .cont-right .descripcion h4{
+        text-align: center; 
+        color: rgb(0, 0, 0);
+        font-size: 28px; 
+        width: 50%;  
+        padding: 15px 0px 15px 0px;
+    }
+    .detalleAdm main .comprar .editar i{
+        font-size: 22px;
+    }
+    .detalleAdm main .principio .cont-right .trash i{
+        font-size: 22px;
+    }
+    .detalleAdm main .principio .cont-right .comprar .cantidadd input{
+        width: 9%;
+    }
+    .detalleAdm main .comprar{
+        width: 100%;
+        margin: 0;
+    }
+    .detalleAdm main .principio .pedidos{
+        width: 100%;
+        ;
+    }
+    .detalleAdm main .principio .pedidos:last-child {
+        margin: 0 auto 174px
+    }
+}

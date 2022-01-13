@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head') %>
+<body class="register">
+    
+   <!-- HEADER -->
+   <%- include('./partials/header') %>
+  <main class="conteiner fondoBlanco">
+   <form action="/user/register" method="POST" enctype="multipart/form-data" id="form">
+    <h1 class="titulo">Registrate</h1>
+    <div class="form">
+        <div class="conteinerB">
+
+          <label for="nombre">Nombre y Apellido</label>
+          <input type="text" class="input" name="name" id="nombre" value=<%= locals.old && old.name ? old.name : null %> >
+          <small class="smallJS1"></small>
+          <% if(locals.errors && errors.name){ %>
+            <small> <%= errors.name.msg %> </small>
+          <% } %> 
+          
+        </div>       
+        <div class="conteinerB">
+
+            <label for="user">Nombre de Usuario</label>
+          <input type="username" class="input" name="username" id="user" value=<%= locals.old && old.username ? old.username : null %>>
+          <small class="smallJS2"></small>
+          <% if(locals.errors && errors.username){ %>
+            <small> <%= errors.username.msg %> </small>
+          <% } %> 
+       </div> 
+       <div class="conteinerB">
+
+            <label for="date">Fecha de Nacimiento</label>
+            <input type="date" class="input" name="fecha" id="date"> 
+            <small class="smallJS3"></small>
+       </div>        
+
+          <div class="conteinerB">
+
+              <label for="correo">Correo Electronico</label>
+              <input type="email" name="email" placeholder="insertar correo" id="correo" class="input" value=<%= locals.old && old.email ? old.email : null %>>
+              <small class="smallJS4"></small>
+              <% if(locals.errors && errors.email){ %>
+                <small> <%= errors.email.msg %> </small>
+              <% } %> 
+          </div>
+          
+        <div class="conteinerB">
+
+            <label for="image">Imagen</label>
+            <input type="file" name="image" id="image" class="input">
+            
+        </div> 
+        <div class="preview2" id="preview3"></div>
+       <div class="conteinerB">
+
+          <label for="contraseña">Contraseña</label>
+          <input type="password" class="input" name="pass" id="contraseña" >
+          <small class="smallJS5"></small>
+          <% if(locals.errors && errors.pass){ %>
+            <small> <%= errors.pass.msg %> </small>
+          <% } %> 
+       </div>  
+      <div class="conteinerB">
+
+          <label for="confirm">Confirmar Contraseña</label>
+          <input type="password" class="input" name="confirmpassword" id="confirm">
+          <small class="smallJS6"></small>
+          <% if(locals.errors && errors.confirmpassword){ %>
+            <small> <%= errors.confirmpassword.msg %> </small>
+          <% } %> 
+       </div> 
+     
+       <div class="conteinerB">
+        <input type="submit" value="Registrarse" class="btn">
+      </div>        
+      <div class="conteinerB">
+        <input type="reset" value="Eliminar Datos" class="btn">
+      </div>
+    </div>   
+</form>
+<script src="/javascripts/register.js"></script>
+</main>
+</body>
+</html>

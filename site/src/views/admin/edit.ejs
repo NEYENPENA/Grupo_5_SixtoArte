@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+
+<%- include('../partials/head') %> 
+
+<body class="edit">
+   <!--  HEADER -->
+
+   <%- include('../partials/header') %> 
+
+   <main >
+    <h2>EDITAR PRODUCTO</h2>
+
+    <form class="form" action="/admin/<%= productEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="form">
+
+        <label for="nombre">Nombre del Producto</label>                             
+        <input type="text" name="nombre" value="<%= productEdit.name %>" id="nombre" >
+        <small class="smallJS30"></small>
+        <% if(locals.errors && errors.nombre){ %>
+          <small> <%= errors.nombre.msg %> </small>
+        <% } %>
+
+          <label for="precio">Precio del Producto</label>
+          <input type="number" name="precio" value="<%= productEdit.price %>"  id="precio" >
+          <small class="smallJS31"></small>
+          <% if(locals.errors && errors.precio){ %>
+            <small> <%= errors.precio.msg %> </small>
+          <% } %>
+
+          <label for="descripcion">Descripción del Producto</label>
+          <input type="text" name="descripcion" value="<%= productEdit.description %>" id="descripcion" >
+          <small class="smallJS32"></small>
+          <% if(locals.errors && errors.descripcion){ %>
+            <small> <%= errors.descripcion.msg %> </small>
+          <% } %>
+
+          <label for="categoria">Categoria del Producto</label>
+          
+          <select name="categoria"  id="categoria">
+
+            <% categorias.map(categoria => { %>
+
+              <option value="<%= categoria.id %>" <%= categoria.id === productEdit.id_categoria ? "selected" : null %> ><%= categoria.name %></option>
+              
+            <%}) %> 
+
+          </select>
+          <% if(locals.errors && errors.categoria){ %>
+            <small> <%= errors.categoria.msg %> </small>
+          <% } %>
+
+          <label for="color">Color del Producto</label>
+         
+          <select name="color" value="<%= productEdit.id_colour %>"id="color"%> ">
+            <% colores.map(color => { %>
+
+              <option value="<%= color.id %> "<%= color.id === productEdit.id_colour ? "selected" : null %>><%= color.name %> </option>
+
+            <%}) %> 
+          </select>
+          <% if(locals.errors && errors.color){ %>
+            <small> <%= errors.color.msg %> </small>
+          <% } %>
+ 
+          <label for="">suba una imagen</label>
+          <input type="file" name="image" value="<%= imagen %>" id="image">
+
+          <div class="preview2" id="preview2"></div>
+
+          <button type="submit" >EDITAR </button>
+          <small class="smallJS33"></small>
+    </form>
+    <form class="cancel" action="/admin">
+        <button type="submit">CANCELAR </button></form>
+    
+   </main>
+   <script src="/javascripts/editProducts.js"></script>
+   <script src="/javascripts/edit.js"></script>
+
+</body>
+</html>

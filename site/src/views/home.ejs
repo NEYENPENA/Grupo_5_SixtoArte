@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- HEAD -->
+<%- include('./partials/head') %>
+
+
+<body class="bodyHome">
+    <!-- HEADER -->
+    <%- include('./partials/header') %>
+
+
+    <main class="home">
+
+
+        <div class="carrousel">
+            <div class="slider" id="slider">
+
+                <div class="slider_section">
+                    <img class="c1" src="../images/carrousel/relojC.png" alt="">
+                </div>
+                <div class="slider_section">
+                    <img class="c2" src="../images/carrousel/lamparaC.png" alt="">
+                </div>
+                <div class="slider_section">
+                    <img class="c3" src="../images/carrousel/portaVelaC.png" alt=""> 
+                </div>
+
+                
+
+            </div>
+            <div class="flechal">
+                <i class="fas fa-angle-left" id="botonLeft"></i>
+            </div>
+            <div class="flechar">
+                <i class="fas fa-angle-right" id="botonRight"></i>
+            </div>
+        </div>
+
+
+        <section>
+
+            <% for (let i = 0; i < productos.length; i++) { %>
+                <article>
+                    <a href="/product/detalle/<%= productos[i].id %>">
+                    <div class="imagen">
+                        <img src="../images/productos/<%= productos[i].imagen[0].name %>" alt="">
+                    </div>
+                    <div class="art2">
+                        <p class="descripcion negro" style="text-transform: uppercase">
+                            <%= productos[i].name %>
+                        </p>
+                        <p class="precio negro ">
+                            $<%= productos[i].price %>
+                        </p>
+                        <div class="icons2">
+                            <form action="#" method="POST">
+                                <button type="submit"><i class="fas fa-shopping-cart negro"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </a>
+                </article>
+        
+                <% } %> 
+
+        </section>
+
+        <div class="top">
+            <a href="#"><i class="fas fa-chevron-circle-up"></i></a>
+        </div>
+<script src="/javascripts/home.js"></script>
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
+
+</body>
+</html>
